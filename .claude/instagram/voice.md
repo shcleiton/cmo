@@ -36,8 +36,13 @@
   - Frases longas na fala; no roteiro, quebrar em frases curtas mantendo o
     "então" e o "né" como cola natural (no máximo um "né" por bloco).
 - **Words I actually use:** diagnóstico, estrutura, construir, integrar,
-  captação, recompra, experiência do cliente, crescimento, números, medir,
-  visão de negócio, holístico, profundo, dinâmica, potência.
+  sistema integrado, captação, recompra, experiência do cliente, crescimento,
+  números, medir, visão de negócio, holístico, profundo, dinâmica,
+  potencializar, nível de consciência, público frio, público de engajamento,
+  video view, remarketing, superaquecido, oferta, Ciclo do Lucro.
+- **Referências que cita:** Eugene Schwartz (níveis de consciência).
+- **Muletas de fala:** "ali" ("dentro ali do que fala..."), "na verdade",
+  "claro,", "ao mesmo tempo". Usar com moderação no roteiro.
 - **Words I would never say out loud:** [A CONFIRMAR] hack, segredo,
   fórmula mágica, "fature 6 dígitos", "do zero ao milhão", mindset,
   gatilho mental, "bora", "explodir as vendas".
@@ -50,16 +55,39 @@
 
 ## My positions
 
-[A CONFIRMAR] Inferidas da entrevista. Confirmar, cortar ou reescrever.
+Confirmadas pelo Cleiton:
 
-1. Hack não constrói negócio. Quem vive de tática solta cresce aos trancos e
-   para no mesmo teto.
-2. Marketing não termina na venda. O lucro de verdade está na recompra, e a
-   maioria das empresas ignora o CS.
-3. Problema de vendas quase nunca é só de tráfego ou de copy. É de estrutura:
-   as áreas não conversam.
-4. Se não é medido, não é crescimento, é sorte.
-5. IA é ferramenta de estrutura, não atalho para pular o pensamento.
+1. **Só orgânico não escala.** Muita gente começa na internet achando que vai
+   viralizar, o perfil vai crescer e vai vender muito só com conteúdo
+   orgânico. Não é verdade. Dificilmente alguém cresce exponencialmente só no
+   orgânico. (Visto ao longo de 10 anos de mercado.)
+2. **Só tráfego pago também não.** O oposto é viver só de tráfego, fazendo
+   campanha achando que vai vender direto para público frio.
+3. **O que funciona é sistema integrado: conteúdo + tráfego + vendas.**
+   - O conteúdo sobe o nível de consciência da audiência (Eugene Schwartz).
+   - O tráfego potencializa a distribuição do conteúdo e leva a oferta para
+     mais gente.
+4. **O dinheiro do tráfego vai mais para quem já está aquecido.** Não exclui
+   100% o público frio, mas proporcionalmente a verba vai muito mais para
+   público de engajamento e remarketing.
+
+Inferidas da entrevista [A CONFIRMAR]:
+
+5. Hack não constrói negócio; estrutura sim.
+6. O lucro está na recompra, não só na primeira venda.
+7. O que não é medido não é crescimento, é sorte.
+
+## Framework próprio: Ciclo do Lucro
+
+Usar pelo nome, sempre "Ciclo do Lucro". É a base de boa parte dos conteúdos.
+
+1. **Conteúdo** — produzo conteúdo que sobe o nível de consciência.
+2. **Distribuição** — distribuo esse conteúdo com tráfego pago.
+3. **Públicos** — pelo pixel do Facebook/Meta, gero público de engajamento e
+   de video view.
+4. **Remarketing** — exploro esse público com a oferta. Ele agora está
+   "superaquecido" e com nível de consciência muito maior, então a chance de
+   venda sobe.
 
 ## Off limits
 
@@ -72,7 +100,7 @@
 
 Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
 
-- {{anos de experiência}}
+- 10 anos de mercado.
 - {{um caso: negócio, problema, o que foi construído, resultado em número}}
 - {{outro caso}}
 
