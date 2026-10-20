@@ -119,7 +119,7 @@ Estrutura C. Gravação: rosto.
 **Fala**
 ```
 Quem vai te comprar ainda não te segue.
-Parece estranho, né?
+Parece estranho.
 A maioria das pessoas que vão comprar de você ainda nem sabe que você existe.
 O Ícaro de Carvalho fala isso, e eu vejo na prática.
 Só que a maioria dos perfis fala o tempo todo com quem já segue.
@@ -476,7 +476,7 @@ Estrutura C. Gravação: rosto.
 **Fala**
 ```
 Full service é a pior coisa que você pode vender.
-Parece a melhor oferta, né? "Eu faço tudo pra você."
+Parece a melhor oferta. "Eu faço tudo pra você."
 Site, tráfego, conteúdo, social media, CRM.
 O problema: ninguém faz tudo bem. E o cliente compra a promessa de tudo.
 O Dener Lippert, dono da V4, chama isso de falácia do 360.
