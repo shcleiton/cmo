@@ -133,3 +133,14 @@ O padrão que mais viralizou no nicho foi a pergunta concreta do público
 Regra para os outros: gancho específico, com número ou situação real. Nada de
 conselho genérico ou motivacional, que ficou no fundo do ranking em todos os
 canais.
+
+## Produção (base.md, ideias 39, 40 e 44)
+
+- **Persona do perfil:** o cara que mostra o raciocínio e os números do
+  marketing. Canal de conhecimento, não garoto-propaganda da oferta.
+- **Formato barato e que funciona:** "3ª pessoa interativa". Alguém filma no
+  celular e, depois de uma reunião ou diagnóstico, pergunta: "Qual foi o
+  principal insight dessa reunião?" Ou lê um comentário/direct e pede a
+  opinião na hora. Rende reel sem roteiro longo.
+- **Nem todo post precisa viralizar:** cada peça tem um papel (crescer,
+  aprofundar ou converter) e um indicador. Medir pelo papel, não só por views.

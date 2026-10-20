@@ -159,3 +159,74 @@ Melhores para os 20 primeiros: **5** (história + virada, ensina o sistema),
 Melhores para os 20 primeiros: **3** (conta na tela), **5** (comando curto,
 aplicável no mesmo dia) e **8** (reação a um nome grande, com o Ciclo do Lucro
 como resposta).
+
+---
+
+## Fonte 3: Alfredo Soares — "Se não crescer X MILHÕES em faturamento é como se o negócio tivesse MORRIDO" (Advisor DOT)
+
+- Link: https://www.youtube.com/watch?v=5pX265p-NoY
+- Formato: Alfredo Soares (com participação do Bruno Nardon) mentorando os
+  fundadores da DOT, bala energética que viralizou no TikTok. Produto físico
+  (bens de consumo), então as ideias precisam de tradução para serviço e
+  educação. Números da DOT são falas dos fundadores.
+
+### Ideias
+
+| # | ideia | min | relação | ângulo do Cleiton |
+|---|---|---|---|---|
+| 31 | **Crie o indicador que funciona para o seu negócio.** Quando a DOT entrou forte no TikTok, as vendas nas farmácias mais que triplicaram: as pessoas viam o vídeo o dia inteiro e compravam no caixa. Aprendizado que o Alfredo atribui ao Gabriel, da Bold: com 40–50 milhões de views por mês, a venda na gôndola subia. "Você não tem que aceitar o indicador que existe, tem que criar um que funcione pro teu negócio." | 05:49 | **CONCORDO +** | "Marketing é ciência exata": até marca dá para medir, se você cria o indicador certo. |
+| 32 | **Separe o orçamento de aquisição do de recompra.** Ex.: 70% para trazer cliente novo, 30% para trazer de volta, sabendo o custo de cada um. "A recompra é o ouro desse jogo." | 42:27 | **TRADUZO** | Mantendo a regra do Cleiton (sem "o lucro está na recompra" absoluto): o que vale é medir os dois custos separados. |
+| 33 | **Pacote em vez de assinatura.** Na opinião do Alfredo, o brasileiro não tem cultura de assinatura de produto físico. Melhor vender pacote de 3 ou 6 meses, testar com anúncios separados por pacote e oferecer um plano VIP pelo WhatsApp a quem fez a terceira compra. Na DOT, 12% já compram o pacote de 3 meses. | 08:15, 16:09 | **TRADUZO** | Para serviço: projeto fechado (pacote) contra mensalidade. Conversa com a ideia 10 (Dener contra o full service). |
+| 34 | **Palestra como canal de CAC negativo.** A fundadora palestra (e é paga para isso), conta o case, e no final tem QR code com oferta e uma promotora cadastrando quem quer amostra. | 13:38 | **TRADUZO** | Para experts e professores: a palestra paga como topo de funil. Complementa a ideia 21 (palestra não escala, mas pode se pagar). |
+| 35 | **Abrir mercado é caro e incerto.** "É fácil botar 1.000 no Google e voltar 10.000. Awareness é: vou botar 10 e não sei o que pode voltar." | 12:30 | **CONCORDO +** | Por isso o Ciclo do Lucro mede o awareness pelo público que ele gera (video view, engajamento), não pela venda direta. |
+| 36 | **"Tem muita coisa que a gente faz no marketing que é mais legal do que funcional."** No estágio de empresa pequena, errar custa muito. | 18:32 | **CONCORDO +** | Mesma família de "hack não constrói negócio". |
+| 37 | **Collab vale pela distribuição, não pela marca.** SuperCoffee com Copenhagen valeu porque o produto entrou nas lojas da Copenhagen. Parceria marca com marca "é legal", o valor está em entrar no ponto de venda do outro. | 21:00 | **TRADUZO** | Para prestador de serviço: parceria que coloca você na frente da base do parceiro (liga com a ideia 17). |
+| 38 | **Empresa pequena é marketing de oportunidade.** "Não é sobre a tua capacidade de ter a ideia, é sobre a sua capacidade de acertar o timing." Radar ligado o tempo todo. | 23:46 | **CONCORDO +** | O case jurídico: a lei saiu e o lançamento foi feito no timing. |
+| 39 | **Fundador é canal, não garoto-propaganda.** Cada sócio do G4 tem uma persona: Alfredo é o conector, Nardon a profundidade técnica, Tallis o escritório e a gestão. Todos constroem valor para a empresa sem falar dela o tempo todo. | 25:39 | **TRADUZO** | Define a persona do perfil novo: o cara que mostra o raciocínio e os números do marketing. |
+| 40 | **Tipos de conteúdo: capturado ou produzido; 1ª pessoa ou 3ª pessoa.** O melhor para ele: **3ª pessoa interativa**. Quem filma pergunta no fim da reunião "qual foi o insight?" ou lê um comentário/direct e pede a opinião na hora. O público dele "não quer ver que o Alfredo está em reunião, quer a opinião do Alfredo". | 27:11 | **TRADUZO** | Formato barato para o Cleiton: alguém filma no celular e faz uma pergunta depois de uma reunião de diagnóstico. |
+| 41 | **"Growth é mentalidade, não área."** "Todo conteúdo funciona. A questão é para quê." | 30:00 | **CONCORDO +** | Cada peça precisa de um objetivo e de um indicador (liga com a ideia 25). |
+| 42 | **"Comprometimento não se compra com esperança, se compra com dinheiro."** Parceria só por comissão não engaja: "as pessoas primeiro querem garantir o delas." Melhor um fixo pequeno + variável. | 37:22 | **TRADUZO** | Junto com a ideia 17: parceiro precisa de algo garantido, não só de promessa. |
+| 43 | **Transforme a amostra grátis em captação de lead.** A DOT entrega sachê com cupom e nunca mais fala com a pessoa. Sugestão: QR code para retirar a amostra, cadastro, pixel e remarketing. "Agora você tem 10 chances de vender para aquele cara." | 43:29 | **CONCORDO +** | É o Ciclo do Lucro aplicado: todo contato gratuito precisa virar público (pixel) para remarketing. |
+| 44 | **Conteúdo que não viraliza pode estar cumprindo outro papel.** Os vlogs dele fazem 20–50 mil views, não 300 mil, e ele continua: mostram a rotina e constroem percepção. O YouTube dele foi de 10 mil para ~35 mil inscritos e atinge um público jovem, "a próxima geração de cliente". | 47:27 | **TRADUZO** | Para o teste dos 45 dias: nem todo post precisa viralizar, desde que tenha um papel claro. |
+| 45 | **Produto de entrada.** A virada da DOT foi um "kit de experimentação": menos unidades, só para conhecer o produto. | 42:16 | **TRADUZO** | A Implementação de Funil (R$2.000, pontual) é o kit de experimentação do Cleiton: a porta de entrada para a continuidade. |
+| 46 | **"O produto é caro para bancar o marketing."** Margem é o que paga a aquisição. | 41:43 | **CONCORDO +** | Liga com a ideia 9 (preço) e a 20 (tempo de retorno). |
+
+### Frases fortes (crédito: Alfredo Soares)
+
+- "Comprometimento não se compra com esperança, se compra com dinheiro."
+- "Tem muita coisa que a gente faz no marketing que é mais legal do que funcional."
+- "Empresa pequena é marketing de oportunidade."
+- "Growth não é uma área, é mentalidade."
+- "Todo conteúdo funciona. A questão é para quê."
+- "Se eu não fizer, eu vou ser aquela marca legalzinha."
+
+### Números citados (fonte: o episódio)
+
+- DOT: começou em abril de 2024; Shark Tank em setembro de 2024; 900 lojas da
+  Drogasil em São Paulo; 70% do público é homem; recompra online ~25%/mês;
+  12% das vendas são o pacote de 3 meses (~R$330).
+- Alfredo: vlogs com 20–50 mil views; YouTube de 10 mil para ~35 mil
+  inscritos desde novembro.
+
+### Ganchos desta fonte (na voz do Cleiton)
+
+**Caso + virada**
+1. "Uma marca de bala mais que triplicou as vendas na farmácia. E o
+   anúncio não estava na farmácia." (ideia 31: como medir marca)
+2. "O Alfredo Soares posta vlog que não passa de 50 mil views. E continua
+   postando. Ele sabe uma coisa que você não sabe sobre conteúdo." (ideia 44)
+
+**Contra o senso comum (#2 / #22)**
+3. "Pare de dar coisa de graça sem pegar o contato." (ideia 43, Ciclo do
+   Lucro)
+4. "Muita coisa no marketing é mais legal do que funcional." (ideia 36)
+5. "Empresa pequena não precisa de ideia. Precisa de timing." (ideia 38 +
+   case jurídico)
+6. "Parceiro que só ganha comissão não vende nada." (ideia 42)
+
+**Pergunta do público (#16)**
+7. "'Vendo mensalidade ou pacote fechado?' Depende de uma conta." (ideias
+   33 e 10)
+
+Melhores para os 20 primeiros: **3** (Ciclo do Lucro em uma frase), **1**
+(caso + virada, ensina a medir marca) e **5** (liga direto ao case jurídico).
