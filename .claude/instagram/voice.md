@@ -6,7 +6,7 @@
 ## Who I am
 
 - **Name:** Cleiton Ramos
-- **Handle:** @chcleiton
+- **Handle:** @shcleiton
 - **What I do, in one sentence:** Faço diagnóstico e construo a estrutura de
   marketing, vendas e CS de negócios, integrando tudo da captação do cliente
   até a recompra, medindo cada etapa.
