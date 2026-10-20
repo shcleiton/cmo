@@ -29,7 +29,7 @@ components:
   ground: "radial azul petróleo + campo de pontos verde-água/azul na base (a rede do manual)"
   register-virada: "gradiente teal 135° #00a897 → #006892, texto branco, destaque em azul petróleo"
   badge: "DIA N/45, label verde-água, topo-esquerda"
-  logo: "logo/logo-claro.png no topo-direita (230px) e grande na tela final; logo/logo-cor.png sobre fundo claro ou teal"
+  logo: "NÃO usar o logo nos Reels (decisão do Cleiton). Arquivos ficam em logo/ só para outros usos."
   rule: "linhas de 2px verde-água a 35%"
   timeline-dot: "círculo verde-água com brilho"
 
