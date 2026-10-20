@@ -50,7 +50,7 @@ dots = "".join('<i></i>' for _ in range(120))
 people = "".join(f'<span class="pw" id="s14-p{k}">{PERSON}</span>' for k in range(7))
 
 S = [
- (0,3.35,'<p class="kick" id="s01-k">SEGUIDORES</p><div class="stat md ink" id="s01-n">0</div><h1 class="hook acc" id="s01-b">9 VENDAS.</h1>',"dark","rosto-10.0.jpg"),
+ (0,3.35,'<p class="kick" id="s01-k">SEGUIDORES</p><div class="stat md ink" id="s01-n">0</div><h1 class="hook acc" id="s01-b">9 VENDAS.</h1>',"dark"),
  (3.35,6.44,'<div class="stat" id="s02-n">0,04%</div><div class="bar-wrap" id="s02-bars"><div class="hbar"><div class="fill full" id="s02-f1"></div><span>22.000 SEGUIDORES</span></div><div class="hbar"><div class="fill sliver" id="s02-f2"></div><span class="acc">9 VENDAS</span></div></div>'),
  (6.44,11.35,'<p class="kick" id="s03-k">O NÚMERO QUE QUASE NINGUÉM OLHA</p><div class="card" id="s03-card"><div class="card-h">TAXA DE ENGAJAMENTO <span class="down" id="s03-down">▼</span></div><svg viewBox="0 0 600 260" class="chart"><path id="s03-line" d="M10 40 C 90 50, 130 70, 190 95 S 300 150, 360 170 S 470 225, 590 238" fill="none" stroke="#ff6b6b" stroke-width="8" stroke-linecap="round"/><line x1="10" y1="250" x2="590" y2="250" stroke="rgba(255,255,255,0.25)" stroke-width="2"/></svg></div><h1 class="big sm acc" id="s03-b">ENGAJAMENTO<br/>NO CHÃO</h1>'),
  (11.35,15.26,f'<div class="phone" id="s04-phone"><div class="ph-bg"></div><div class="ph-bars"><i class="on"></i><i class="on"></i><i id="s04-prog"><b></b></i><i></i></div><div class="ph-top">{USER}<span>seu perfil · 22 mil seguidores</span></div><div class="ph-views" id="s04-views">{EYE}<b id="s04-c">0</b><b class="c2" id="s04-c2">a 110</b><span>visualizações</span></div></div>'),
@@ -64,7 +64,7 @@ S = [
  (48.51,56.96,f'<div class="dots" id="s12-dots">{dots}</div><ul class="rules"><li id="s12-a"><span class="n">CPM</span>R$20 A R$30</li><li id="s12-b"><span class="n">ANÚNCIO</span>R$300</li><li id="s12-c" class="acc"><span class="n">ENTREGA</span><span>10 A 15 MIL<br/>IMPRESSÕES</span></li><li id="s12-d"><span class="n">PARA</span>QUEM VOCÊ<br/>ESCOLHE</li></ul>'),
  (56.96,62.92,'<p class="kick" id="s13-k">CICLO DO LUCRO</p><div class="flow"><div class="node" id="s13-a">ASSISTIU<br/><span>o conteúdo</span></div><div class="arrow" id="s13-x1"></div><div class="node" id="s13-b">PÚBLICO DE<br/>VIDEO VIEW<br/><span>fica guardado no pixel</span></div><div class="arrow" id="s13-x2"></div><div class="node hot" id="s13-c">OFERTA</div></div>'),
  (62.92,66.56,f'<p class="kick ink" id="s14-k">O ÍCARO RESUME</p><div class="crowd">{people}</div><h1 class="big ink" id="s14-a">COMPRE GENTE.</h1><h1 class="big" id="s14-b">NÃO SEGUIDOR.</h1>',"orange"),
- (66.56,D,'<p class="kick" id="s15-k">FAZ A CONTA</p><div class="formula" id="s15-f"><span>VIEWS DOS STORIES</span><i></i><span>SEGUIDORES</span></div><h1 class="hook acc" id="s15-b">COMENTA O<br/>SEU NÚMERO</h1>',"dark","rosto-7.0.jpg"),
+ (66.56,D,'<p class="kick" id="s15-k">FAZ A CONTA</p><div class="formula" id="s15-f"><span>VIEWS DOS STORIES</span><span class="div">÷</span><span>SEGUIDORES</span><span class="acc">= ?</span></div><h1 class="hook acc" id="s15-b">COMENTA O<br/>SEU NÚMERO</h1>',"dark"),
 ]
 scenes = "\n".join(scene(i+1, *x) for i, x in enumerate(S))
 

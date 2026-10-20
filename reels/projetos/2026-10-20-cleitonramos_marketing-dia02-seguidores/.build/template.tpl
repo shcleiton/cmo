@@ -133,7 +133,8 @@
       .pp { width: 96px; height: 96px; }
       .pw { display: inline-block; }
       /* s15 fórmula */
-      .formula { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 6px; font-weight: 900; font-size: 58px; }
+      .formula { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-weight: 900; font-size: 70px; line-height: 1.0; }
+      .formula .div { color: #6FD3A0; font-size: 90px; }
       .formula i { width: 560px; height: 8px; background: #6FD3A0; border-radius: 4px; transform-origin: left center; }
       .cap { position: absolute; left: 120px; right: 120px; top: 1330px; height: 180px; display: flex; align-items: flex-start; justify-content: center; }
       .cap-line { display: block; font-weight: 600; font-size: 40px; line-height: 1.25; text-align: center; color: #FFFFFF; background: rgba(2,42,62,0.88); padding: 10px 22px; border-radius: 10px; }
@@ -164,8 +165,7 @@
         tl.fromTo(inn, { scale: 1 }, { scale: 1.03, duration: d, ease: "none" }, t);
       });
       // s01
-      tl.fromTo("#s01-face", { scale: 1.14 }, { scale: 1.0, duration: 3.35, ease: "none" }, 0);
-      count("s01-n", 0, 22000, 0.05, 1.5);
+            count("s01-n", 0, 22000, 0.05, 1.5);
       tl.fromTo("#s01-b", { scale: 2.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power4.in" }, 1.8);
       tl.fromTo("#s01-in", { x: -14 }, { x: 0, duration: 0.3, ease: "elastic.out(1,0.3)" }, 2.1);
       // s02
@@ -224,9 +224,7 @@
       [0,1,2,3,4,5,6].forEach((k) => pop("#s14-p" + k, 63.1 + k * 0.1));
       up("#s14-a", 64.59); up("#s14-b", 65.52);
       // s15
-      tl.fromTo("#s15-face", { scale: 1.0 }, { scale: 1.06, duration: 5.75, ease: "none" }, 66.56);
-      fade("#s15-k", 66.6); up("#s15-f", 68.72);
-      tl.fromTo("#s15-f i", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 69.0);
+            fade("#s15-k", 66.6); up("#s15-f", 68.72);
       tl.fromTo("#s15-b", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 71.27);
       document.querySelectorAll(".cap-line").forEach((el) => {
         const t = parseFloat(el.parentElement.dataset.start);

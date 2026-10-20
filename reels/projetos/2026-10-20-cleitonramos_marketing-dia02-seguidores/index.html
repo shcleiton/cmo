@@ -133,7 +133,8 @@
       .pp { width: 96px; height: 96px; }
       .pw { display: inline-block; }
       /* s15 fórmula */
-      .formula { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 6px; font-weight: 900; font-size: 58px; }
+      .formula { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-weight: 900; font-size: 70px; line-height: 1.0; }
+      .formula .div { color: #6FD3A0; font-size: 90px; }
       .formula i { width: 560px; height: 8px; background: #6FD3A0; border-radius: 4px; transform-origin: left center; }
       .cap { position: absolute; left: 120px; right: 120px; top: 1330px; height: 180px; display: flex; align-items: flex-start; justify-content: center; }
       .cap-line { display: block; font-weight: 600; font-size: 40px; line-height: 1.25; text-align: center; color: #FFFFFF; background: rgba(2,42,62,0.88); padding: 10px 22px; border-radius: 10px; }
@@ -178,9 +179,9 @@
       <audio id="sfx-33" src="assets/sfx/pop.mp3" data-start="71.27" data-duration="0.7" data-track-index="4" data-volume="0.4"></audio>
       <video id="fundo" src="assets/video/fundo.mp4" data-start="0" data-duration="72.31" data-track-index="3" muted playsinline></video>
       <section id="s01" class="clip scene dark" data-start="0" data-duration="3.35" data-track-index="1">
-        <div class="face" id="s01-face" style="background-image:url(assets/img/rosto-10.0.jpg)"></div><div class="facefade"></div>
+        <div class="ground"></div>
         <div class="badge">DIA 2/45</div>
-        <div class="stage low" id="s01-in"><p class="kick" id="s01-k">SEGUIDORES</p><div class="stat md ink" id="s01-n">0</div><h1 class="hook acc" id="s01-b">9 VENDAS.</h1></div>
+        <div class="stage" id="s01-in"><p class="kick" id="s01-k">SEGUIDORES</p><div class="stat md ink" id="s01-n">0</div><h1 class="hook acc" id="s01-b">9 VENDAS.</h1></div>
       </section>
       <section id="s02" class="clip scene dark" data-start="3.35" data-duration="3.09" data-track-index="1">
         <div class="ground"></div>
@@ -248,9 +249,9 @@
         <div class="stage" id="s14-in"><p class="kick ink" id="s14-k">O ÍCARO RESUME</p><div class="crowd"><span class="pw" id="s14-p0"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p1"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p2"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p3"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p4"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p5"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span><span class="pw" id="s14-p6"><svg viewBox="0 0 24 24" class="pp"><circle cx="12" cy="7" r="4.2" fill="currentColor"/><path d="M3.5 23c.6-5.6 4-8.6 8.5-8.6s7.9 3 8.5 8.6z" fill="currentColor"/></svg></span></div><h1 class="big ink" id="s14-a">COMPRE GENTE.</h1><h1 class="big" id="s14-b">NÃO SEGUIDOR.</h1></div>
       </section>
       <section id="s15" class="clip scene dark" data-start="66.56" data-duration="5.75" data-track-index="1">
-        <div class="face" id="s15-face" style="background-image:url(assets/img/rosto-7.0.jpg)"></div><div class="facefade"></div>
+        <div class="ground"></div>
         <div class="badge">DIA 2/45</div>
-        <div class="stage low" id="s15-in"><p class="kick" id="s15-k">FAZ A CONTA</p><div class="formula" id="s15-f"><span>VIEWS DOS STORIES</span><i></i><span>SEGUIDORES</span></div><h1 class="hook acc" id="s15-b">COMENTA O<br/>SEU NÚMERO</h1></div>
+        <div class="stage" id="s15-in"><p class="kick" id="s15-k">FAZ A CONTA</p><div class="formula" id="s15-f"><span>VIEWS DOS STORIES</span><span class="div">÷</span><span>SEGUIDORES</span><span class="acc">= ?</span></div><h1 class="hook acc" id="s15-b">COMENTA O<br/>SEU NÚMERO</h1></div>
       </section>
       <div id="cap-01" class="clip cap" data-start="0.05" data-duration="2.05" data-track-index="2"><span class="cap-line">22 mil seguidores.</span></div>
       <div id="cap-02" class="clip cap" data-start="2.1" data-duration="1.25" data-track-index="2"><span class="cap-line">9 vendas.</span></div>
@@ -303,8 +304,7 @@
         tl.fromTo(inn, { scale: 1 }, { scale: 1.03, duration: d, ease: "none" }, t);
       });
       // s01
-      tl.fromTo("#s01-face", { scale: 1.14 }, { scale: 1.0, duration: 3.35, ease: "none" }, 0);
-      count("s01-n", 0, 22000, 0.05, 1.5);
+            count("s01-n", 0, 22000, 0.05, 1.5);
       tl.fromTo("#s01-b", { scale: 2.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power4.in" }, 1.8);
       tl.fromTo("#s01-in", { x: -14 }, { x: 0, duration: 0.3, ease: "elastic.out(1,0.3)" }, 2.1);
       // s02
@@ -363,9 +363,7 @@
       [0,1,2,3,4,5,6].forEach((k) => pop("#s14-p" + k, 63.1 + k * 0.1));
       up("#s14-a", 64.59); up("#s14-b", 65.52);
       // s15
-      tl.fromTo("#s15-face", { scale: 1.0 }, { scale: 1.06, duration: 5.75, ease: "none" }, 66.56);
-      fade("#s15-k", 66.6); up("#s15-f", 68.72);
-      tl.fromTo("#s15-f i", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: E }, 69.0);
+            fade("#s15-k", 66.6); up("#s15-f", 68.72);
       tl.fromTo("#s15-b", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 71.27);
       document.querySelectorAll(".cap-line").forEach((el) => {
         const t = parseFloat(el.parentElement.dataset.start);

@@ -17,14 +17,14 @@ html, body { background:#03354e; overflow:hidden; }
 
 .face { position:absolute; inset:0; background:url(assets/img/rosto-10.0.jpg) center 30%/cover; }
 .fade { position:absolute; inset:0; background: linear-gradient(180deg, rgba(2,42,62,0) 30%, rgba(2,42,62,0.85) 55%, rgba(2,42,62,0.97) 100%); }
-.card { position:absolute; left:0; right:0; top:1020px; display:flex; flex-direction:column; padding:0 120px; gap:36px; }
+.card { position:absolute; left:0; right:0; top:0; bottom:0; justify-content:center; display:flex; flex-direction:column; padding:0 120px; gap:36px; }
 .badge { font-weight:600; font-size:38px; letter-spacing:0.32em; color:#6FD3A0; }
 h1 { font-weight:900; font-size:118px; line-height:1.0; letter-spacing:-0.025em; }
 .acc { color:#6FD3A0; }
 .logo { width:420px; height:auto; }
 </style></head><body>
 <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="1">
-<section id="capa" class="clip scene" data-start="0" data-duration="1"><div class="face"></div><div class="fade"></div>
+<section id="capa" class="clip scene" data-start="0" data-duration="1"><div class="ground"></div>
 <div class="card"><h1 id="capa-t">22 MIL SEGUIDORES.<br/><span class="acc">9 VENDAS.</span></h1><div class="badge" id="capa-b">DIA 2/45</div></div></section>
 </div>
 <script>const tl = gsap.timeline({ paused: true }); tl.set("#capa-t", { opacity: 1 }, 0); window.__timelines["main"] = tl;</script>
