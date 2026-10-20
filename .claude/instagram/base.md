@@ -87,3 +87,75 @@ Legenda da relação com o Cleiton:
 Melhores para os 20 primeiros: **5** (história + virada, ensina o sistema),
 **8** (reação a um nome grande, formato debate) e **3** (conta na tela, "marketing
 é ciência exata").
+
+---
+
+## Fonte 2: Alfredo Soares — "As Estratégias Para ESTRUTURAR MARKETING de EMPRESA | ADVISOR"
+
+- Link: https://www.youtube.com/watch?v=CsivxdkrABQ
+- Formato: Alfredo Soares (G4) fazendo advisor na BC Energia (Goiânia), com o
+  dono (Alê) e o time de marketing. Quase tudo é fala do Alfredo; os números da
+  BC são do Alê.
+
+### Ideias
+
+| # | ideia | min | relação | ângulo do Cleiton |
+|---|---|---|---|---|
+| 16 | **"Todo mundo pode te comprar, mas você não vende para todo mundo."** Para escolher para quem vender, 4 filtros: quem é **mais fácil**, **mais rápido**, **mais barato** e **mais escalável**. Quando um público ou canal junta os quatro, vira o foco. | 16:33 | **CONCORDO +** | Prestador de serviço que "atende qualquer um" não tem ICP. Os 4 filtros são um diagnóstico rápido. |
+| 17 | **Parceiro não é vendedor.** Não tente transformar o contador em vendedor (a comissão é pequena demais para ele se importar). Faça ele virar "o seu Google": te coloca na frente do lead com endosso. Em troca, ajude o negócio dele a ter mais clientes. | 18:09 | **TRADUZO** | Canal de indicação para prestador de serviço: contador, advogado, agência parceira. |
+| 18 | **Brand é o cliente comprar sem você precisar vender.** "Tem vários caras do agro no G4. Eu não vendo para eles, eles me compram." Posicionamento + preço + comissão + canal certos. | 19:53 | **CONCORDO +** | Liga com o nível de consciência (Schwartz): quem chega consciente compra sozinho. |
+| 19 | **Marketing editorial: "eu pego um assunto e me aproprio dele para vender."** O G4 evoluiu de marketing dos fundadores → do setor (educação) → editorial (liderança, IA, política) → regional → por setor de cliente. "Já foi a dor da eleição. Hoje é a dor da implementação de IA." | 21:07 | **CONCORDO +** | É o case jurídico do Cleiton: narrativa em cima da lei nova = 6 dígitos em 7 dias. |
+| 20 | **CAC sobre LTV fechar não basta: olhe o tempo de retorno.** Exemplo: paga R$300 para adquirir, ganha R$1.000, mas leva 10 meses para recuperar o dinheiro. Precisa de fôlego de caixa. Quem tem LTV rápido (o G4 recebe à vista) pode ignorar o "barato"; quem não tem, precisa de canais baratos. | 23:27 | **CONCORDO +** | "Marketing é ciência exata" com conta na tela. |
+| 21 | **Palestra traz o cliente de maior LTV, mas não escala.** Canal excelente não é o mesmo que canal escalável. | 24:53 | **TRADUZO** | Para experts e professores: palestra é ótima, mas não é o funil. |
+| 22 | **Produto que paga o marketing.** Evento com patrocinador ou educação que subsidia a aquisição e baixa o CAC (Stone, G4). | 25:19 | **TRADUZO** | Para empresas de educação: o evento/workshop pago como topo de funil. |
+| 23 | **"Marketing complexo": 3 pilares.** Institucional (autoridade), audiência (conteúdo, lançamento: CAC menor, jornada longa) e performance (vendas, campanha, oferta: CAC maior, jornada curta). Autoridade e relacionamento conectam os dois lados. Precisa dos dois ao mesmo tempo ("ambidestria"). | 26:24 | **CONCORDO +** | O Ciclo do Lucro é a ponte entre audiência e performance: o pixel transforma quem viu o conteúdo em público de remarketing. |
+| 24 | **"Conteúdo tem jornada longa. Não é o cara viu, o cara comprou."** | 26:08 | **DISCORDO** (em parte) | A jornada é longa quando o conteúdo fica solto. Com remarketing para quem assistiu, a oferta chega no momento em que a consciência subiu. Isso encurta a jornada. |
+| 25 | **Mapa de canais por etapa do funil.** Topo = público-alvo (não ICP), dominar percepção. Meio = ICP, frequência, prova social, quebra de objeção, oferta. Fundo = lead, proximidade e tempo (no G4: receber o cliente no escritório). Para cada etapa: canal, mensagem, CTA e **indicador**. "Não pode pegar um canal de topo de funil e jogar o cara para o vendedor." | 28:43 | **CONCORDO +** | É "o que não é medido é sorte" aplicado: cada etapa com seu indicador. E os níveis de consciência de Schwartz em cada etapa. |
+| 26 | **Quebra de objeção é mudar a perspectiva.** US$2.500 por uma sala VIP parece absurdo comparado à passagem; R$15 mil para melhorar uma viagem de R$500 mil faz sentido. | 29:41 | **TRADUZO** | R$2.000 de implementação comparado com o que o cliente já gasta em tráfego que não converte. |
+| 27 | **Não mande link para quem já está no direct.** Quem comentou, reagiu ou respondeu a caixinha é lead morno. Mandar para formulário esfria e joga ele de volta para o topo. O G4 tem duas pessoas só no direct, conversando e passando para o vendedor. | 32:03 | **TRADUZO** | Questiona o caminho atual (bio → página → WhatsApp). Para quem já chamou no direct: conversar ali e levar direto para o WhatsApp. |
+| 28 | **Cada formato tem um papel.** Reels = topo, para quem não segue. Feed/foto = para quem já segue. Stories = meio do funil, os mais engajados; ali vai **profundidade, não viral**. | 32:56 | **CONCORDO +** | Ajusta o plano dos 45 dias: reels para crescer, stories para aprofundar. |
+| 29 | **Rede de influência: faça marca para quem influencia o seu cliente.** "Se o teu personal fala do SuperCoffee para você, você está validando." Quem valida encurta o ciclo de venda, mesmo sem comprar. | 33:36 | **TRADUZO** | Para educação: coordenadores, associações, professores de referência. |
+| 30 | **"Na inflação da mídia, vence a empresa que domina o canal de comunicação com o cliente."** | 34:09 | **CONCORDO +** | A base de público de engajamento/video view é esse canal. |
+
+### Frases fortes (crédito: Alfredo Soares)
+
+- "Todo mundo pode te comprar. Mas você não vende para todo mundo."
+- "Eu não vendo para eles, eles me compram."
+- "Eu pego um assunto e me aproprio do assunto para vender."
+- "Você tinha um lead morno e está esfriando ele."
+- "O que eu tenho que botar no stories não é coisa viral."
+- "Dinheiro é matemática." (fala no trecho sobre dívida, 14:15)
+
+### Números citados (fonte: o episódio)
+
+- G4: vende ~R$50 milhões/mês; orçamento de marketing ~R$50 milhões/ano
+  (fala do Alfredo).
+- BC Energia: após o G4, +40% de equipe e +50% de faturamento; ao trocar
+  gerência por produto por gerência por canal, foi de R$1,5–2 milhões para
+  R$4–5 milhões em vendas/mês (fala do Alê).
+
+### Ganchos desta fonte (na voz do Cleiton)
+
+**Pergunta do público (#16)**
+1. "'Meu serviço serve pra qualquer empresa.' Então ele não vende pra
+   nenhuma." (ideia 16)
+2. "'Meu conteúdo demora muito pra vender.' Demora porque você deixa o
+   público esfriar." (ideia 24, Ciclo do Lucro)
+
+**Caso + virada / número**
+3. "Você paga R$300 para trazer um cliente e ganha R$1.000 com ele. Parece
+   um ótimo negócio. Até você ver quando o dinheiro volta." (ideia 20)
+4. "Uma formação jurídica fez 6 dígitos em 7 dias. E não foi por tráfego. Foi
+   porque a gente se apropriou de um assunto." (ideia 19 + case do Cleiton)
+
+**Contra o senso comum (#2 / #22)**
+5. "Pare de mandar link pra quem já te chamou no direct." (ideia 27)
+6. "Pare de tentar transformar seu parceiro em vendedor." (ideia 17)
+7. "Reels é pra quem não te conhece. Stories é pra quem vai comprar."
+   (ideia 28)
+8. "O Alfredo Soares diz que conteúdo tem jornada longa. Tem, a não ser que
+   você faça isso." (ideia 24, reação)
+
+Melhores para os 20 primeiros: **3** (conta na tela), **5** (comando curto,
+aplicável no mesmo dia) e **8** (reação a um nome grande, com o Ciclo do Lucro
+como resposta).

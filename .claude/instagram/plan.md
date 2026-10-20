@@ -21,8 +21,11 @@ crença à prova em público. Isso é o melhor gancho que o perfil tem:
 
 - **7 posts por semana:** 5 reels + 2 carrosséis. Reel é o único formato que
   chega em quem não segue; carrossel aprofunda e gera salvamento.
-- **Stories todos os dias:** 3 a 5 frames, bastidor do teste (número de
-  seguidores do dia, o que está funcionando).
+- **Stories todos os dias:** 3 a 5 frames. Stories são para quem já segue
+  (meio do funil): profundidade, não viral. Bastidor do teste (seguidores do
+  dia, o que funcionou e por quê) + 1 frame que aprofunda o reel do dia.
+  Quem responder caixinha ou reagir: conversar no direct, nunca mandar link.
+  (base.md, ideias 27 e 28)
 - **Horário:** 7h30 (público de dono de empresa). Testar 12h na semana 2.
   O horário importa muito menos que os 2 primeiros segundos do reel.
 - **Engajamento: 20 min por dia, antes de postar** (lista abaixo).
