@@ -115,3 +115,28 @@ contra 22%). O que muda é a **especificidade**, não a forma.
 Copiar a fórmula, nunca o vídeo: o formato do gancho, a estrutura e o tamanho.
 Não o roteiro, não o texto, não a edição. Cada linha acima está atribuída ao
 canal de onde veio.
+
+## Adendo: players que o Cleiton acompanha
+
+Pedidos: Alfredo Soares, Ícaro de Carvalho, Russell Brunson, Tallis Gomes,
+Pedro Sobral, Marcelo Braggion.
+
+**Resultado: o YouTube não serve para esses seis.** São criadores nativos do
+Instagram. No YouTube:
+- Alfredo Soares, Ícaro de Carvalho e Tallis Gomes: sem canal oficial com
+  shorts (só canais de cortes de terceiros, que não dão uma mediana confiável).
+- Pedro Sobral: 7 shorts, nenhum acima de 1,2x. Todos de rotina/motivação.
+- Marcelo Braggion: 11 shorts, cortes de podcast; o melhor teve 4,5x
+  ("Sem isso sua técnica não vale nada"), mas com só 1,7 mil views.
+- Russell Brunson: 40 shorts, nenhum acima de 3x. Os melhores (~2x) são
+  número grande + verdade escondida ("The $4.7 Billion OnlyFans Lie", "The
+  Secret Framework In Every Disney Movie"). Os piores são motivacionais
+  genéricos ("Most Entrepreneurs Fail. You Don't Have To.", 0,5x).
+
+O pouco que apareceu reforça o padrão 2 (caso/marca + virada) e o achado
+geral: específico ganha de genérico. Mas a amostra é pequena demais para
+virar regra.
+
+**Próximo passo:** print da aba de Reels de cada um no Instagram. A aba mostra
+as views de cada reel, o que basta para calcular a mediana e achar os
+outliers, sem login de terceiros e sem raspagem.

@@ -109,3 +109,24 @@ Lista: {{preencher com os perfis}}
 3. Rodar `/ig-viral` para ver o que está viralizando hoje no nicho de
    marketing no Brasil e ajustar as fórmulas acima.
 4. Gravar os 3 primeiros reels antes de publicar o primeiro.
+
+## Ajustes após a pesquisa (swipe.md)
+
+O padrão que mais viralizou no nicho foi a pergunta concreta do público
+(#16). Trocas na grade dos 20 primeiros:
+
+- **Dia 2:** de "Postar todo dia não faz empresa vender" (#22) para
+  "'Dá pra vender só com conteúdo orgânico?' Me perguntam isso toda semana."
+  (#16). Mesmo tema, formato que está ganhando.
+- **Dia 6:** caso da pós no formato caso + virada: "Uma pós-graduação saiu de
+  33 para mais de 110 vendas. E não foi por anúncio novo."
+- **Dia 11:** caso jurídico com virada: "Uma formação jurídica fez 6 dígitos
+  em 7 dias. E não foi por tráfego." (confirmar se a virada é verdadeira)
+- **Dia 16:** caso das mães com virada: "Um lançamento mais que dobrou as
+  vendas. E não foi por desconto."
+- **Dia 18:** de #12 para #16: "'Meu nicho não funciona no Instagram.' Me
+  falam isso direto."
+
+Regra para os outros: gancho específico, com número ou situação real. Nada de
+conselho genérico ou motivacional, que ficou no fundo do ranking em todos os
+canais.
