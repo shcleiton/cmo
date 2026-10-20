@@ -21,6 +21,11 @@
   - **Continuidade (upsell):** depois da implementação, o cliente pode
     contratar o Cleiton para seguir executando a estratégia e os funis.
 
+## Regras de escrita
+
+Obrigatórias em todo texto: ver `escrita.md` (vencem este arquivo em caso de
+conflito). Sem travessão, sem "não é X, é Y", sem emoji, sem hashtag.
+
 ## What I sound like
 
 - **Language:** Português do Brasil, registro falado. Nunca traduzir
@@ -36,7 +41,8 @@
   - Encadeia ideias com "então", "né", "de maneira especial", "toda essa
     dinâmica".
   - Pensa em sistema: liga marketing → vendas → CS → recompra numa frase só.
-  - Contrasta o raso com o profundo ("não é hack, é estrutura").
+  - Contrasta o raso com o profundo, em duas frases ("Hack não constrói
+    negócio. Estrutura constrói.").
   - Fala em medir: "medindo o que está sendo construído", números.
   - Frases longas na fala; no roteiro, quebrar em frases curtas mantendo o
     "então" e o "né" como cola natural (no máximo um "né" por bloco).
@@ -54,7 +60,7 @@
   vendas", "fature 6 dígitos" como promessa. "Hack" só no contraste
   ("hack não constrói negócio"), nunca como algo que ele ensina.
 - **Do I swear:** Não.
-- **Emoji in captions:** Um, raramente.
+- **Emoji in captions:** Nenhum (regra de escrita). Hashtag: nenhuma.
 - **Face on camera:** Às vezes (mistura rosto, tela e B-roll).
 - **Voiceover or to-camera:** Os dois. Rosto para opinião e diagnóstico;
   tela/voz em off para mostrar número, dashboard, funil.
@@ -81,7 +87,7 @@ Todas confirmadas pelo Cleiton:
    médio. O ticket alto fica para quem já está aquecido.
 
 5. **Hack não constrói negócio.** Estrutura constrói.
-6. **O que não é medido não é crescimento, é sorte.**
+6. **O que não é medido não é crescimento. É sorte.**
 7. **Marketing é ciência exata.** Marketing são dados. Marketing sem dados não
    é marketing.
 

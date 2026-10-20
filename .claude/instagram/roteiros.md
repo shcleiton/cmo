@@ -37,13 +37,13 @@ Segue pra acompanhar até o dia 45. E aí a gente descobre a força do orgânico
 ```
 
 **Tela**
-- 0:00 — O ORGÂNICO AINDA CONSTRÓI NEGÓCIO?
-- 0:04 — CRESCER, ATÉ DÁ.
-- 0:08 — CONSTRÓI UM NEGÓCIO?
-- 0:16 — 45 DIAS. ZERO ANÚNCIO.
-- 0:22 — NÚMEROS NOS DIAS 15, 30 E 45
-- 0:26 — QUANTOS VIRARAM NEGÓCIO
-- 0:36 — SEGUE PRA VER O DIA 45
+- 0:00: O ORGÂNICO AINDA CONSTRÓI NEGÓCIO?
+- 0:04: CRESCER, ATÉ DÁ.
+- 0:08: CONSTRÓI UM NEGÓCIO?
+- 0:16: 45 DIAS. ZERO ANÚNCIO.
+- 0:22: NÚMEROS NOS DIAS 15, 30 E 45
+- 0:26: QUANTOS VIRARAM NEGÓCIO
+- 0:36: SEGUE PRA VER O DIA 45
 
 **Legenda:** Crescer perfil, qualquer um cresce. A pergunta é se o orgânico
 sozinho constrói um negócio. Vou testar em público: 45 dias, perfil novo,
@@ -72,11 +72,11 @@ E aí, você já comprou seguidor? Pode falar, ninguém vai julgar.
 ```
 
 **Tela**
-- 0:00 — 22 MIL SEGUIDORES. 9 VENDAS.
-- 0:05 — SEGUIDORES COMPRADOS
-- 0:10 — NÃO ASSISTE. NÃO CLICA. NÃO COMPRA.
-- 0:20 — COMPRE GENTE, NÃO SEGUIDOR
-- 0:30 — JÁ COMPROU SEGUIDOR?
+- 0:00: 22 MIL SEGUIDORES. 9 VENDAS.
+- 0:05: SEGUIDORES COMPRADOS
+- 0:10: NÃO ASSISTE. NÃO CLICA. NÃO COMPRA.
+- 0:20: COMPRE GENTE, NÃO SEGUIDOR
+- 0:30: JÁ COMPROU SEGUIDOR?
 
 **Legenda:** 22 mil seguidores e 9 vendas. O produto era bom. A audiência é
 que não existia.
@@ -95,13 +95,13 @@ Estrutura B. **Fixar no topo.** 8 slides.
 2. Uma pós-graduação vendeu 33 num lançamento. No seguinte, com o mesmo
    produto, mais de 110. O que mudou foi o sistema. Eu chamo de **Ciclo do
    Lucro**.
-3. **Etapa 1 — Conteúdo.** Conteúdo que sobe o nível de consciência. Não é
-   post pra vender. É post pra pessoa entender o problema que ela tem.
-4. **Etapa 2 — Distribuição.** Esse conteúdo vai pro tráfego pago. Você paga
+3. **Etapa 1. Conteúdo.** Conteúdo que sobe o nível de consciência. É post pra
+   pessoa entender o problema que ela tem. A venda vem depois.
+4. **Etapa 2. Distribuição.** Esse conteúdo vai pro tráfego pago. Você paga
    pra mais gente assistir, inclusive quem nunca ouviu falar de você.
-5. **Etapa 3 — Públicos.** O pixel guarda quem assistiu e quem engajou. Vira
+5. **Etapa 3. Públicos.** O pixel guarda quem assistiu e quem engajou. Vira
    público de video view e de engajamento.
-6. **Etapa 4 — Remarketing.** A oferta vai pra esse público. Ele já está
+6. **Etapa 4. Remarketing.** A oferta vai pra esse público. Ele já está
    aquecido. A chance de venda sobe.
 7. A maior parte da verba vai pras etapas 3 e 4. Público frio também recebe
    oferta, mas em menor proporção e com produto de ticket mais baixo.
@@ -132,11 +132,11 @@ Me conta: quanto das suas vendas vem de quem já te seguia?
 ```
 
 **Tela**
-- 0:00 — QUEM VAI TE COMPRAR AINDA NÃO TE SEGUE
-- 0:07 — ELE NEM SABE QUE VOCÊ EXISTE
-- 0:15 — STORIES, OFERTA, LIVE: SÓ PRA BASE
-- 0:22 — REELS: QUEM NÃO TE CONHECE
-- 0:25 — STORIES: QUEM JÁ TE SEGUE
+- 0:00: QUEM VAI TE COMPRAR AINDA NÃO TE SEGUE
+- 0:07: ELE NEM SABE QUE VOCÊ EXISTE
+- 0:15: STORIES, OFERTA, LIVE: SÓ PRA BASE
+- 0:22: REELS: QUEM NÃO TE CONHECE
+- 0:25: STORIES: QUEM JÁ TE SEGUE
 
 **Legenda:** Se todo o seu conteúdo fala com quem já te segue, você está
 falando sempre com as mesmas pessoas.
@@ -163,14 +163,14 @@ Segue, que eu vou mostrar cada etapa disso aqui.
 ```
 
 **Tela**
-- 0:00 — 33 VENDAS
-- 0:02 — NO SEGUINTE: 110+
-- 0:05 — MESMO PRODUTO
-- 0:10 — 1. CONTEÚDO
-- 0:13 — 2. TRÁFEGO
-- 0:16 — 3. PÚBLICO
-- 0:19 — 4. OFERTA
-- 0:24 — MAIS DE 3X
+- 0:00: 33 VENDAS
+- 0:02: NO SEGUINTE: 110+
+- 0:05: MESMO PRODUTO
+- 0:10: 1. CONTEÚDO
+- 0:13: 2. TRÁFEGO
+- 0:16: 3. PÚBLICO
+- 0:19: 4. OFERTA
+- 0:24: MAIS DE 3X
 
 **Legenda:** Mesmo curso, mesma faculdade. 33 vendas num lançamento, mais de
 110 no seguinte. O que mudou foi o sistema.
@@ -201,11 +201,11 @@ No anúncio, na página ou no WhatsApp? Me conta aqui.
 ```
 
 **Tela**
-- 0:00 — ELE CLICOU NO ANÚNCIO
-- 0:02 — E NÃO CONSEGUIU COMPRAR
-- 0:05 — A CULPA NÃO FOI DO TRÁFEGO
-- 0:22 — O ELO MAIS FRACO
-- 0:32 — ONDE SEU LEAD MORRE?
+- 0:00: ELE CLICOU NO ANÚNCIO
+- 0:02: E NÃO CONSEGUIU COMPRAR
+- 0:05: A CULPA NÃO FOI DO TRÁFEGO
+- 0:22: O ELO MAIS FRACO
+- 0:32: ONDE SEU LEAD MORRE?
 
 **Legenda:** O anúncio funcionou. O WhatsApp não. Antes de pôr mais dinheiro
 em tráfego, descubra onde o seu lead morre.
@@ -219,16 +219,16 @@ Estrutura A. 8 slides.
 1. **Capa:** ELE VIU SEU POST. POR QUE NÃO COMPROU?
 2. Porque ele ainda não estava pronto. Eugene Schwartz dividiu isso em 5
    níveis de consciência.
-3. **Nível 1 — Não sabe que tem um problema.** Ex.: o dono da clínica que
+3. **Nível 1. Não sabe que tem um problema.** Ex.: o dono da clínica que
    acha normal depender de indicação. *Anúncio que fala com ele:* "Sua agenda
    depende de indicação?"
-4. **Nível 2 — Sabe do problema, não conhece a solução.** *Anúncio:* "Por que
+4. **Nível 2. Sabe do problema, não conhece a solução.** *Anúncio:* "Por que
    clínicas boas ficam com a agenda vazia."
-5. **Nível 3 — Conhece a solução, não conhece a sua.** *Anúncio:* "Funil de
+5. **Nível 3. Conhece a solução, não conhece a sua.** *Anúncio:* "Funil de
    agendamento: como funciona."
-6. **Nível 4 — Conhece a sua solução, ainda não decidiu.** *Anúncio:* um caso
+6. **Nível 4. Conhece a sua solução, ainda não decidiu.** *Anúncio:* um caso
    com número.
-7. **Nível 5 — Só falta a oferta.** *Anúncio:* a oferta direta.
+7. **Nível 5. Só falta a oferta.** *Anúncio:* a oferta direta.
 8. Muita gente chega ao nível 5 e não compra porque você não ofereceu (Ícaro
    de Carvalho). **Salva e confere: seu conteúdo fala com qual nível?**
 
@@ -256,11 +256,11 @@ Me conta: qual decisão de marketing você tomou no achismo esse mês?
 ```
 
 **Tela**
-- 0:00 — MARKETING NÃO É CRIATIVIDADE
-- 0:02 — É MATEMÁTICA
-- 0:05 — 1 PESSOA: IMPREVISÍVEL
-- 0:09 — 1.000 PESSOAS: PREVISÍVEL
-- 0:28 — QUEM DECIDE É O DADO
+- 0:00: MARKETING NÃO É CRIATIVIDADE
+- 0:02: É MATEMÁTICA
+- 0:05: 1 PESSOA: IMPREVISÍVEL
+- 0:09: 1.000 PESSOAS: PREVISÍVEL
+- 0:28: QUEM DECIDE É O DADO
 
 **Legenda:** Você não prevê um cliente. Você prevê mil. Por isso marketing se
 decide no número, não no gosto.
@@ -279,21 +279,21 @@ Conteúdo demora pra vender quando fica solto.
 A pessoa assiste, gosta, e você nunca mais fala com ela.
 Agora, se você distribui esse conteúdo com tráfego, o pixel guarda quem assistiu.
 E a oferta vai pra essa pessoa enquanto ela ainda está quente.
-A jornada encurta.
-Não é o conteúdo que é lento. É o sistema que está incompleto.
+O caminho até a compra fica mais curto.
+O conteúdo está certo. Falta o resto do sistema.
 Você faz remarketing pra quem assiste os seus vídeos? Me conta aqui.
 ```
 
 **Tela**
-- 0:00 — O ALFREDO SOARES ERROU NESSA
-- 0:05 — "CONTEÚDO DEMORA PRA VENDER"
-- 0:12 — CONTEÚDO SOLTO = DEMORA
-- 0:18 — PIXEL GUARDA QUEM ASSISTIU
-- 0:24 — OFERTA PRA QUEM ESTÁ QUENTE
-- 0:28 — O SISTEMA ESTÁ INCOMPLETO
+- 0:00: O ALFREDO SOARES ERROU NESSA
+- 0:05: "CONTEÚDO DEMORA PRA VENDER"
+- 0:12: CONTEÚDO SOLTO = DEMORA
+- 0:18: PIXEL GUARDA QUEM ASSISTIU
+- 0:24: OFERTA PRA QUEM ESTÁ QUENTE
+- 0:28: O SISTEMA ESTÁ INCOMPLETO
 
-**Legenda:** Conteúdo não é lento. O que fica lento é conteúdo sem
-distribuição e sem remarketing.
+**Legenda:** Conteúdo solto demora pra vender. Com distribuição e remarketing,
+o caminho até a compra encurta.
 
 > Fonte: Alfredo Soares, advisor na BC Energia (base.md, ideia 24, 26:08):
 > "Conteúdo tem uma jornada longa. Não é o cara viu, o cara comprou."
@@ -319,11 +319,11 @@ Ali está a sua próxima campanha.
 ```
 
 **Tela**
-- 0:00 — 6 DÍGITOS EM 7 DIAS
-- 0:03 — NÃO FOI TRÁFEGO. FOI TIMING.
-- 0:06 — UMA LEI NOVA
-- 0:12 — A NARRATIVA ERA A LEI
-- 0:24 — NÃO PRECISA DE IDEIA. PRECISA DE TIMING.
+- 0:00: 6 DÍGITOS EM 7 DIAS
+- 0:03: NÃO FOI TRÁFEGO. FOI TIMING.
+- 0:06: UMA LEI NOVA
+- 0:12: A NARRATIVA ERA A LEI
+- 0:24: NÃO PRECISA DE IDEIA. PRECISA DE TIMING.
 
 **Legenda:** 6 dígitos em 7 dias, numa formação para a área jurídica. O curso
 era bom. O timing foi melhor.
@@ -395,11 +395,11 @@ Dia 30 tem mais. Segue pra ver se o orgânico morreu mesmo.
 ```
 
 **Tela**
-- 0:00 — 15 DIAS SÓ NO ORGÂNICO
-- 0:03 — {{77}} → {{X}} SEGUIDORES
-- 0:08 — MELHOR VÍDEO: {{N}} SEGUIDORES
-- 0:20 — META: {{N}} POR DIA
-- 0:28 — DIA 30 TEM MAIS
+- 0:00: 15 DIAS SÓ NO ORGÂNICO
+- 0:03: {{77}} → {{X}} SEGUIDORES
+- 0:08: MELHOR VÍDEO: {{N}} SEGUIDORES
+- 0:20: META: {{N}} POR DIA
+- 0:28: DIA 30 TEM MAIS
 
 **Legenda:** Os números dos primeiros 15 dias, sem filtro.
 
@@ -424,12 +424,12 @@ Seu cliente compra sozinho ou em grupo?
 ```
 
 **Tela**
-- 0:00 — 40 VENDAS
-- 0:02 — NO SEGUINTE: 93
-- 0:04 — SEM DESCONTO
-- 0:10 — VENDA EM GRUPO
-- 0:24 — MAIS QUE DOBROU
-- 0:28 — COMO SEU CLIENTE DECIDE?
+- 0:00: 40 VENDAS
+- 0:02: NO SEGUINTE: 93
+- 0:04: SEM DESCONTO
+- 0:10: VENDA EM GRUPO
+- 0:24: MAIS QUE DOBROU
+- 0:28: COMO SEU CLIENTE DECIDE?
 
 **Legenda:** O produto e o preço eram os mesmos. Mudou a forma de vender: pro
 grupo, não pra pessoa.
@@ -453,16 +453,16 @@ Se o atendimento demora, você multiplica lead esperando resposta.
 A pergunta certa é: onde o meu funil está quebrando?
 No anúncio, na página, no atendimento ou na oferta.
 Arruma o elo mais fraco primeiro.
-Aí o tráfego vira alavanca, e não ralo de dinheiro.
+Aí cada real de tráfego rende. Antes, ia pelo ralo.
 Qual é o elo mais fraco do seu funil hoje?
 ```
 
 **Tela**
-- 0:00 — QUANTO INVESTIR EM TRÁFEGO?
-- 0:03 — PERGUNTA ERRADA
-- 0:05 — TRÁFEGO MULTIPLICA O QUE EXISTE
-- 0:15 — ONDE SEU FUNIL QUEBRA?
-- 0:24 — ALAVANCA OU RALO?
+- 0:00: QUANTO INVESTIR EM TRÁFEGO?
+- 0:03: PERGUNTA ERRADA
+- 0:05: TRÁFEGO MULTIPLICA O QUE EXISTE
+- 0:15: ONDE SEU FUNIL QUEBRA?
+- 0:24: RENDE OU VAI PELO RALO?
 
 **Legenda:** Antes de perguntar quanto investir, pergunte onde o seu funil
 está quebrando.
@@ -488,11 +488,11 @@ Você vende escopo fechado ou vende "tudo"?
 ```
 
 **Tela**
-- 0:00 — FULL SERVICE É A PIOR VENDA
-- 0:05 — "EU FAÇO TUDO PRA VOCÊ"
-- 0:12 — NINGUÉM FAZ TUDO BEM
-- 0:17 — A FALÁCIA DO 360
-- 0:24 — ESCOPO FECHADO
+- 0:00: FULL SERVICE É A PIOR VENDA
+- 0:05: "EU FAÇO TUDO PRA VOCÊ"
+- 0:12: NINGUÉM FAZ TUDO BEM
+- 0:17: A FALÁCIA DO 360
+- 0:24: ESCOPO FECHADO
 
 **Legenda:** Prometer tudo deixa o cliente insatisfeito até quando dá
 resultado. Escopo fechado, entrega clara, resultado medido.
@@ -518,14 +518,14 @@ Você prefere lista grande ou lista boa?
 ```
 
 **Tela**
-- 0:00 — PERDER 90% DOS LEADS É BOM
-- 0:05 — A MAIORIA NÃO TEM INTERESSE
-- 0:12 — E CUSTA CARO
-- 0:20 — FORMAR LISTAS E DIMINUIR LISTAS
-- 0:30 — LISTA GRANDE IMPRESSIONA
-- 0:32 — LISTA BOA VENDE
+- 0:00: PERDER 90% DOS LEADS É BOM
+- 0:05: A MAIORIA NÃO TEM INTERESSE
+- 0:12: E CUSTA CARO
+- 0:20: FORMAR LISTAS E DIMINUIR LISTAS
+- 0:30: LISTA GRANDE IMPRESSIONA
+- 0:32: LISTA BOA VENDE
 
-**Legenda:** Lead que não tem interesse não é lead. É custo.
+**Legenda:** Lead sem interesse custa caro. E não compra.
 
 ---
 
@@ -558,24 +558,24 @@ O check-in precisa cair no 15º dia de verdade. Por isso a ordem anda assim:
 
 | dia do teste | roteiro | formato |
 |---|---|---|
-| 1 | Dia 1 — O orgânico morreu? | reel |
-| 2 | Dia 2 — 22 mil seguidores, 9 vendas | reel |
-| 3 | Dia 3 — O método (Ciclo do Lucro) | carrossel |
-| 4 | Dia 4 — Quem vai te comprar não te segue | reel |
-| 5 | Dia 5 — 33 → 110 | reel |
-| 6 | Dia 6 — A lenha do Dener | reel |
-| 7 | Dia 7 — 5 níveis de consciência | carrossel |
-| 8 | Dia 8 — Marketing é matemática | reel |
-| 9 | Dia 10 — O Alfredo errou nessa | reel |
-| 10 | Dia 11 — 6 dígitos em 7 dias | reel |
-| 11 | Dia 13 — Os 3 motivos | carrossel |
-| 12 | Dia 14 — Os números do funil | carrossel |
-| 13 | Dia 16 — 40 → 93 | reel |
-| 14 | Dia 17 — Quanto investir em tráfego? | reel |
+| 1 | Dia 1: O orgânico morreu? | reel |
+| 2 | Dia 2: 22 mil seguidores, 9 vendas | reel |
+| 3 | Dia 3: O método (Ciclo do Lucro) | carrossel |
+| 4 | Dia 4: Quem vai te comprar não te segue | reel |
+| 5 | Dia 5: 33 → 110 | reel |
+| 6 | Dia 6: A lenha do Dener | reel |
+| 7 | Dia 7: 5 níveis de consciência | carrossel |
+| 8 | Dia 8: Marketing é matemática | reel |
+| 9 | Dia 10: O Alfredo errou nessa | reel |
+| 10 | Dia 11: 6 dígitos em 7 dias | reel |
+| 11 | Dia 13: Os 3 motivos | carrossel |
+| 12 | Dia 14: Os números do funil | carrossel |
+| 13 | Dia 16: 40 → 93 | reel |
+| 14 | Dia 17: Quanto investir em tráfego? | reel |
 | 15 | **Dia 15 — Check-in dos 15 dias** | reel |
-| 16 | Dia 18 — Full service | reel |
-| 17 | Dia 19 — Perder 90% dos leads | reel |
-| 18 | Dia 20 — Serve pra qualquer empresa | carrossel |
+| 16 | Dia 18: Full service | reel |
+| 17 | Dia 19: Perder 90% dos leads | reel |
+| 18 | Dia 20: Serve pra qualquer empresa | carrossel |
 
 Dias 19 a 21 do teste: livres para repetir a estrutura (A, B, C ou D) que
 mais trouxe seguidores até ali.
