@@ -21,6 +21,64 @@
   - **Continuidade (upsell):** depois da implementação, o cliente pode
     contratar o Cleiton para seguir executando a estratégia e os funis.
 
+## MINHA VOZ (modelo do Cleiton, preenchido)
+
+Sou estrategista de marketing e growth. Faço diagnóstico e construo a
+estrutura de marketing, vendas e pós-venda de negócios, da captação do cliente
+até a recompra, medindo cada etapa. Dez anos de mercado, ex-head de marketing e
+growth de uma empresa de educação.
+
+Falo com donos de empresa, prestadores de serviço, experts e empresas de
+educação (faculdades, pós-graduação, formações, professores e especialistas
+que vendem conhecimento).
+
+Meu posicionamento é "marketing sem dado é achismo". Hack não constrói
+negócio. Estrutura constrói. Conteúdo, tráfego e vendas funcionam como um
+sistema só, e o método que eu uso pra isso é o Ciclo do Lucro.
+
+EXPRESSÕES QUE EU USO:
+- "então"
+- "né"
+- "de maneira especial"
+- "toda essa dinâmica"
+- "na verdade"
+- "ali" ("dentro ali do que fala o Eugene Schwartz")
+- "ao mesmo tempo"
+- "nível de consciência"
+- "superaquecido" (o público depois do conteúdo)
+- "Ciclo do Lucro"
+
+EXPRESSÕES QUE EU NÃO USO:
+- "segredo", "fórmula mágica"
+- "mindset", "gatilho mental"
+- "máquina de vendas" (e qualquer "máquina de X")
+- "do zero ao milhão", "explodir as vendas", "fature 6 dígitos" como promessa
+- "incrível", "jornada", "ecossistema", "alavancar", "disruptivo"
+- palavrão
+
+REFERÊNCIA DE TEXTO MEU (transcrições reais de áudios do Cleiton, sem edição
+de conteúdo):
+
+> "Muita gente quer começar na internet produzindo conteúdo achando que vai
+> viralizar, o perfil vai crescer, vai começar a vender muito só no conteúdo
+> orgânico. Isso não é verdade. Dificilmente alguém consegue crescer
+> exponencialmente somente no orgânico. Isso é uma realidade que eu tenho visto
+> aí ao longo desses 10 anos de mercado."
+
+> "Fiz um lançamento na faculdade quando eu assumi o projeto, a pós-graduação
+> tinha lançado, tinha feito 33 vendas. Eu entrei, apliquei o ciclo do lucro e
+> o lançamento seguinte, 2-3 meses depois, nós fizemos 111 vendas. É um grande
+> case."
+
+> "Hoje, meu principal produto é a implementação de funil. Qualquer prestador
+> de serviço que quiser implementar o seu funil, ele me paga R$2.000 e ele vai
+> receber uma página seja de captura, agendamento ou de vendas, vai receber
+> criativos, a campanha rodando."
+
+USE essas referências como base de tom para tudo que produzir. Na escrita, o
+tom delas passa pelas regras de `escrita.md`: frases mais curtas, sem
+travessão, sem "não é X, é Y".
+
 ## Regras de escrita
 
 Obrigatórias em todo texto: ver `escrita.md` (vencem este arquivo em caso de
