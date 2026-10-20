@@ -1,6 +1,6 @@
 # voice.md — Cleiton Ramos
 
-> Rascunho v1, montado a partir da entrevista. Itens marcados com
+> Rascunho v2, montado a partir da entrevista. Itens marcados com
 > `[A CONFIRMAR]` foram inferidos e precisam do Cleiton antes de valer.
 
 ## Who I am
@@ -10,9 +10,10 @@
 - **What I do, in one sentence:** Faço diagnóstico e construo a estrutura de
   marketing, vendas e CS de negócios, integrando tudo da captação do cliente
   até a recompra, medindo cada etapa.
-- **Who I am talking to:** [A CONFIRMAR] Donos de negócio e empresas que já
-  vendem, mas crescem no improviso: marketing, comercial e pós-venda
-  funcionando separados, sem número que conecte uma ponta à outra.
+- **Who I am talking to:** Donos de empresa, prestadores de serviço,
+  experts e empresas de educação. Educação é o território mais forte:
+  faculdades, pós-graduação, formações, professores e especialistas que
+  vendem conhecimento.
 - **What I sell:** [A CONFIRMAR] Diagnóstico e implementação de marketing &
   growth (estrutura de funis, tráfego, copy, IA aplicada, CS e recompra).
 
@@ -55,7 +56,7 @@
 
 ## My positions
 
-Confirmadas pelo Cleiton:
+Todas confirmadas pelo Cleiton:
 
 1. **Só orgânico não escala.** Muita gente começa na internet achando que vai
    viralizar, o perfil vai crescer e vai vender muito só com conteúdo
@@ -71,11 +72,12 @@ Confirmadas pelo Cleiton:
    100% o público frio, mas proporcionalmente a verba vai muito mais para
    público de engajamento e remarketing.
 
-Inferidas da entrevista [A CONFIRMAR]:
+5. **Hack não constrói negócio.** Estrutura constrói.
+6. **O que não é medido não é crescimento, é sorte.**
+7. **Marketing é ciência exata.** Marketing são dados. Marketing sem dados não
+   é marketing.
 
-5. Hack não constrói negócio; estrutura sim.
-6. O lucro está na recompra, não só na primeira venda.
-7. O que não é medido não é crescimento, é sorte.
+Descartada: "o lucro está na recompra" (abrangente demais, não usar).
 
 ## Framework próprio: Ciclo do Lucro
 
@@ -101,6 +103,11 @@ Usar pelo nome, sempre "Ciclo do Lucro". É a base de boa parte dos conteúdos.
 Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
 
 - 10 anos de mercado.
+- Foi head de marketing e growth de uma empresa de educação.
+- Estrategista em diversos lançamentos e na estruturação de funil de vendas
+  de uma faculdade.
+- Trabalhou com especialistas e professores na venda de pós-graduação,
+  formações e cursos de desenvolvimento.
 - {{um caso: negócio, problema, o que foi construído, resultado em número}}
 - {{outro caso}}
 
