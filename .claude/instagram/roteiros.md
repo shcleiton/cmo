@@ -560,7 +560,7 @@ O check-in precisa cair no 15º dia de verdade. Por isso a ordem anda assim:
 |---|---|---|
 | 1 | Dia 1: O orgânico morreu? | reel |
 | 2 | Dia 2: 22 mil seguidores, 9 vendas | reel |
-| 3 | Dia 3: O método (Ciclo do Lucro) | carrossel |
+| 3 | **Novo dia 3: O zero confortável** (reel; projeto `reels/projetos/2026-10-20-cleitonramos_marketing-dia03-zero`). O carrossel do método vai para outra data. | reel |
 | 4 | Dia 4: Quem vai te comprar não te segue | reel |
 | 5 | Dia 5: 33 → 110 | reel |
 | 6 | Dia 6: A lenha do Dener | reel |

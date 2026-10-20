@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:#08090b; overflow:hidden; }
+#root { position:relative; width:1080px; height:1920px; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff;
+  background: radial-gradient(80% 55% at 50% 52%, #24272c 0%, #121417 55%, #08090b 100%); }
+#z { position:absolute; left:0; right:0; top:620px; text-align:center; font-weight:900; font-size:900px; line-height:840px;
+  background: linear-gradient(105deg, #5b6168 0%, #c9ced4 30%, #ffffff 40%, #c9ced4 50%, #6d737a 80%, #4a4f55 100%); background-size: 300% 100%; background-position: 40% 0;
+  -webkit-background-clip:text; background-clip:text; color:transparent; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); }
+#t { position:absolute; left:110px; right:110px; top:360px; font-weight:900; font-size:84px; line-height:1.02; letter-spacing:-0.02em; color:#8d949c; }
+#t b { color:#fff; }
+#d { position:absolute; left:110px; top:1500px; font-weight:600; font-size:32px; letter-spacing:0.32em; color:#6FD3A0; }
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="1">
+<section id="capa" class="clip" data-start="0" data-duration="1" style="position:absolute;inset:0">
+<div id="t">VOCÊ AINDA<br/><b>NÃO FEZ NENHUMA<br/>OFERTA?</b></div><div id="z">0</div><div id="d">DIA 3/45</div></section>
+</div>
+<script>const tl = gsap.timeline({ paused: true }); tl.set("#t", { opacity: 1 }, 0); window.__timelines["main"] = tl;</script>
+</body></html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dia 3: o zero confortável</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-latin-500-normal.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; background: #08090b; overflow: hidden; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #08090b; font-family: "Montserrat", sans-serif; color: #fff; }
+      .layer { position: absolute; inset: 0; }
+
+      /* ===== ATO 1: monocromático ===== */
+      #mono { background: radial-gradient(80% 55% at 50% 46%, #24272c 0%, #121417 55%, #08090b 100%); transform-origin: 540px 930px; }
+      #hook { position: absolute; left: 120px; right: 120px; top: 300px; }
+      #hook p { font-weight: 900; font-size: 54px; line-height: 1.08; letter-spacing: -0.02em; color: #8d949c; }
+      #hook .hi { color: #ffffff; }
+      #hook .kw { display: inline-block; opacity: 0; }
+      #nome { position: absolute; left: 120px; right: 120px; top: 330px; font-weight: 900; font-size: 84px; letter-spacing: -0.02em; opacity: 0; }
+      #zbox { position: absolute; left: 0; right: 0; top: 510px; height: 840px; }
+      #z0 { position: absolute; inset: 0; text-align: center; font-weight: 900; font-size: 900px; line-height: 840px; letter-spacing: 0;
+        background: linear-gradient(105deg, #5b6168 0%, #c9ced4 30%, #ffffff 40%, #c9ced4 50%, #6d737a 80%, #4a4f55 100%);
+        background-size: 300% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; color: transparent;
+        filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); }
+      #ring { position: absolute; left: 540px; top: 420px; width: 780px; height: 780px; margin: -390px 0 0 -390px; border-radius: 50%;
+        border: 3px solid rgba(255,255,255,0.28); box-shadow: inset 0 0 80px rgba(255,255,255,0.10), 0 0 40px rgba(255,255,255,0.06);
+        background: radial-gradient(circle at 35% 28%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 35%); opacity: 0; }
+      #cracks { position: absolute; inset: 0; width: 1080px; height: 840px; }
+      #cracks path { opacity: 0; fill: none; stroke: #ffffff; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 6px rgba(255,255,255,0.8)); }
+      .nao { position: absolute; left: 540px; top: 890px; font-weight: 900; font-size: 46px; letter-spacing: 0.06em; color: #e9ecef;
+        padding: 14px 26px; border: 3px solid rgba(255,255,255,0.6); border-radius: 40px; background: rgba(20,22,25,0.85); opacity: 0; white-space: nowrap; }
+      .lb { position: absolute; left: 120px; right: 120px; top: 1290px; text-align: center; font-weight: 900; font-size: 62px; letter-spacing: -0.01em; line-height: 1.05; opacity: 0; }
+      #quote { position: absolute; left: 120px; right: 120px; top: 1375px; text-align: center; font-weight: 500; font-size: 28px; color: #aab1b8; opacity: 0; }
+      #quote b { font-weight: 600; color: #e5e8eb; font-style: italic; }
+      #lb5 { font-size: 120px; top: 1250px; }
+      #todo { position: absolute; left: 170px; right: 170px; top: 760px; height: 540px; border-radius: 28px; background: rgba(255,255,255,0.05);
+        border: 2px solid rgba(255,255,255,0.14); overflow: hidden; opacity: 0; }
+      #tdl { position: absolute; left: 0; right: 0; top: 24px; }
+      .td { height: 92px; display: flex; align-items: center; gap: 26px; padding: 0 36px; font-weight: 800; font-size: 40px; color: #e3e6e9; opacity: 0; }
+      .box { width: 44px; height: 44px; border-radius: 10px; border: 4px solid #8d949c; position: relative; flex: none; }
+      .box::after { content: ""; position: absolute; left: 10px; top: 2px; width: 12px; height: 24px; border: solid #ffffff; border-width: 0 6px 6px 0; transform: rotate(45deg) scale(var(--ck, 0)); }
+      #tdo { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; display: flex; align-items: center; gap: 26px; padding: 0 36px;
+        background: linear-gradient(0deg, #2a1b1b 0%, rgba(42,27,27,0.9) 100%); border-top: 2px solid rgba(255,107,107,0.5); font-weight: 900; font-size: 44px; color: #ff8a80; }
+      #tdo .box { border-color: #ff8a80; }
+
+      #flash { background: #6FD3A0; opacity: 0; }
+
+      /* ===== ATO 2: cor ===== */
+      #color { opacity: 0; background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+      #color::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 560px;
+        background-image: radial-gradient(circle, rgba(111,211,160,0.5) 2.2px, transparent 2.6px), radial-gradient(circle, rgba(0,163,214,0.4) 1.8px, transparent 2.2px);
+        background-size: 34px 34px, 34px 34px; background-position: 0 0, 17px 17px;
+        -webkit-mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 45%, transparent 75%);
+        mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 45%, transparent 75%); }
+      #week { position: absolute; left: 120px; right: 120px; top: 290px; display: flex; gap: 10px; z-index: 3; }
+      .day { flex: 1; text-align: center; font-weight: 800; font-size: 22px; letter-spacing: 0.08em; padding: 12px 0; border-radius: 30px;
+        background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.45); }
+      .day.on { background: #6FD3A0; color: #03354e; }
+      #plus2 { position: absolute; top: -46px; left: 50%; font-weight: 900; font-size: 24px; color: #6FD3A0; opacity: 0; white-space: nowrap; }
+      #world { position: absolute; left: 0; top: 0; width: 1080px; height: 5760px; }
+      .st { position: absolute; left: 120px; right: 120px; height: 1920px; }
+      #st1 { top: 0; } #st2 { top: 1920px; } #st3 { top: 3840px; }
+      .sh { position: absolute; top: 410px; left: 0; right: 0; display: flex; align-items: center; gap: 30px; }
+      .num { font-weight: 900; font-size: 170px; line-height: 0.8; color: transparent; -webkit-text-stroke: 4px #6FD3A0; }
+      .stt { font-weight: 900; font-size: 50px; line-height: 1.05; letter-spacing: -0.01em; }
+      .stt em { font-style: normal; color: #6FD3A0; }
+      #msg { position: absolute; top: 640px; left: 0; right: 0; background: #0d2633; border: 2px solid rgba(111,211,160,0.3); border-radius: 30px 30px 30px 8px;
+        padding: 34px 34px 30px; box-shadow: 0 30px 70px rgba(0,0,0,0.35); opacity: 0; }
+      .ol { position: relative; margin-bottom: 22px; }
+      .otag { display: inline-block; font-weight: 800; font-size: 20px; letter-spacing: 0.14em; color: #03354e; background: #6FD3A0; padding: 6px 12px; border-radius: 8px; margin-bottom: 8px; opacity: 0; }
+      .otx { font-weight: 600; font-size: 38px; line-height: 1.25; color: #ffffff; }
+      .otx .ch { opacity: 0; }
+      #ol3 { margin-top: 10px; padding-top: 20px; border-top: 2px dashed rgba(111,211,160,0.4); margin-bottom: 0; }
+      #ol3 .otx { color: #6FD3A0; font-weight: 800; }
+      #stamp { position: absolute; right: 30px; bottom: -170px; width: 200px; height: 200px; border-radius: 50%; border: 6px solid #6FD3A0; color: #6FD3A0;
+        display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 900; font-size: 34px; line-height: 1; background: rgba(3,53,78,0.95); opacity: 0; }
+      #grid { position: absolute; top: 660px; left: 30px; right: 30px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 26px 0; }
+      .av { width: 104px; height: 104px; border-radius: 50%; justify-self: center; position: relative; opacity: 0;
+        background: radial-gradient(circle at 50% 38%, #8aa0ad 0 22%, transparent 23%), radial-gradient(ellipse at 50% 100%, #8aa0ad 0 42%, transparent 43%), #2c4756; }
+      .tick { position: absolute; right: -6px; bottom: -4px; width: 40px; height: 40px; border-radius: 50%; background: #5f6f78; border: 4px solid #03354e; }
+      .tick::after { content: ""; position: absolute; left: 12px; top: 6px; width: 8px; height: 16px; border: solid #fff; border-width: 0 4px 4px 0; transform: rotate(45deg); }
+      .tick.blue { background: #00a3d6; }
+      #ctr { position: absolute; top: 1335px; left: 0; right: 0; text-align: left; font-weight: 900; font-size: 64px; }
+      #ctr span { color: #6FD3A0; }
+      #clock { position: absolute; top: 1342px; right: 0; font-weight: 900; font-size: 34px; color: #03354e; background: #6FD3A0; padding: 12px 22px; border-radius: 40px; opacity: 0; }
+      .tile { position: absolute; left: 0; right: 0; height: 200px; border-radius: 26px; background: rgba(2,42,62,0.85); border: 2px solid rgba(111,211,160,0.3);
+        display: flex; align-items: center; justify-content: space-between; padding: 0 40px; opacity: 0; }
+      .tile p { font-weight: 800; font-size: 38px; letter-spacing: 0.02em; }
+      #t1 { top: 660px; } #t2 { top: 890px; } #t3 { top: 1120px; }
+      .roll { display: inline-block; height: 130px; overflow: hidden; font-weight: 900; font-size: 120px; line-height: 130px; color: #6FD3A0; }
+      .roll .strip { display: flex; flex-direction: column; }
+      .roll i { font-style: normal; height: 130px; }
+
+      /* ===== holofote ===== */
+      #spot { opacity: 0; background: radial-gradient(circle at 50% 46%, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.04) 22%, #000 46%); }
+      #spottxt { position: absolute; left: 150px; right: 150px; top: 740px; text-align: center; font-weight: 900; font-size: 72px; line-height: 1.05; opacity: 0; }
+      #spottxt em { font-style: normal; color: #6FD3A0; }
+
+      /* ===== árvore ===== */
+      #tree { opacity: 0; background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+      #tcam { position: absolute; left: 120px; right: 120px; top: 400px; transform-origin: 50% 0; }
+      #spine { position: absolute; left: 44px; top: 50px; width: 4px; height: 1300px; background: rgba(111,211,160,0.5); transform-origin: top center; transform: scaleY(0); }
+      .br { position: relative; display: flex; gap: 30px; margin-bottom: 70px; }
+      .ico { width: 92px; height: 92px; flex: none; border-radius: 50%; background: #0d2633; border: 3px solid rgba(111,211,160,0.6); display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; opacity: 0; }
+      .ico svg { width: 52px; height: 52px; fill: none; stroke: #ffffff; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .bt { flex: 1; }
+      .q { font-weight: 900; font-size: 46px; line-height: 1.08; letter-spacing: -0.01em; opacity: 0; }
+      .tagfix, .tagok { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-top: 18px; font-weight: 900; font-size: 40px; padding: 14px 22px; border-radius: 16px; opacity: 0; }
+      .tagfix { background: rgba(111,211,160,0.14); border: 2px solid rgba(111,211,160,0.55); color: #ffffff; }
+      .tagfix .lbl { font-size: 24px; letter-spacing: 0.14em; color: #6FD3A0; }
+      .tagfix small { flex-basis: 100%; font-weight: 600; font-size: 26px; color: rgba(255,255,255,0.75); }
+      .dot { width: 14px; height: 14px; border-radius: 50%; background: #ff6b6b; display: inline-block; align-self: center; }
+      .tagok { background: #6FD3A0; color: #03354e; box-shadow: 0 0 50px rgba(111,211,160,0.55); font-size: 46px; }
+      .arrow-ad { font-size: 40px; opacity: 0; }
+      .note { display: inline-block; margin-top: 18px; margin-left: 6px; max-width: 640px; font-weight: 800; font-size: 30px; line-height: 1.2; color: #2b2b1f; background: #fff3b0;
+        padding: 18px 22px; border-radius: 4px; box-shadow: 0 14px 30px rgba(0,0,0,0.35); transform: rotate(-2.5deg); opacity: 0; }
+      .chips { display: flex; gap: 14px; margin-top: 16px; }
+      .chip { font-weight: 900; font-size: 32px; color: #03354e; background: #ffffff; padding: 10px 22px; border-radius: 40px; opacity: 0; }
+
+      /* ===== assinatura ===== */
+      #sig { opacity: 0; }
+      #sg1 { position: absolute; left: 120px; right: 120px; top: 420px; text-align: center; font-weight: 900; font-size: 64px; opacity: 0; }
+      #sg1 .gr { color: #7f8890; }
+      #digits { position: absolute; left: 0; right: 0; top: 560px; height: 440px; text-align: center; font-weight: 900; font-size: 430px; line-height: 440px; white-space: nowrap; }
+      #dg3 { display: inline-block; color: #6FD3A0; opacity: 0; }
+      #dg0 { display: inline-block; color: #7f8890; }
+      #sg2 { position: absolute; left: 120px; right: 120px; top: 1030px; text-align: center; font-weight: 900; font-size: 60px; line-height: 1.08; opacity: 0; }
+      #sg3 { position: relative; display: inline-block; color: #6FD3A0; opacity: 0; }
+      #sgu { position: absolute; left: 0; right: 0; bottom: -10px; height: 8px; border-radius: 4px; background: #6FD3A0; transform-origin: left center; transform: scaleX(0); }
+
+      /* ===== CTA ===== */
+      #cta { opacity: 0; }
+      #ck { position: absolute; left: 120px; right: 120px; top: 330px; text-align: center; font-weight: 600; font-size: 30px; letter-spacing: 0.28em; color: #6FD3A0; opacity: 0; }
+      #ct1, #ct2 { position: absolute; left: 120px; right: 120px; top: 370px; text-align: center; font-weight: 900; font-size: 66px; line-height: 1.05; opacity: 0; }
+      #odo { position: absolute; left: 0; right: 0; top: 590px; height: 620px; display: flex; justify-content: center; align-items: flex-end; }
+      #odd { width: 470px; height: 620px; overflow: hidden; font-weight: 900; font-size: 640px; line-height: 620px; text-align: center; }
+      #odd .col { display: flex; flex-direction: column; }
+      #odd i { font-style: normal; height: 620px; display: block; background: linear-gradient(160deg, #6FD3A0 0%, #00a897 50%, #008293 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      #o45 { font-weight: 900; font-size: 150px; line-height: 1; color: #ffffff; margin: 0 0 70px 14px; opacity: 0; }
+      #oday { position: absolute; top: 560px; left: 0; right: 0; text-align: center; font-weight: 600; font-size: 30px; letter-spacing: 0.32em; color: #6FD3A0; opacity: 0; }
+      #stampd { position: absolute; left: 50%; top: 1180px; width: 640px; margin-left: -320px; text-align: center; font-weight: 900; font-size: 52px; letter-spacing: 0.04em;
+        color: #6FD3A0; border: 6px solid #6FD3A0; border-radius: 18px; padding: 14px 0; opacity: 0; }
+      #segue { position: absolute; left: 50%; top: 1310px; width: 840px; margin-left: -420px; text-align: center; font-weight: 900; font-size: 46px; white-space: nowrap; color: #03354e; background: #6FD3A0;
+        border-radius: 60px; padding: 22px 0; opacity: 0; box-shadow: 0 0 50px rgba(111,211,160,0.5); }
+
+      /* ===== legenda e textura ===== */
+      #caps { position: absolute; left: 110px; right: 110px; top: 1430px; height: 110px; }
+      .cap { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-weight: 700; font-weight: 800; font-size: 40px; line-height: 1.2; visibility: hidden;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.9); }
+      .cap .w { color: rgba(255,255,255,0.55); }
+      #grain { pointer-events: none; opacity: 0.07; mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="77.56">
+      <audio id="narracao" src="assets/audio/narracao.mp3" data-start="0" data-duration="77.56" data-track-index="0"></audio>
+      <audio id="sfx-000" src="assets/sfx/impact.mp3" data-start="0.0" data-duration="2.1" data-track-index="2" data-volume="0.3"></audio>
+      <audio id="sfx-001" src="assets/sfx/pop.mp3" data-start="4.92" data-duration="0.7" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="sfx-002" src="assets/sfx/click.mp3" data-start="7.35" data-duration="0.4" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-003" src="assets/sfx/click.mp3" data-start="8.15" data-duration="0.4" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-004" src="assets/sfx/click.mp3" data-start="9.3" data-duration="0.4" data-track-index="2" data-volume="0.3"></audio>
+      <audio id="sfx-005" src="assets/sfx/click.mp3" data-start="10.0" data-duration="0.4" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-006" src="assets/sfx/click.mp3" data-start="10.35" data-duration="0.4" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-007" src="assets/sfx/pop.mp3" data-start="11.3" data-duration="0.7" data-track-index="5" data-volume="0.22"></audio>
+      <audio id="sfx-008" src="assets/sfx/pop.mp3" data-start="11.75" data-duration="0.7" data-track-index="2" data-volume="0.22"></audio>
+      <audio id="sfx-009" src="assets/sfx/pop.mp3" data-start="12.2" data-duration="0.7" data-track-index="3" data-volume="0.22"></audio>
+      <audio id="sfx-010" src="assets/sfx/pop.mp3" data-start="12.65" data-duration="0.7" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="sfx-011" src="assets/sfx/pop.mp3" data-start="13.12" data-duration="0.7" data-track-index="5" data-volume="0.22"></audio>
+      <audio id="sfx-012" src="assets/sfx/click.mp3" data-start="14.08" data-duration="0.4" data-track-index="2" data-volume="0.6"></audio>
+      <audio id="sfx-013" src="assets/sfx/click.mp3" data-start="14.86" data-duration="0.4" data-track-index="3" data-volume="0.6"></audio>
+      <audio id="sfx-014" src="assets/sfx/click.mp3" data-start="15.3" data-duration="0.4" data-track-index="4" data-volume="0.6"></audio>
+      <audio id="sfx-015" src="assets/sfx/whoosh.mp3" data-start="17.72" data-duration="0.6" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="sfx-016" src="assets/sfx/impact.mp3" data-start="18.08" data-duration="2.1" data-track-index="2" data-volume="0.35"></audio>
+      <audio id="sfx-017" src="assets/sfx/click.mp3" data-start="20.85" data-duration="0.4" data-track-index="3" data-volume="0.16"></audio>
+      <audio id="sfx-018" src="assets/sfx/click.mp3" data-start="21.05" data-duration="0.4" data-track-index="4" data-volume="0.16"></audio>
+      <audio id="sfx-019" src="assets/sfx/click.mp3" data-start="21.25" data-duration="0.4" data-track-index="5" data-volume="0.16"></audio>
+      <audio id="sfx-020" src="assets/sfx/click.mp3" data-start="21.7" data-duration="0.4" data-track-index="2" data-volume="0.16"></audio>
+      <audio id="sfx-021" src="assets/sfx/click.mp3" data-start="21.9" data-duration="0.4" data-track-index="3" data-volume="0.16"></audio>
+      <audio id="sfx-022" src="assets/sfx/click.mp3" data-start="22.15" data-duration="0.4" data-track-index="4" data-volume="0.16"></audio>
+      <audio id="sfx-023" src="assets/sfx/click.mp3" data-start="22.75" data-duration="0.4" data-track-index="5" data-volume="0.16"></audio>
+      <audio id="sfx-024" src="assets/sfx/click.mp3" data-start="22.95" data-duration="0.4" data-track-index="2" data-volume="0.16"></audio>
+      <audio id="sfx-025" src="assets/sfx/click.mp3" data-start="23.3" data-duration="0.4" data-track-index="3" data-volume="0.16"></audio>
+      <audio id="sfx-026" src="assets/sfx/click.mp3" data-start="24.75" data-duration="0.4" data-track-index="4" data-volume="0.16"></audio>
+      <audio id="sfx-027" src="assets/sfx/click.mp3" data-start="24.95" data-duration="0.4" data-track-index="5" data-volume="0.16"></audio>
+      <audio id="sfx-028" src="assets/sfx/click.mp3" data-start="25.2" data-duration="0.4" data-track-index="2" data-volume="0.16"></audio>
+      <audio id="sfx-029" src="assets/sfx/click.mp3" data-start="25.5" data-duration="0.4" data-track-index="3" data-volume="0.16"></audio>
+      <audio id="sfx-030" src="assets/sfx/impact.mp3" data-start="26.62" data-duration="2.1" data-track-index="4" data-volume="0.38"></audio>
+      <audio id="sfx-031" src="assets/sfx/whoosh.mp3" data-start="27.55" data-duration="0.6" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-032" src="assets/sfx/pop.mp3" data-start="28.45" data-duration="0.7" data-track-index="2" data-volume="0.18"></audio>
+      <audio id="sfx-033" src="assets/sfx/pop.mp3" data-start="29.0" data-duration="0.7" data-track-index="3" data-volume="0.18"></audio>
+      <audio id="sfx-034" src="assets/sfx/pop.mp3" data-start="29.45" data-duration="0.7" data-track-index="4" data-volume="0.18"></audio>
+      <audio id="sfx-035" src="assets/sfx/pop.mp3" data-start="29.85" data-duration="0.7" data-track-index="5" data-volume="0.18"></audio>
+      <audio id="sfx-036" src="assets/sfx/pop.mp3" data-start="30.2" data-duration="0.7" data-track-index="2" data-volume="0.18"></audio>
+      <audio id="sfx-037" src="assets/sfx/pop.mp3" data-start="30.5" data-duration="0.7" data-track-index="3" data-volume="0.18"></audio>
+      <audio id="sfx-038" src="assets/sfx/pop.mp3" data-start="30.8" data-duration="0.7" data-track-index="4" data-volume="0.18"></audio>
+      <audio id="sfx-039" src="assets/sfx/pop.mp3" data-start="31.05" data-duration="0.7" data-track-index="5" data-volume="0.18"></audio>
+      <audio id="sfx-040" src="assets/sfx/pop.mp3" data-start="31.3" data-duration="0.7" data-track-index="2" data-volume="0.18"></audio>
+      <audio id="sfx-041" src="assets/sfx/pop.mp3" data-start="31.55" data-duration="0.7" data-track-index="3" data-volume="0.18"></audio>
+      <audio id="sfx-042" src="assets/sfx/whoosh.mp3" data-start="32.14" data-duration="0.6" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="sfx-043" src="assets/sfx/pop.mp3" data-start="33.84" data-duration="0.7" data-track-index="5" data-volume="0.22"></audio>
+      <audio id="sfx-044" src="assets/sfx/pop.mp3" data-start="34.05" data-duration="0.7" data-track-index="2" data-volume="0.22"></audio>
+      <audio id="sfx-045" src="assets/sfx/pop.mp3" data-start="34.25" data-duration="0.7" data-track-index="3" data-volume="0.22"></audio>
+      <audio id="sfx-046" src="assets/sfx/whoosh.mp3" data-start="34.78" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-047" src="assets/sfx/pop.mp3" data-start="36.94" data-duration="0.7" data-track-index="5" data-volume="0.32"></audio>
+      <audio id="sfx-048" src="assets/sfx/pop.mp3" data-start="38.14" data-duration="0.7" data-track-index="2" data-volume="0.32"></audio>
+      <audio id="sfx-049" src="assets/sfx/pop.mp3" data-start="39.8" data-duration="0.7" data-track-index="3" data-volume="0.32"></audio>
+      <audio id="sfx-050" src="assets/sfx/whoosh.mp3" data-start="43.3" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-051" src="assets/sfx/impact.mp3" data-start="45.38" data-duration="2.1" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-052" src="assets/sfx/click.mp3" data-start="47.48" data-duration="0.4" data-track-index="2" data-volume="0.45"></audio>
+      <audio id="sfx-053" src="assets/sfx/whoosh.mp3" data-start="50.45" data-duration="0.6" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="sfx-054" src="assets/sfx/impact.mp3" data-start="52.78" data-duration="2.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-055" src="assets/sfx/click.mp3" data-start="53.1" data-duration="0.4" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="sfx-056" src="assets/sfx/whoosh.mp3" data-start="54.05" data-duration="0.6" data-track-index="2" data-volume="0.25"></audio>
+      <audio id="sfx-057" src="assets/sfx/impact.mp3" data-start="56.14" data-duration="2.1" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-058" src="assets/sfx/pop.mp3" data-start="57.54" data-duration="0.7" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-059" src="assets/sfx/pop.mp3" data-start="58.14" data-duration="0.7" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-060" src="assets/sfx/pop.mp3" data-start="58.74" data-duration="0.7" data-track-index="2" data-volume="0.3"></audio>
+      <audio id="sfx-061" src="assets/sfx/whoosh.mp3" data-start="59.25" data-duration="0.6" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="sfx-062" src="assets/sfx/impact.mp3" data-start="60.3" data-duration="2.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-063" src="assets/sfx/whoosh.mp3" data-start="61.8" data-duration="0.6" data-track-index="5" data-volume="0.28"></audio>
+      <audio id="sfx-064" src="assets/sfx/whoosh.mp3" data-start="63.45" data-duration="0.6" data-track-index="2" data-volume="0.3"></audio>
+      <audio id="sfx-065" src="assets/sfx/pop.mp3" data-start="65.22" data-duration="0.7" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="sfx-066" src="assets/sfx/whoosh.mp3" data-start="68.4" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-067" src="assets/sfx/click.mp3" data-start="72.24" data-duration="0.4" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="sfx-068" src="assets/sfx/impact.mp3" data-start="72.55" data-duration="2.1" data-track-index="2" data-volume="0.35"></audio>
+      <audio id="sfx-069" src="assets/sfx/impact.mp3" data-start="73.3" data-duration="2.1" data-track-index="3" data-volume="0.32"></audio>
+      <audio id="sfx-070" src="assets/sfx/pop.mp3" data-start="76.64" data-duration="0.7" data-track-index="4" data-volume="0.35"></audio>
+      <div class="layer" id="mono">
+        <div id="hook"><p>
+          <span class="kw" data-t="0.06">VOCÊ</span> <span class="kw" data-t="0.28">ESTÁ</span> <span class="kw" data-t="0.5">HÁ</span> <span class="kw hi" data-t="0.68">MESES</span>
+          <span class="kw" data-t="1.04">PREPARANDO</span> <span class="kw" data-t="1.42">O</span> <span class="kw" data-t="1.48">NEGÓCIO</span>
+          <span class="kw" data-t="2.04">E</span> <span class="kw" data-t="2.12">AINDA</span> <span class="kw hi" data-t="2.34">NÃO</span> <span class="kw hi" data-t="2.48">FEZ</span>
+          <span class="kw hi" data-t="2.68">NENHUMA</span> <span class="kw hi" data-t="3.14">OFERTA?</span></p></div>
+        <div id="nome">ISSO TEM NOME.</div>
+        <div id="zbox">
+          <div id="ring"></div>
+          <div id="z0">0</div>
+          <svg id="cracks" viewBox="0 0 1080 840">
+            <path id="ck1" d="M330 230 L392 296 L376 350 L438 404 L420 452"/>
+            <path id="ck2" d="M742 214 L700 290 L734 338 L676 414 L700 470"/>
+            <path id="ck3" d="M450 690 L506 630 L560 650 L604 590 L668 604"/>
+          </svg>
+          <span class="nao" id="nao0">NÃO</span><span class="nao" id="nao1">NÃO</span><span class="nao" id="nao2">NÃO</span><span class="nao" id="nao3">NÃO</span><span class="nao" id="nao4">NÃO</span>
+        </div>
+        <div class="lb" id="lb1">O ZERO CONFORTÁVEL</div>
+        <div id="quote"><b>"O zero é muito confortável."</b> Ícaro de Carvalho</div>
+        <div id="todo"><div id="tdl"><div class="td" id="td0"><b class="box" id="bx0"></b>CORES DA MARCA</div><div class="td" id="td1"><b class="box" id="bx1"></b>BIO NOVA</div><div class="td" id="td2"><b class="box" id="bx2"></b>LOGO</div><div class="td" id="td3"><b class="box" id="bx3"></b>SITE</div><div class="td" id="td4"><b class="box" id="bx4"></b>FOTO NOVA</div><div class="td" id="td5"><b class="box" id="bx5"></b>MAIS UM CURSO</div></div><div id="tdo"><b class="box"></b>OFERTA</div></div>
+        <div class="lb" id="lb2">NINGUÉM TE DIZ NÃO.</div>
+        <div class="lb" id="lb3">O ZERO NÃO TE ENSINA NADA.</div>
+        <div class="lb" id="lb4">SAIR DO ZERO ESSA SEMANA.</div>
+        <div class="lb" id="lb5">ANOTA.</div>
+      </div>
+
+      <div class="layer" id="color">
+        <div id="week"><span class="day" id="d0">SEG</span><span class="day" id="d1">TER</span><span class="day" id="d2">QUA</span><span class="day" id="d3">QUI</span><span class="day" id="d4">SEX</span><span class="day" id="d5">SÁB</span><span class="day" id="d6">DOM</span><span id="plus2">+2 DIAS</span></div>
+        <div id="world">
+          <div class="st" id="st1">
+            <div class="sh" id="sh1"><span class="num">1</span><p class="stt">ESCREVE A OFERTA<br/>EM <em>3 LINHAS</em></p></div>
+            <div id="msg"><div class="ol" id="ol0"><span class="otag" id="ot0">PRA QUEM</span><p class="otx"><span class="ch">P</span><span class="ch">r</span><span class="ch">a</span><span class="ch"> </span><span class="ch">c</span><span class="ch">l</span><span class="ch">í</span><span class="ch">n</span><span class="ch">i</span><span class="ch">c</span><span class="ch">a</span><span class="ch">s</span><span class="ch"> </span><span class="ch">c</span><span class="ch">o</span><span class="ch">m</span><span class="ch"> </span><span class="ch">h</span><span class="ch">o</span><span class="ch">r</span><span class="ch">á</span><span class="ch">r</span><span class="ch">i</span><span class="ch">o</span><span class="ch"> </span><span class="ch">v</span><span class="ch">a</span><span class="ch">z</span><span class="ch">i</span><span class="ch">o</span><span class="ch">.</span></p></div><div class="ol" id="ol1"><span class="otag" id="ot1">O QUE RESOLVE</span><p class="otx"><span class="ch">M</span><span class="ch">o</span><span class="ch">n</span><span class="ch">t</span><span class="ch">o</span><span class="ch"> </span><span class="ch">s</span><span class="ch">u</span><span class="ch">a</span><span class="ch"> </span><span class="ch">c</span><span class="ch">a</span><span class="ch">p</span><span class="ch">t</span><span class="ch">a</span><span class="ch">ç</span><span class="ch">ã</span><span class="ch">o</span><span class="ch"> </span><span class="ch">e</span><span class="ch">m</span><span class="ch"> </span><span class="ch">3</span><span class="ch">0</span><span class="ch"> </span><span class="ch">d</span><span class="ch">i</span><span class="ch">a</span><span class="ch">s</span><span class="ch">.</span></p></div><div class="ol" id="ol2"><span class="otag" id="ot2">QUANTO E ATÉ QUANDO</span><p class="otx"><span class="ch">R</span><span class="ch">$</span><span class="ch">9</span><span class="ch">0</span><span class="ch">0</span><span class="ch">,</span><span class="ch"> </span><span class="ch">s</span><span class="ch">ó</span><span class="ch"> </span><span class="ch">a</span><span class="ch">t</span><span class="ch">é</span><span class="ch"> </span><span class="ch">s</span><span class="ch">e</span><span class="ch">x</span><span class="ch">t</span><span class="ch">a</span><span class="ch">.</span></p></div><div class="ol" id="ol3"><p class="otx"><span class="ch">P</span><span class="ch">o</span><span class="ch">s</span><span class="ch">s</span><span class="ch">o</span><span class="ch"> </span><span class="ch">t</span><span class="ch">e</span><span class="ch"> </span><span class="ch">m</span><span class="ch">a</span><span class="ch">n</span><span class="ch">d</span><span class="ch">a</span><span class="ch">r</span><span class="ch"> </span><span class="ch">c</span><span class="ch">o</span><span class="ch">m</span><span class="ch">o</span><span class="ch"> </span><span class="ch">f</span><span class="ch">u</span><span class="ch">n</span><span class="ch">c</span><span class="ch">i</span><span class="ch">o</span><span class="ch">n</span><span class="ch">a</span><span class="ch">?</span></p></div><div id="stamp">SIM<br/>OU<br/>NÃO</div></div>
+          </div>
+          <div class="st" id="st2">
+            <div class="sh" id="sh2"><span class="num">2</span><p class="stt"><em>30 PESSOAS</em> QUE JÁ<br/>FALARAM COM VOCÊ</p></div>
+            <div id="grid"><div class="av" id="av0"><i class="tick" id="tk0"></i></div><div class="av" id="av1"><i class="tick" id="tk1"></i></div><div class="av" id="av2"><i class="tick" id="tk2"></i></div><div class="av" id="av3"><i class="tick" id="tk3"></i></div><div class="av" id="av4"><i class="tick" id="tk4"></i></div><div class="av" id="av5"><i class="tick" id="tk5"></i></div><div class="av" id="av6"><i class="tick" id="tk6"></i></div><div class="av" id="av7"><i class="tick" id="tk7"></i></div><div class="av" id="av8"><i class="tick" id="tk8"></i></div><div class="av" id="av9"><i class="tick" id="tk9"></i></div><div class="av" id="av10"><i class="tick" id="tk10"></i></div><div class="av" id="av11"><i class="tick" id="tk11"></i></div><div class="av" id="av12"><i class="tick" id="tk12"></i></div><div class="av" id="av13"><i class="tick" id="tk13"></i></div><div class="av" id="av14"><i class="tick" id="tk14"></i></div><div class="av" id="av15"><i class="tick" id="tk15"></i></div><div class="av" id="av16"><i class="tick" id="tk16"></i></div><div class="av" id="av17"><i class="tick" id="tk17"></i></div><div class="av" id="av18"><i class="tick" id="tk18"></i></div><div class="av" id="av19"><i class="tick" id="tk19"></i></div><div class="av" id="av20"><i class="tick" id="tk20"></i></div><div class="av" id="av21"><i class="tick" id="tk21"></i></div><div class="av" id="av22"><i class="tick" id="tk22"></i></div><div class="av" id="av23"><i class="tick" id="tk23"></i></div><div class="av" id="av24"><i class="tick" id="tk24"></i></div><div class="av" id="av25"><i class="tick" id="tk25"></i></div><div class="av" id="av26"><i class="tick" id="tk26"></i></div><div class="av" id="av27"><i class="tick" id="tk27"></i></div><div class="av" id="av28"><i class="tick" id="tk28"></i></div><div class="av" id="av29"><i class="tick" id="tk29"></i></div></div>
+            <div id="ctr"><span id="ctrn">0</span>/30</div>
+            <div id="clock">+2 DIAS: REENVIA</div>
+          </div>
+          <div class="st" id="st3">
+            <div class="sh" id="sh3"><span class="num">3</span><p class="stt">ANOTA<br/><em>3 NÚMEROS</em></p></div>
+            <div class="tile" id="t1"><p>RESPONDERAM</p><span class="roll"><span class="strip"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>?</i></span></span></div>
+            <div class="tile" id="t2"><p>QUISERAM<br/>SABER MAIS</p><span class="roll"><span class="strip"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>?</i></span></span></div>
+            <div class="tile" id="t3"><p>COMPRARAM</p><span class="roll"><span class="strip"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>?</i></span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer" id="spot"><div id="spottxt">AGORA A PARTE QUE QUASE NINGUÉM <em>SABE LER.</em></div></div>
+
+      <div class="layer" id="tree"><div id="tcam"><div id="spine"></div><div class="br" id="b1"><div class="ico" id="b1-ico"><svg viewBox="0 0 48 48"><path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24z"/><circle cx="24" cy="24" r="6"/></svg></div><div class="bt"><p class="q" id="b1-q">VISUALIZARAM E NINGUÉM RESPONDEU?</p><div class="tagfix" id="b1-tag"><i class="dot"></i><span class="lbl">AJUSTE:</span> A MENSAGEM<small>CARA DE PROPAGANDA</small></div><div class="note" id="b1-note">ABRA COM O NOME + O QUE VOCÊS JÁ CONVERSARAM</div></div></div><div class="br" id="b2"><div class="ico" id="b2-ico"><svg viewBox="0 0 48 48"><path d="M8 10h32v22H22l-9 7v-7H8z"/></svg></div><div class="bt"><p class="q" id="b2-q">RESPONDERAM, MAS NINGUÉM QUIS SABER MAIS?</p><div class="tagfix" id="b2-tag"><i class="dot"></i><span class="lbl">AJUSTE:</span> A PROMESSA</div><div class="note" id="b2-note">FALE DA DOR QUE ELA SENTE</div></div></div><div class="br" id="b3"><div class="ico" id="b3-ico"><svg viewBox="0 0 48 48"><path d="M24 6h16v16L22 40 8 26z"/><circle cx="33" cy="15" r="3"/></svg></div><div class="bt"><p class="q" id="b3-q">QUISERAM SABER MAIS E NÃO COMPRARAM?</p><div class="tagfix" id="b3-tag"><i class="dot"></i><span class="lbl">AJUSTE:</span> O FECHAMENTO</div><div class="chips"><span class="chip" id="b3-c0">PREÇO</span><span class="chip" id="b3-c1">PROVA</span><span class="chip" id="b3-c2">PRAZO</span></div></div></div><div class="br ok" id="b4"><div class="ico" id="b4-ico"><svg viewBox="0 0 48 48"><path d="M5 9h6l5 21h22l4-14H14"/><circle cx="19" cy="38" r="3"/><circle cx="35" cy="38" r="3"/></svg></div><div class="bt"><p class="q" id="b4-q">ALGUÉM COMPROU?</p><div class="tagok" id="b4-tag">VOCÊ TEM UMA OFERTA<span class="arrow-ad" id="b4-ad">→ <b>ANÚNCIO</b></span></div></div></div></div></div>
+
+      <div class="layer" id="sig">
+        <div id="sg1">O ZERO NÃO TE DIZ <span class="gr">NADA.</span></div>
+        <div id="digits"><span id="dg3">3</span><span id="dg0">0</span></div>
+        <div id="sg2">MENSAGENS TE MOSTRAM<br/><span id="sg3">ONDE ESTÁ O PROBLEMA.<i id="sgu"></i></span></div>
+      </div>
+
+      <div class="layer" id="cta">
+        <div id="ck">NESSE PERFIL</div>
+        <div id="ct1">MARKETING<br/>COM NÚMERO.</div>
+        <div id="ct2">E ELE TAMBÉM ESTÁ<br/>SAINDO DO ZERO.</div>
+        <div id="oday">DIA</div>
+        <div id="odo"><div id="odd"><div class="col" id="odc"><i>0</i><i>1</i><i>2</i><i>3</i></div></div><div id="o45">/45</div></div>
+        <div id="stampd">DESAFIO 45 DIAS</div>
+        <div id="segue">SEGUE PRA ACOMPANHAR</div>
+      </div>
+
+      <div class="layer" id="flash"></div>
+      <div id="caps"><div class="cap" data-s="6.78" data-e="8.34"><span class="w" data-t="6.78">Sempre</span> <span class="w" data-t="7.0">aparece</span> <span class="w" data-t="7.52">mais</span> <span class="w" data-t="7.78">uma</span> <span class="w" data-t="7.98">coisa</span> <span class="w" data-t="8.24">pra</span></div>
+<div class="cap" data-s="8.34" data-e="8.96"><span class="w" data-t="8.34">arrumar.</span></div>
+<div class="cap" data-s="8.96" data-e="10.76"><span class="w" data-t="8.96">A</span> <span class="w" data-t="9.08">logo,</span> <span class="w" data-t="9.68">o</span> <span class="w" data-t="9.86">site.</span></div>
+<div class="cap" data-s="10.76" data-e="12.38"><span class="w" data-t="10.76">E</span> <span class="w" data-t="10.82">enquanto</span> <span class="w" data-t="11.14">você</span> <span class="w" data-t="11.42">não</span> <span class="w" data-t="11.56">oferece,</span></div>
+<div class="cap" data-s="12.38" data-e="13.74"><span class="w" data-t="12.38">ninguém</span> <span class="w" data-t="12.8">te</span> <span class="w" data-t="12.92">diz</span> <span class="w" data-t="13.12">não.</span></div>
+<div class="cap" data-s="13.74" data-e="14.78"><span class="w" data-t="13.74">Só</span> <span class="w" data-t="13.86">que</span> <span class="w" data-t="13.94">o</span> <span class="w" data-t="14.08">zero</span> <span class="w" data-t="14.44">também</span> <span class="w" data-t="14.66">não</span></div>
+<div class="cap" data-s="14.78" data-e="15.88"><span class="w" data-t="14.78">te</span> <span class="w" data-t="14.86">ensina</span> <span class="w" data-t="15.28">nada.</span></div>
+<div class="cap" data-s="15.88" data-e="17.76"><span class="w" data-t="15.88">Dá</span> <span class="w" data-t="16.0">pra</span> <span class="w" data-t="16.16">sair</span> <span class="w" data-t="16.42">dele</span> <span class="w" data-t="16.8">essa</span> <span class="w" data-t="17.06">semana.</span></div>
+<div class="cap" data-s="17.76" data-e="18.44"><span class="w" data-t="17.76">Anota.</span></div>
+<div class="cap" data-s="18.44" data-e="20.14"><span class="w" data-t="18.44">Um:</span> <span class="w" data-t="18.9">escreve</span> <span class="w" data-t="19.28">a</span> <span class="w" data-t="19.32">oferta</span> <span class="w" data-t="19.7">em</span> <span class="w" data-t="19.88">três</span></div>
+<div class="cap" data-s="20.14" data-e="20.82"><span class="w" data-t="20.14">linhas.</span></div>
+<div class="cap" data-s="20.82" data-e="21.66"><span class="w" data-t="20.82">Pra</span> <span class="w" data-t="21.02">quem</span> <span class="w" data-t="21.28">é,</span></div>
+<div class="cap" data-s="21.66" data-e="22.7"><span class="w" data-t="21.66">o</span> <span class="w" data-t="21.8">que</span> <span class="w" data-t="21.94">resolve,</span></div>
+<div class="cap" data-s="22.7" data-e="24.68"><span class="w" data-t="22.7">quanto</span> <span class="w" data-t="23.04">custa</span> <span class="w" data-t="23.56">e</span> <span class="w" data-t="23.66">até</span> <span class="w" data-t="23.92">quando.</span></div>
+<div class="cap" data-s="24.68" data-e="26.4"><span class="w" data-t="24.68">E</span> <span class="w" data-t="24.82">fecha</span> <span class="w" data-t="25.1">com</span> <span class="w" data-t="25.18">uma</span> <span class="w" data-t="25.36">pergunta</span> <span class="w" data-t="25.84">simples,</span></div>
+<div class="cap" data-s="26.4" data-e="27.62"><span class="w" data-t="26.4">de</span> <span class="w" data-t="26.62">sim</span> <span class="w" data-t="26.96">ou</span> <span class="w" data-t="27.12">não.</span></div>
+<div class="cap" data-s="27.62" data-e="29.98"><span class="w" data-t="27.62">Dois:</span> <span class="w" data-t="28.42">manda</span> <span class="w" data-t="29.0">uma</span> <span class="w" data-t="29.22">por</span> <span class="w" data-t="29.44">uma</span> <span class="w" data-t="29.7">pra</span></div>
+<div class="cap" data-s="29.98" data-e="31.56"><span class="w" data-t="29.98">trinta</span> <span class="w" data-t="30.3">pessoas</span> <span class="w" data-t="30.74">que</span> <span class="w" data-t="30.9">já</span> <span class="w" data-t="31.1">falaram</span> <span class="w" data-t="31.42">com</span></div>
+<div class="cap" data-s="31.56" data-e="32.14"><span class="w" data-t="31.56">você.</span></div>
+<div class="cap" data-s="32.14" data-e="33.84"><span class="w" data-t="32.14">Quem</span> <span class="w" data-t="32.32">não</span> <span class="w" data-t="32.46">visualizar</span> <span class="w" data-t="32.94">em</span> <span class="w" data-t="33.08">dois</span> <span class="w" data-t="33.36">dias,</span></div>
+<div class="cap" data-s="33.84" data-e="34.84"><span class="w" data-t="33.84">recebe</span> <span class="w" data-t="34.22">de</span> <span class="w" data-t="34.32">novo.</span></div>
+<div class="cap" data-s="34.84" data-e="36.94"><span class="w" data-t="34.84">Três:</span> <span class="w" data-t="35.54">anota</span> <span class="w" data-t="35.96">três</span> <span class="w" data-t="36.24">números.</span></div>
+<div class="cap" data-s="36.94" data-e="39.8"><span class="w" data-t="36.94">Quantos</span> <span class="w" data-t="37.24">responderam,</span> <span class="w" data-t="38.14">quantos</span> <span class="w" data-t="38.46">quiseram</span> <span class="w" data-t="38.82">saber</span> <span class="w" data-t="39.14">mais,</span></div>
+<div class="cap" data-s="39.8" data-e="41.38"><span class="w" data-t="39.8">quantos</span> <span class="w" data-t="40.12">compraram.</span></div>
+<div class="cap" data-s="41.38" data-e="42.92"><span class="w" data-t="41.38">Agora</span> <span class="w" data-t="41.6">a</span> <span class="w" data-t="41.7">parte</span> <span class="w" data-t="42.0">que</span> <span class="w" data-t="42.2">quase</span> <span class="w" data-t="42.52">ninguém</span></div>
+<div class="cap" data-s="42.92" data-e="43.62"><span class="w" data-t="42.92">sabe</span> <span class="w" data-t="43.16">ler.</span></div>
+<div class="cap" data-s="43.62" data-e="45.38"><span class="w" data-t="43.62">Visualizaram</span> <span class="w" data-t="44.24">e</span> <span class="w" data-t="44.3">ninguém</span> <span class="w" data-t="44.62">respondeu?</span></div>
+<div class="cap" data-s="45.38" data-e="46.54"><span class="w" data-t="45.38">A</span> <span class="w" data-t="45.46">mensagem</span> <span class="w" data-t="45.9">está</span> <span class="w" data-t="46.08">com</span> <span class="w" data-t="46.24">cara</span> <span class="w" data-t="46.42">de</span></div>
+<div class="cap" data-s="46.54" data-e="47.48"><span class="w" data-t="46.54">propaganda.</span></div>
+<div class="cap" data-s="47.48" data-e="48.78"><span class="w" data-t="47.48">Abre</span> <span class="w" data-t="47.68">com</span> <span class="w" data-t="47.78">o</span> <span class="w" data-t="47.88">nome</span> <span class="w" data-t="48.12">da</span> <span class="w" data-t="48.24">pessoa</span></div>
+<div class="cap" data-s="48.78" data-e="49.7"><span class="w" data-t="48.78">e</span> <span class="w" data-t="48.86">com</span> <span class="w" data-t="48.98">o</span> <span class="w" data-t="49.06">que</span> <span class="w" data-t="49.18">vocês</span> <span class="w" data-t="49.54">já</span></div>
+<div class="cap" data-s="49.7" data-e="50.58"><span class="w" data-t="49.7">conversaram.</span></div>
+<div class="cap" data-s="50.58" data-e="52.78"><span class="w" data-t="50.58">Responderam,</span> <span class="w" data-t="51.22">mas</span> <span class="w" data-t="51.4">ninguém</span> <span class="w" data-t="51.74">quis</span> <span class="w" data-t="51.9">saber</span> <span class="w" data-t="52.18">mais?</span></div>
+<div class="cap" data-s="52.78" data-e="54.18"><span class="w" data-t="52.78">O</span> <span class="w" data-t="52.88">problema</span> <span class="w" data-t="53.26">é</span> <span class="w" data-t="53.3">a</span> <span class="w" data-t="53.4">promessa.</span></div>
+<div class="cap" data-s="54.18" data-e="56.14"><span class="w" data-t="54.18">Quiseram</span> <span class="w" data-t="54.54">saber</span> <span class="w" data-t="54.84">mais</span> <span class="w" data-t="55.08">e</span> <span class="w" data-t="55.2">não</span> <span class="w" data-t="55.38">compraram?</span></div>
+<div class="cap" data-s="56.14" data-e="57.54"><span class="w" data-t="56.14">O</span> <span class="w" data-t="56.22">problema</span> <span class="w" data-t="56.56">é</span> <span class="w" data-t="56.58">o</span> <span class="w" data-t="56.7">fechamento.</span></div>
+<div class="cap" data-s="57.54" data-e="59.38"><span class="w" data-t="57.54">Preço,</span> <span class="w" data-t="58.14">prova</span> <span class="w" data-t="58.62">ou</span> <span class="w" data-t="58.74">prazo.</span></div>
+<div class="cap" data-s="59.38" data-e="60.3"><span class="w" data-t="59.38">Alguém</span> <span class="w" data-t="59.64">comprou?</span></div>
+<div class="cap" data-s="60.3" data-e="61.8"><span class="w" data-t="60.3">Você</span> <span class="w" data-t="60.62">tem</span> <span class="w" data-t="60.78">uma</span> <span class="w" data-t="60.9">oferta.</span></div>
+<div class="cap" data-s="61.8" data-e="63.42"><span class="w" data-t="61.8">Agora</span> <span class="w" data-t="62.24">sim</span> <span class="w" data-t="62.44">vale</span> <span class="w" data-t="62.62">colocar</span> <span class="w" data-t="63.02">dinheiro</span> <span class="w" data-t="63.32">em</span></div>
+<div class="cap" data-s="63.42" data-e="64.08"><span class="w" data-t="63.42">anúncio.</span></div>
+<div class="cap" data-s="64.08" data-e="65.72"><span class="w" data-t="64.08">O</span> <span class="w" data-t="64.26">zero</span> <span class="w" data-t="64.58">não</span> <span class="w" data-t="64.72">te</span> <span class="w" data-t="64.86">diz</span> <span class="w" data-t="65.12">nada.</span></div>
+<div class="cap" data-s="65.72" data-e="67.68"><span class="w" data-t="65.72">Trinta</span> <span class="w" data-t="66.04">mensagens</span> <span class="w" data-t="66.64">te</span> <span class="w" data-t="66.8">mostram</span> <span class="w" data-t="67.28">onde</span> <span class="w" data-t="67.46">está</span></div>
+<div class="cap" data-s="67.68" data-e="68.48"><span class="w" data-t="67.68">o</span> <span class="w" data-t="67.76">problema.</span></div>
+<div class="cap" data-s="68.48" data-e="70.22"><span class="w" data-t="68.48">Nesse</span> <span class="w" data-t="68.74">perfil,</span> <span class="w" data-t="69.16">eu</span> <span class="w" data-t="69.26">aprofundo</span> <span class="w" data-t="69.68">o</span> <span class="w" data-t="69.76">marketing</span></div>
+<div class="cap" data-s="70.22" data-e="71.54"><span class="w" data-t="70.22">assim,</span> <span class="w" data-t="70.72">com</span> <span class="w" data-t="70.9">número.</span></div>
+<div class="cap" data-s="71.54" data-e="72.74"><span class="w" data-t="71.54">E</span> <span class="w" data-t="71.62">ele</span> <span class="w" data-t="71.78">também</span> <span class="w" data-t="72.08">está</span> <span class="w" data-t="72.34">saindo</span> <span class="w" data-t="72.6">do</span></div>
+<div class="cap" data-s="72.74" data-e="73.24"><span class="w" data-t="72.74">zero.</span></div>
+<div class="cap" data-s="73.24" data-e="74.4"><span class="w" data-t="73.24">É</span> <span class="w" data-t="73.3">um</span> <span class="w" data-t="73.38">desafio</span> <span class="w" data-t="73.78">de</span> <span class="w" data-t="73.9">quarenta</span> <span class="w" data-t="74.28">e</span></div>
+<div class="cap" data-s="74.4" data-e="76.64"><span class="w" data-t="74.4">cinco</span> <span class="w" data-t="74.68">dias</span> <span class="w" data-t="75.04">com</span> <span class="w" data-t="75.14">os</span> <span class="w" data-t="75.24">resultados</span> <span class="w" data-t="75.8">abertos.</span></div>
+<div class="cap" data-s="76.64" data-e="77.56"><span class="w" data-t="76.64">Segue</span> <span class="w" data-t="76.86">pra</span> <span class="w" data-t="76.94">acompanhar.</span></div></div>
+      <div class="layer" id="grain"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out", D = 77.56;
+      const $ = (s) => document.querySelector(s), $$ = (s) => Array.from(document.querySelectorAll(s));
+      const show = (s, t, d) => tl.fromTo(s, { autoAlpha: 0 }, { autoAlpha: 1, duration: d || 0.25 }, t);
+      const hide = (s, t, d) => tl.to(s, { autoAlpha: 0, duration: d || 0.25 }, t);
+      const up = (s, t, d) => tl.fromTo(s, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: d || 0.4, ease: "back.out(1.6)" }, t);
+      const pop = (s, t) => tl.fromTo(s, { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, t);
+      const draw = (el, t, d) => { const L = el.getTotalLength(); tl.set(el, { opacity: 1 }, t); tl.fromTo(el, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: d || 0.3, ease: "power2.out" }, t); };
+
+      // ===== ATO 1 =====
+      tl.fromTo("#z0", { scale: 0.82, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.5, ease: "power4.out" }, 0);
+      tl.fromTo("#z0", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 2.2, ease: "power1.inOut" }, 0.3);
+      tl.to("#zbox", { scale: 1.025, duration: 1.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.5);
+      $$("#hook .kw").forEach((el) => tl.fromTo(el, { autoAlpha: 0, y: 26 }, { autoAlpha: 1, y: 0, duration: 0.16, ease: E }, parseFloat(el.dataset.t)));
+      hide("#hook", 3.9, 0.15);
+      tl.fromTo("#nome", { autoAlpha: 0, scale: 1.15 }, { autoAlpha: 1, scale: 1, duration: 0.25, ease: E }, 3.96);
+      // zero vira bolha de vidro, confortável
+      tl.fromTo("#z0", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 0.9, ease: "power2.inOut" }, 4.9);
+      tl.fromTo("#ring", { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 1, scale: 1, duration: 0.6, ease: "back.out(1.6)" }, 4.92);
+      up("#lb1", 5.14); show("#quote", 5.5, 0.4);
+      // lista que nunca termina
+      hide(["#nome", "#lb1", "#quote", "#ring"], 6.55, 0.2);
+      tl.to("#zbox", { y: -400, scale: 0.4, duration: 0.6, ease: "power3.inOut" }, 6.6);
+      tl.fromTo("#todo", { autoAlpha: 0, y: 80 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: E }, 6.75);
+      const rowT = [7.0, 7.8, 8.96, 9.68, 10.05, 10.38];
+      rowT.forEach((t, i) => {
+        tl.fromTo("#td" + i, { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.25, ease: E }, t);
+        tl.fromTo("#bx" + i, { "--ck": 0 }, { "--ck": 1, duration: 0.2, ease: "back.out(3)" }, t + 0.3);
+        if (i >= 3) tl.to("#tdl", { y: -(i - 3 + 1) * 92, duration: 0.3, ease: E }, t);
+        tl.fromTo("#tdo", { y: 0 }, { y: 36, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out" }, t);
+      });
+      // bolha: os NÃO batem e voltam
+      hide("#todo", 10.7, 0.25);
+      tl.to("#zbox", { y: 0, scale: 1, duration: 0.55, ease: "power3.inOut" }, 10.72);
+      tl.to("#ring", { autoAlpha: 1, duration: 0.3 }, 10.95);
+      const ang = [200, 330, 30, 150, 260], hits = [11.3, 11.75, 12.2, 12.65, 13.12];
+      ang.forEach((a, i) => {
+        const r = (a * Math.PI) / 180, cx = Math.cos(r), cy = Math.sin(r);
+        tl.fromTo("#nao" + i, { autoAlpha: 0, x: cx * 760 - 80, y: cy * 760 - 40, rotation: 0 },
+          { autoAlpha: 1, x: cx * 470 - 80, y: cy * 470 - 40, duration: 0.35, ease: "power2.in" }, hits[i] - 0.35);
+        tl.to("#nao" + i, { x: cx * 980 - 80, y: cy * 980 - 40, rotation: (i % 2 ? 40 : -40), autoAlpha: 0, duration: 0.6, ease: "power2.out" }, hits[i]);
+        tl.fromTo("#ring", { borderColor: "rgba(255,255,255,0.9)" }, { borderColor: "rgba(255,255,255,0.28)", duration: 0.35 }, hits[i]);
+      });
+      up("#lb2", 12.38);
+      // o zero racha
+      hide(["#lb2", "#ring"], 13.7, 0.2);
+      up("#lb3", 13.95);
+      [["#ck1", 14.08], ["#ck2", 14.86], ["#ck3", 15.28]].forEach(([s, t]) => {
+        draw($(s), t, 0.18);
+        tl.fromTo("#zbox", { x: -7 }, { x: 0, duration: 0.25, ease: "elastic.out(1,0.3)" }, t);
+      });
+      hide("#lb3", 15.75, 0.15); up("#lb4", 15.88);
+      hide("#lb4", 17.65, 0.1);
+      tl.fromTo("#lb5", { autoAlpha: 0, scale: 1.6 }, { autoAlpha: 1, scale: 1, duration: 0.18, ease: "power4.out" }, 17.76);
+      // o mergulho
+      tl.to("#mono", { scale: 11, filter: "blur(10px)", duration: 0.5, ease: "power3.in" }, 17.9);
+      tl.fromTo("#flash", { autoAlpha: 0 }, { autoAlpha: 0.85, duration: 0.06 }, 18.36);
+      tl.to("#flash", { autoAlpha: 0, duration: 0.35 }, 18.42);
+      tl.set("#mono", { autoAlpha: 0 }, 18.4);
+      tl.fromTo("#color", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 0.6, ease: E }, 18.36);
+
+      // ===== ATO 2: passos =====
+      const dayOn = (i, t) => tl.fromTo("#d" + i, { backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.45)" },
+        { backgroundColor: "#6FD3A0", color: "#03354e", duration: 0.25 }, t);
+      $$(".day").forEach((d) => gsap.set(d, { backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.45)" }));
+      dayOn(0, 18.44);
+      up("#sh1", 18.5);
+      up("#msg", 20.55, 0.35);
+      const lineT = [[20.82, 21.6], [21.66, 22.6], [22.7, 24.2], [24.68, 26.3]];
+      lineT.forEach(([a, b], i) => {
+        if ($("#ot" + i)) pop("#ot" + i, a);
+        const ch = $$("#ol" + i + " .ch");
+        tl.fromTo(ch, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: (b - a) / ch.length }, a);
+      });
+      tl.fromTo("#stamp", { autoAlpha: 0, scale: 2.2, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: -12, duration: 0.25, ease: "power4.in" }, 26.4);
+      // passo 2
+      tl.to("#world", { y: -1920, duration: 0.75, ease: "power3.inOut" }, 27.5);
+      dayOn(1, 28.42);
+      up("#sh2", 27.9);
+      tl.fromTo(".av", { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.25, ease: "back.out(2)", stagger: { amount: 3.2, ease: "power2.in" } }, 28.45);
+      const cn = { v: 0 };
+      tl.fromTo(cn, { v: 0 }, { v: 30, duration: 3.45, ease: "power2.in", onUpdate: () => { $("#ctrn").textContent = Math.round(cn.v); } }, 28.45);
+      dayOn(2, 30.6);
+      const unseen = [3, 7, 11, 14, 18, 22, 25, 28];
+      tl.fromTo("#plus2", { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.3 }, 32.14);
+      dayOn(3, 33.08);
+      pop("#clock", 33.1);
+      unseen.forEach((i) => tl.fromTo("#av" + i, { boxShadow: "0 0 0 0 rgba(255,107,107,0)" }, { boxShadow: "0 0 0 10px rgba(255,107,107,0.85)", duration: 0.3, yoyo: true, repeat: 3 }, 32.3));
+      unseen.forEach((i, k) => tl.fromTo("#av" + i, { scale: 1 }, { scale: 1.18, duration: 0.15, yoyo: true, repeat: 1 }, 33.84 + k * 0.05));
+      tl.to(".tick", { backgroundColor: "#00a3d6", duration: 0.15, stagger: 0.02 }, 34.1);
+      // passo 3
+      tl.to("#world", { y: -3840, duration: 0.75, ease: "power3.inOut" }, 34.72);
+      up("#sh3", 35.1);
+      dayOn(4, 35.54);
+      [["#t1", 36.94], ["#t2", 38.14], ["#t3", 39.8]].forEach(([s, t], i) => {
+        tl.fromTo(s, { autoAlpha: 0, x: 120 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: E }, t);
+        tl.fromTo(s + " .strip", { y: 0 }, { y: -1300, duration: 0.6, ease: "power2.out" }, t + 0.05);
+        if (i) dayOn(4 + i, t);
+      });
+
+      // ===== holofote =====
+      tl.fromTo("#spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.22 }, 40.74);
+      tl.set("#color", { autoAlpha: 0 }, 40.98);
+      tl.fromTo("#spottxt", { autoAlpha: 0, scale: 0.92 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: E }, 41.38);
+
+      // ===== árvore =====
+      tl.set("#tree", { autoAlpha: 1 }, 43.0);
+      tl.to(["#spot"], { autoAlpha: 0, duration: 0.4 }, 43.05);
+      const brs = ["b1", "b2", "b3", "b4"], bT = [43.62, 50.58, 54.18, 59.38], tagT = [45.38, 52.78, 56.14, 60.3];
+      const camY = (id) => -$("#" + id).offsetTop;
+      brs.forEach((b, i) => {
+        if (i) tl.to("#tcam", { y: camY(b), duration: 0.7, ease: "power3.inOut" }, bT[i] - 0.5);
+        tl.to("#spine", { scaleY: Math.min(1, ($("#" + b).offsetTop + 60) / 1300), duration: 0.5, ease: "power2.out" }, bT[i] - 0.4);
+        pop("#" + b + "-ico", bT[i] - 0.15);
+        $$("#" + b + "-ico svg path, #" + b + "-ico svg circle").forEach((p) => draw(p, bT[i], 0.45));
+        up("#" + b + "-q", bT[i]);
+        tl.fromTo("#" + b + "-tag", { autoAlpha: 0, y: -40 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "bounce.out" }, tagT[i]);
+      });
+      tl.fromTo("#b1-note", { autoAlpha: 0, scale: 1.4, rotation: 6 }, { autoAlpha: 1, scale: 1, rotation: -2.5, duration: 0.35, ease: "back.out(2)" }, 47.48);
+      tl.fromTo("#b2-note", { autoAlpha: 0, scale: 1.4, rotation: 6 }, { autoAlpha: 1, scale: 1, rotation: 2, duration: 0.35, ease: "back.out(2)" }, 53.1);
+      [57.54, 58.14, 58.74].forEach((t, k) => pop("#b3-c" + k, t));
+      tl.fromTo("#b4-tag", { boxShadow: "0 0 0px rgba(111,211,160,0)" }, { boxShadow: "0 0 70px rgba(111,211,160,0.8)", duration: 0.5, yoyo: true, repeat: 3 }, 60.6);
+      tl.fromTo("#b4-ad", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: E }, 61.8);
+      // quadro de print: árvore inteira
+      const treeH = () => $("#tcam").scrollHeight;
+      tl.to("#tcam", { y: 0, scale: () => Math.min(1, 1060 / treeH()), duration: 0.6, ease: "power3.inOut" }, 63.35);
+
+      // ===== assinatura =====
+      tl.to("#tree", { autoAlpha: 0, duration: 0.3 }, 64.0);
+      tl.set("#sig", { autoAlpha: 1 }, 64.0);
+      up("#sg1", 64.08);
+      tl.fromTo("#digits", { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: E }, 64.3);
+      tl.fromTo("#dg3", { autoAlpha: 0, x: -300 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "back.out(1.8)" }, 65.22);
+      tl.to("#dg0", { color: "#6FD3A0", duration: 0.25 }, 65.3);
+      up("#sg2", 65.54);
+      tl.fromTo("#sg3", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, 66.78);
+      tl.fromTo("#sgu", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: E }, 67.2);
+
+      // ===== CTA =====
+      tl.to("#sig", { autoAlpha: 0, duration: 0.3 }, 68.35);
+      tl.set("#cta", { autoAlpha: 1 }, 68.35);
+      show("#ck", 68.48); up("#ct1", 68.76);
+      tl.fromTo("#odo", { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: E }, 68.6);
+      hide(["#ct1", "#ck"], 71.4, 0.15); up("#ct2", 71.54);
+      tl.fromTo("#odc", { y: 0 }, { y: -1860, duration: 0.7, ease: "back.out(1.4)" }, 72.24);
+      show("#oday", 72.55); tl.fromTo("#o45", { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: E }, 72.6);
+      tl.fromTo("#stampd", { autoAlpha: 0, scale: 1.8, rotation: -10 }, { autoAlpha: 1, scale: 1, rotation: -3, duration: 0.25, ease: "power4.in" }, 73.24);
+      hide("#ct2", 76.5, 0.15);
+      tl.fromTo("#segue", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, 76.64);
+      tl.to("#segue", { scale: 1.05, duration: 0.25, yoyo: true, repeat: 1 }, 77.0);
+
+      // ===== legendas palavra a palavra =====
+      $$(".cap").forEach((c) => {
+        const s = parseFloat(c.dataset.s), e = parseFloat(c.dataset.e);
+        tl.set(c, { visibility: "visible" }, s); tl.set(c, { visibility: "hidden" }, e);
+        const ws = $$(".w", c);
+        const mono = s < 18.3;
+        ws.forEach((w, i) => {
+          const t = parseFloat(w.dataset.t);
+          tl.set(w, { color: mono ? "#ffffff" : "#6FD3A0" }, t);
+          tl.set(w, { color: "#ffffff" }, i + 1 < ws.length ? parseFloat(ws[i + 1].dataset.t) : e - 0.01);
+        });
+      });
+      $$(".cap .w").forEach((w) => gsap.set(w, { color: "rgba(255,255,255,0.55)" }));
+      tl.fromTo("#grain", { backgroundPosition: "0px 0px" }, { backgroundPosition: "1500px 1100px", duration: D, ease: "steps(" + Math.round(D * 12) + ")" }, 0);
+      tl.to("#caps", { autoAlpha: 0, duration: 0.15 }, 76.6);
+      tl.set({}, {}, D);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
