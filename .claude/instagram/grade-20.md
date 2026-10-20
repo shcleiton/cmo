@@ -1,81 +1,84 @@
-# Grade final: os 20 primeiros (@cleitonramos_marketing)
+# Grade final: os 20 primeiros (@cleitonramos_marketing) — v2
 
-Teste: 0 → 10 mil seguidores em 45 dias, só no orgânico. Nenhum dos 20 tem CTA
-de oferta. O final de cada peça é sempre um destes três, e só um:
-- **SEGUE** — "Segue pra ver o resultado do dia 45."
-- **COMENTA** — uma pergunta para a pessoa responder nos comentários.
-- **SALVA** — "Salva pra usar no seu próximo lançamento/campanha." (carrosséis)
+Revisada com o feedback do Cleiton:
+- Os temas dos dias 2, 9, 12, 13 e 18 foram trocados.
+- O dia 9 foi corrigido: no Ciclo do Lucro a gente **anuncia** para quem nunca
+  ouviu falar (conteúdo), só não **vende** para essa pessoa (a oferta vai para
+  quem assistiu).
+- Os ganchos foram reescritos com as estruturas que mais performaram na
+  pesquisa de shorts (`swipe.md`). Os dias 11 e 14 (aprovados como "ótimo")
+  ficaram como estavam.
 
-Cadência: 5 reels + 2 carrosséis por semana, um post por dia, às 7h30
-(testar 12h na semana 2). Stories todos os dias (bastidor do teste +
-aprofundar o post do dia). Nunca dois posts do mesmo tipo seguidos.
+## As 4 estruturas (tiradas dos outliers do swipe)
 
-Formatos de gravação:
-- **ROSTO** — falando para a câmera.
-- **TELA** — voz em off sobre números, gerenciador de anúncios, quadro.
-- **3ª PESSOA** — alguém filma e faz a pergunta (base.md, ideia 40).
+| código | estrutura | modelo que performou | regra |
+|---|---|---|---|
+| **A** | Pergunta do público, com situação e número | "SOMENTE 6 VENDAS COM TRÁFEGO PAGO: O QUE FAZER?" (13,3x), "TICKET DE R$37 É MUITO BAIXO PARA VENDER?" (7,6x), "Am I in the wrong business?" (35,6x) | Do jeito que o cliente pergunta. Com número ou situação concreta. Nunca pergunta de professor. |
+| **B** | Caso + virada | "A Oi e as Casas Bahia faliram e não foi por falta de venda" (4,6x), "O McDonald's prova: ter um ótimo produto não garante um grande negócio" (5,1x) | Resultado concreto na 1ª linha, "e não foi por X" na 2ª. Sem a virada, flopa. |
+| **C** | Afirmação seca contra o senso comum | "A venda só é certa quando o pagamento cai" (12,4x), "Why I'd never chase new ideas" (10x) | Curta, específica, discutível. Nunca conselho genérico ("queira ser criticado" = 0,5x). |
+| **D** | Reação a um nome grande | (formato do Ícaro e do próprio swipe: nome conhecido + discordância) | Nome na 1ª frase, posição clara, respeito no desenvolvimento. |
 
-Fonte = número da ideia em `base.md`. Quando cita alguém, o crédito vai na fala
-e na legenda.
+Regras comuns:
+- **Texto na tela:** até 8 palavras, em caixa alta, igual ao título do short.
+- **Primeira fala:** o mesmo gancho dito em voz alta, nos 3 primeiros segundos.
+- **Nenhum CTA de oferta.** O final é um só: **SEGUE**, **COMENTA** (uma
+  pergunta) ou **SALVA** (carrosséis).
 
 ---
 
-## Semana 1 — apresentar o teste e o método
+## Semana 1
 
-| dia | formato | tipo | gancho (primeira frase) | desenvolvimento | gravação | final | fonte |
+| dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
-| 1 | REEL | HISTÓRIA | "O Ícaro de Carvalho diz que o orgânico do Instagram acabou. Eu concordo. E mesmo assim vou tentar crescer um perfil do zero, só no orgânico, por 45 dias." | Por que fazer o teste mesmo concordando (10 anos de mercado, "só orgânico não escala"). As regras: 45 dias, sem anúncio, 1 post por dia, números abertos nos dias 15, 30 e 45. **Fixar no topo.** | ROSTO | SEGUE | 47 |
-| 2 | REEL | OPINIÃO | "'Dá pra vender só com conteúdo orgânico?' Me perguntam isso toda semana. A resposta curta é: dificilmente." | Conteúdo sobe o nível de consciência; quem vende é o sistema (conteúdo + tráfego + vendas). Por isso o teste é um teste, não uma promessa. | ROSTO | COMENTA: "Você vende mais pelo orgânico ou pelo pago?" | posição 1 |
-| 3 | CARROSSEL | ENSINO | Capa: "O Ciclo do Lucro: o método que eu uso pra transformar conteúdo em venda" | 4 etapas, 1 por slide: conteúdo → distribuição → públicos (pixel: engajamento e video view) → remarketing. Slide final: "A etapa 3 é a que quase ninguém configura." **Fixar.** | — | SALVA | voice.md, 78 |
-| 4 | REEL | OPINIÃO | "Seu próximo cliente ainda não te segue." | A maioria de quem vai comprar ainda não te conhece (crédito: Ícaro). Por isso falar só com seguidor trava o crescimento. Reels são para quem não segue; stories, para quem já segue. | ROSTO | COMENTA: "Quantos % das suas vendas vêm de quem já te seguia?" | 63, 28 |
-| 5 | REEL | PROVA | "Uma pós-graduação saiu de 33 para mais de 110 vendas. E não foi por anúncio novo." | O que mudou: aplicar o Ciclo do Lucro (conteúdo antes, público de video view, remarketing com a oferta). Sem nome da faculdade. **Fixar.** | ROSTO + TELA | SEGUE | case 1 |
-| 6 | REEL | HISTÓRIA | "Ele clicou no anúncio, chamou no WhatsApp e não conseguiu comprar. E a culpa não foi do tráfego." | A história da lenha do Dener Lippert (crédito). O gargalo era o atendimento. Elo mais fraco da corrente: antes de pôr mais tráfego, olhe onde o lead morre. | ROSTO | COMENTA: "Onde o seu lead morre: no anúncio, na página ou no WhatsApp?" | 1 |
-| 7 | CARROSSEL | ENSINO | Capa: "Seu público está em qual destes 5 níveis?" | Os 5 níveis de consciência de Eugene Schwartz, 1 por slide, com um exemplo de anúncio para cada (prestador de serviço). Último slide: quem está no nível 5 e não compra é porque você não ofereceu (crédito: Ícaro). | — | SALVA | 50 |
+| 1 | REEL | D | **O ORGÂNICO DO INSTAGRAM MORREU?** | "O Ícaro de Carvalho diz que o orgânico do Instagram morreu. Eu vou testar. 45 dias, perfil do zero, sem anúncio." | Por que testar mesmo concordando com ele. As regras: 1 post por dia, números abertos nos dias 15, 30 e 45. **Fixar.** | SEGUE | 47 |
+| 2 | REEL | A | **4 MIL SEGUIDORES E SÓ 13 VENDAS?** | "'Tenho 4 mil seguidores e meu lançamento vendeu 13.' Isso não é fracasso. É matemática." | A conta na tela: quem vê os stories, quem entra, quem aparece, quem compra. O problema não é o produto, é o tamanho da base que vê a oferta. (Exemplo, não case real.) | COMENTA: "Quantas pessoas viram sua última oferta?" | 71 |
+| 3 | CARROSSEL | B | Capa: **33 VENDAS → MAIS DE 110. O MÉTODO.** | — | O Ciclo do Lucro em 4 etapas, 1 por slide. Último slide: "A etapa 3 é a que quase ninguém configura." **Fixar.** | SALVA | voice.md |
+| 4 | REEL | C | **QUEM VAI TE COMPRAR AINDA NÃO TE SEGUE** | "Quem vai te comprar ainda não te segue." | A maioria de quem vai comprar ainda não te conhece (crédito: Ícaro). Por isso falar só com seguidor trava o crescimento. | COMENTA: "Quantos % das suas vendas vêm de quem já te seguia?" | 63 |
+| 5 | REEL | B | **33 VENDAS. NO LANÇAMENTO SEGUINTE, 110.** | "Uma pós-graduação vendeu 33. No lançamento seguinte, mais de 110. E o produto era o mesmo." | O que mudou foi o sistema: conteúdo antes, público de video view, remarketing com a oferta. Sem nome da faculdade. **Fixar.** ⚠️ Confirmar que o produto (a pós) não mudou entre os dois lançamentos. | SEGUE | case 1 |
+| 6 | REEL | B | **ELE CLICOU NO ANÚNCIO E NÃO CONSEGUIU COMPRAR** | "Ele clicou no anúncio, chamou no WhatsApp e não conseguiu comprar. E a culpa não foi do tráfego." | A história da lenha do Dener Lippert (crédito). O gargalo era o atendimento. Antes de pôr mais tráfego, ache o elo mais fraco. | COMENTA: "Onde o seu lead morre: no anúncio, na página ou no WhatsApp?" | 1 |
+| 7 | CARROSSEL | A | Capa: **ELE VIU SEU POST. POR QUE NÃO COMPROU?** | — | Os 5 níveis de consciência de Eugene Schwartz, 1 por slide, com um exemplo de anúncio para cada. Último slide: quem está no nível 5 e não compra é porque você não ofereceu (crédito: Ícaro). | SALVA | 50 |
 
-## Semana 2 — marketing é dado
+## Semana 2
 
-| dia | formato | tipo | gancho (primeira frase) | desenvolvimento | gravação | final | fonte |
+| dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
-| 8 | REEL | OPINIÃO | "Você não consegue prever o que um cliente vai fazer. Mas consegue prever o que mil vão fazer. É por isso que marketing é dado." | Uma pessoa não é previsível; um público é (exemplo da Coca e do guaraná). Por isso se testa em volume e se decide pelo número, não pelo gosto. | ROSTO | COMENTA: "Qual decisão de marketing você tomou no achismo esse mês?" | 64, posição 7 |
-| 9 | REEL | ENSINO | "Pare de anunciar pra quem nunca ouviu falar de você." | Público frio é o dinheiro mais caro. Os próximos clientes estão em quem interagiu com você nos últimos 30 dias (crédito: Ícaro). Como criar esse público no gerenciador. | TELA | SALVA | 49, posição 4 |
-| 10 | REEL | OPINIÃO | "O Alfredo Soares diz que conteúdo tem jornada longa. Tem, a não ser que você faça isso." | Concordo que conteúdo solto demora. Mas com remarketing para quem assistiu, a oferta chega quando a consciência subiu. Isso encurta a jornada. | ROSTO | COMENTA: "Você faz remarketing pra quem assiste seus vídeos?" | 24 |
-| 11 | REEL | PROVA | "Uma formação jurídica fez 6 dígitos em 7 dias. E não foi por tráfego. Foi timing." | Uma lei nova tinha acabado de sair; a narrativa foi construída em cima dela. "Empresa pequena não precisa de ideia, precisa de timing" (crédito: Alfredo). | ROSTO | SEGUE | case 2, 38, 19 |
-| 12 | CARROSSEL | ENSINO | Capa: "R$300 pra trazer um cliente, R$1.000 de lucro com ele. Ótimo negócio?" | A conta do tempo de retorno: se o dinheiro volta em 10 meses, você precisa de caixa para crescer (crédito: Alfredo). Slide com a conta e onde olhar no seu negócio. | — | SALVA | 20 |
-| 13 | REEL | OPINIÃO | "Pare de sortear iPhone pra conseguir lead." | Sorteio traz lista grande e lead barato, mas pouca presença e ninguém comprando. Lead barato que não compra é vaidade. Hack não constrói negócio. | ROSTO | COMENTA: "Já fez sorteio pra captar? Como foi?" | 69, posição 5 |
-| 14 | CARROSSEL | ENSINO | Capa: "Os números que eu olho toda semana num funil" | Um indicador por etapa: topo (alcance, % de não seguidores), meio (custo por lead, comparecimento), fundo (conversão, custo por venda). "O que não é medido é sorte." | — | SALVA | 25, posição 6 |
+| 8 | REEL | C | **MARKETING NÃO É CRIATIVIDADE. É MATEMÁTICA.** | "Marketing não é criatividade. É matemática." | Você não prevê o que um cliente faz, mas prevê o que mil fazem (exemplo da Coca e do guaraná). Por isso se testa em volume e se decide pelo número. | COMENTA: "Qual decisão de marketing você tomou no achismo esse mês?" | 64 |
+| 9 | REEL | C | **EU ANUNCIO PRA QUEM NUNCA ME VIU. SÓ NÃO VENDO.** | "Eu anuncio pra quem nunca ouviu falar de mim. Só não vendo pra essa pessoa." | Para quem é frio vai conteúdo pago (etapa 2). Quem assistiu vira público de video view (etapa 3). A oferta vai para esse público (etapa 4). | SALVA | posição 4, Ciclo do Lucro |
+| 10 | REEL | D | **O ALFREDO SOARES ERROU NESSA** | "O Alfredo Soares diz que conteúdo demora pra vender. Eu discordo. Só demora se você deixar o público esfriar." | Respeito a ele no início; o argumento é o remarketing para quem assistiu, que encurta a jornada. | COMENTA: "Você faz remarketing pra quem assiste seus vídeos?" | 24 |
+| 11 | REEL | B | **6 DÍGITOS EM 7 DIAS. NÃO FOI TRÁFEGO.** | "Uma formação jurídica fez 6 dígitos em 7 dias. E não foi por tráfego. Foi timing." | **Aprovado.** Uma lei nova tinha acabado de sair; a narrativa foi construída em cima dela. "Empresa pequena não precisa de ideia, precisa de timing" (crédito: Alfredo). | SEGUE | case 2, 38 |
+| 12 | REEL | B | **UMA BALA TRIPLICOU AS VENDAS NA FARMÁCIA** | "Uma bala energética mais que triplicou as vendas na farmácia. E nunca anunciou na farmácia." | Caso da DOT (contado no advisor do Alfredo, crédito): o TikTok gerava a procura e a venda acontecia no caixa. Lição: crie o indicador que mede o seu negócio de verdade. | COMENTA: "Qual número você olha pra saber se seu marketing funciona?" | 31 |
+| 13 | CARROSSEL | A | Capa: **FORAM NO SEU EVENTO E NÃO COMPRARAM?** | — | São só 3 motivos, 1 por slide: não tinha dinheiro naquele momento (reabra a venda ~15 dias depois), sentiu que não era para ele (erro do evento), não viu urgência (erro também). Crédito: Ícaro. | SALVA | 70 |
+| 14 | CARROSSEL | — | Capa: **OS NÚMEROS QUE EU OLHO TODA SEMANA NUM FUNIL** | — | **Aprovado.** Um indicador por etapa: topo (alcance, % de não seguidores), meio (custo por lead, comparecimento), fundo (conversão, custo por venda). | SALVA | 25 |
 
-## Semana 3 — primeiro resultado e aprofundar
+## Semana 3
 
-| dia | formato | tipo | gancho (primeira frase) | desenvolvimento | gravação | final | fonte |
+| dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
-| 15 | REEL | HISTÓRIA | "15 dias tentando crescer só no orgânico. Esses são os números." | **Check-in com números reais:** seguidores, views, % de não seguidores, o post que mais trouxe gente e por quê. Se estiver abaixo da meta, dizer. | TELA + ROSTO | SEGUE | 6 (fórmula) |
-| 16 | REEL | PROVA | "Um lançamento mais que dobrou as vendas. E não foi por desconto." | Formação para mães: de cerca de 40 para 93 vendas com venda em grupo para grupos de estudo. A estratégia e por que funcionou. | ROSTO | COMENTA: "Seu cliente compra sozinho ou em grupo?" | case 3 |
-| 17 | REEL | OPINIÃO | "'Quanto eu preciso investir em tráfego pra começar?' Essa é a pergunta errada." | A pergunta certa: onde está o elo mais fraco (página, atendimento, oferta)? Tráfego só multiplica o que já funciona. | ROSTO | COMENTA: "Qual é o elo mais fraco do seu funil hoje?" | 1, posição 3 |
-| 18 | REEL | ENSINO | "Pare de mandar link pra quem já te chamou no direct." | Quem comentou ou respondeu a caixinha é lead morno; formulário esfria (crédito: Alfredo). Converse ali e leve direto ao WhatsApp. | 3ª PESSOA | SALVA | 27, 58 |
-| 19 | REEL | OPINIÃO | "Você não quer que todo mundo fique. Você quer perder 90%." | Quem não tem interesse custa caro na campanha. O trabalho é formar listas e diminuir listas (crédito: Ícaro). É o que o pixel faz no Ciclo do Lucro. | ROSTO | COMENTA: "Você prefere lista grande ou lista boa?" | 68 |
-| 20 | CARROSSEL | ENSINO | Capa: "'Meu serviço serve pra qualquer empresa.' Então ele não vende pra nenhuma." | "Todo mundo pode te comprar, mas você não vende pra todo mundo" (crédito: Alfredo). Os 4 filtros, 1 por slide: mais fácil, mais rápido, mais barato, mais escalável. | — | SALVA | 16 |
+| 15 | REEL | B | **15 DIAS SÓ NO ORGÂNICO. OS NÚMEROS.** | "15 dias tentando crescer só no orgânico. Esses são os números." | Check-in com números reais: seguidores, views, % de não seguidores, o post que mais trouxe gente e por quê. Se estiver abaixo da meta, dizer. | SEGUE | 6 |
+| 16 | REEL | B | **40 VENDAS. NO SEGUINTE, 93. SEM DESCONTO.** | "Um lançamento fez cerca de 40 vendas. O seguinte fez 93. E não foi por desconto." | Formação para mães: venda em grupo para grupos de estudo. A estratégia e por que funcionou. | COMENTA: "Seu cliente compra sozinho ou em grupo?" | case 3 |
+| 17 | REEL | A | **QUANTO INVESTIR EM TRÁFEGO PRA COMEÇAR?** | "'Quanto eu preciso investir em tráfego pra começar?' Pergunta errada." | A pergunta certa: onde está o elo mais fraco (página, atendimento, oferta)? Tráfego só multiplica o que já funciona. | COMENTA: "Qual é o elo mais fraco do seu funil hoje?" | 1 |
+| 18 | REEL | C | **FULL SERVICE É A PIOR COISA QUE VOCÊ PODE VENDER** | "Full service é a pior coisa que você pode vender." | O dono da V4 chama de "a falácia do 360" (crédito: Dener): prometer tudo deixa o cliente insatisfeito mesmo quando ele vende. Escopo fechado, entrega clara, depois continuidade. | COMENTA: "Você vende escopo fechado ou 'tudo'?" | 10 |
+| 19 | REEL | C | **PERDER 90% DOS SEUS LEADS É BOM** | "Perder 90% dos seus leads é bom." | Quem não tem interesse custa caro na campanha. O trabalho é formar listas e diminuir listas (crédito: Ícaro). É o que o pixel faz no Ciclo do Lucro. | COMENTA: "Você prefere lista grande ou lista boa?" | 68 |
+| 20 | CARROSSEL | A | Capa: **"MEU SERVIÇO SERVE PRA QUALQUER EMPRESA."** | — | Slide 2: "Então ele não vende pra nenhuma." Os 4 filtros (crédito: Alfredo): mais fácil, mais rápido, mais barato, mais escalável. | SALVA | 16 |
 
 ---
 
 ## Os 3 fixados
 
-1. Dia 1: abertura do teste (apresenta a pessoa e a série).
-2. Dia 3: carrossel do Ciclo do Lucro (explica o método).
-3. Dia 5: pós-graduação de 33 para mais de 110 (prova).
+1. Dia 1: abertura do teste.
+2. Dia 3: carrossel do método (33 → mais de 110).
+3. Dia 5: o case da pós-graduação.
 
-## Regras de execução
+## Antes de gravar
 
-- **3 primeiros segundos:** o gancho, simples, para qualquer dono de negócio.
-  O resto pode ser profundo (base.md, ideia 66).
-- **Crédito:** sempre que a ideia é de outra pessoa, o nome vai na fala e na
-  legenda. Casos dos outros nunca contados como do Cleiton.
-- **Atribuições "prováveis"** (marcadas em base.md): conferir no vídeo antes
-  de dizer o nome em voz alta.
-- **Cases do Cleiton:** sempre anônimos e com os números exatos do voice.md
-  ("mais de 110", "cerca de 40 para 93", "6 dígitos").
+- **Dia 5:** confirmar que a pós era o mesmo produto nos dois lançamentos.
+  Se não for, trocar a virada por "E não foi por anúncio novo".
+- **Dias 6, 18:** falas do Dener (seguras). **Dias 10, 20:** falas do Alfredo
+  (episódios solo, seguras). **Dia 12:** números ditos pelos fundadores da
+  DOT no episódio; usar "mais que triplicou", sem inventar valor.
 - **Medir por peça:** views, % de não seguidores, compartilhamentos,
-  salvamentos e seguidores ganhos. No dia 21, os 3 melhores ditam os
-  próximos 10.
+  salvamentos e seguidores ganhos. No dia 21, as 3 estruturas (A, B, C, D) que
+  mais trouxeram seguidores ditam os próximos 10.
 
 ## Em aberto
 
