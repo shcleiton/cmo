@@ -38,33 +38,10 @@ crença à prova em público. Isso é o melhor gancho que o perfil tem:
 4. **Contra o hack** — opinião contra atalho, guru e "máquina de vendas".
 5. **Bastidores de lançamento em educação** — cases anônimos.
 
-## Os 20 primeiros (sem CTA de oferta)
+## Os 20 primeiros
 
-Fórmulas = número em `ig-reel/hooks.json`. Final de cada peça: no máximo
-"segue para ver o dia 45" ou uma pergunta para comentar. Nunca a oferta.
-
-| dia | formato | tipo | # | ângulo |
-|---|---|---|---|---|
-| 1 | REEL | HISTÓRIA | 6 | Abertura do teste: "Eu defendo que ninguém cresce só no orgânico. Vou tentar mesmo assim. 45 dias." (fixar) |
-| 2 | REEL | OPINIÃO | 22 | "Postar todo dia não faz empresa vender." Conteúdo sobe consciência; quem vende é o sistema. |
-| 3 | CARROSSEL | ENSINO | 11 | O Ciclo do Lucro em 4 etapas. "A etapa 3 é a que ninguém configura." |
-| 4 | REEL | ENSINO | 2 | "Pare de anunciar para público frio. Anuncie para quem já te assistiu." Remarketing de video view. |
-| 5 | REEL | BASTIDOR | 8 | "Fui head de marketing de uma empresa de educação. O que ninguém fala sobre lançamento de pós." |
-| 6 | REEL | PROVA | 25 | "Uma pós vendeu 33. Dois meses depois, mais de 110. Mudou uma coisa." (Ciclo do Lucro; sem nome) |
-| 7 | CARROSSEL | ENSINO | 11 | Os 5 níveis de consciência do Eugene Schwartz, com um exemplo de anúncio para cada. |
-| 8 | REEL | OPINIÃO | 22 | "Marketing sem dado não é marketing. É palpite." |
-| 9 | REEL | ENSINO | 3 | "Ninguém te conta: o anúncio que 'não vende' está te dando o público mais barato que você vai ter." |
-| 10 | REEL | ENSINO | 20 | "Você não precisa de mais seguidores. Precisa de gente no nível certo de consciência." |
-| 11 | REEL | PROVA | 25 | "Uma lei mudou. Em 7 dias, uma formação jurídica fez 6 dígitos." Como pegar o assunto quente e construir narrativa. |
-| 12 | REEL | ENSINO | 7 | "Você está medindo o funil errado, e não é culpa sua. Curtida não paga conta; olha custo por venda." |
-| 13 | REEL | OPINIÃO | 22 | "Hack não constrói negócio." O que constrói. |
-| 14 | CARROSSEL | ENSINO | 9 | "Copia esses números." Os indicadores que eu olho toda semana num funil. |
-| 15 | REEL | HISTÓRIA | 6 | **Check-in dia 15:** números reais do perfil. O que viralizou, o que não. |
-| 16 | REEL | PROVA | 25 | "Um grupo de mães comprou junto. As vendas foram de 40 para 93." Venda em grupo. |
-| 17 | REEL | ENSINO | 16 | "'Quanto eu tenho que investir em tráfego?' Me perguntam toda semana." |
-| 18 | REEL | ENSINO | 12 | "'Meu nicho não funciona no Instagram.' Tudo bem. Então faz assim." |
-| 19 | REEL | ENSINO | 10 | "Se teu anúncio tem clique e não tem venda, esses 30 segundos resolvem." (diagnóstico de página) |
-| 20 | CARROSSEL | ENSINO | 14 | "Prestador de serviço que vive de indicação: este é o funil que você está ignorando." |
+Grade final em `grade-20.md` (substitui a tabela que estava aqui e os ajustes
+da pesquisa). Montada com os ganchos de `swipe.md` e `base.md`.
 
 ## Dias 21 a 45: decidido pelos dados
 
@@ -112,27 +89,6 @@ Lista: {{preencher com os perfis}}
 3. Rodar `/ig-viral` para ver o que está viralizando hoje no nicho de
    marketing no Brasil e ajustar as fórmulas acima.
 4. Gravar os 3 primeiros reels antes de publicar o primeiro.
-
-## Ajustes após a pesquisa (swipe.md)
-
-O padrão que mais viralizou no nicho foi a pergunta concreta do público
-(#16). Trocas na grade dos 20 primeiros:
-
-- **Dia 2:** de "Postar todo dia não faz empresa vender" (#22) para
-  "'Dá pra vender só com conteúdo orgânico?' Me perguntam isso toda semana."
-  (#16). Mesmo tema, formato que está ganhando.
-- **Dia 6:** caso da pós no formato caso + virada: "Uma pós-graduação saiu de
-  33 para mais de 110 vendas. E não foi por anúncio novo."
-- **Dia 11:** caso jurídico com virada: "Uma formação jurídica fez 6 dígitos
-  em 7 dias. E não foi por tráfego." (confirmar se a virada é verdadeira)
-- **Dia 16:** caso das mães com virada: "Um lançamento mais que dobrou as
-  vendas. E não foi por desconto."
-- **Dia 18:** de #12 para #16: "'Meu nicho não funciona no Instagram.' Me
-  falam isso direto."
-
-Regra para os outros: gancho específico, com número ou situação real. Nada de
-conselho genérico ou motivacional, que ficou no fundo do ranking em todos os
-canais.
 
 ## Produção (base.md, ideias 39, 40 e 44)
 
