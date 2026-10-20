@@ -202,6 +202,9 @@ Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
    Um lançamento para um perfil de 22 mil seguidores vendeu 9. Os
    seguidores eram comprados: perfis fake que nunca iam comprar. Lição:
    compre gente (alcance para quem é real), não seguidor.
+   Números reais: ticket R$2.997 (9 vendas, cerca de R$27 mil); stories com
+   média de 90 a 110 visualizações (menos de 0,5% da base). Descoberto pela
+   taxa de engajamento baixa, depois pesquisa na lista de seguidores.
 
 ## The ask
 
