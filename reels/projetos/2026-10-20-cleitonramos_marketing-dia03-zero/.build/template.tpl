@@ -103,6 +103,7 @@
 
       /* ===== árvore ===== */
       #tree { opacity: 0; background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+      #tmask { position: absolute; left: 0; right: 0; top: 0; height: 420px; background: linear-gradient(180deg, #022a3e 0%, #022a3e 60%, rgba(2,42,62,0) 100%); }
       #tcam { position: absolute; left: 120px; right: 120px; top: 400px; transform-origin: 50% 0; }
       #spine { position: absolute; left: 44px; top: 50px; width: 4px; height: 1300px; background: rgba(111,211,160,0.5); transform-origin: top center; transform: scaleY(0); }
       .br { position: relative; display: flex; gap: 30px; margin-bottom: 70px; }
@@ -211,7 +212,7 @@
 
       <div class="layer" id="spot"><div id="spottxt">AGORA A PARTE QUE QUASE NINGUÉM <em>SABE LER.</em></div></div>
 
-      <div class="layer" id="tree"><div id="tcam"><div id="spine"></div>%%BR%%</div></div>
+      <div class="layer" id="tree"><div id="tcam"><div id="spine"></div>%%BR%%</div><div id="tmask"></div></div>
 
       <div class="layer" id="sig">
         <div id="sg1">O ZERO NÃO TE DIZ <span class="gr">NADA.</span></div>
