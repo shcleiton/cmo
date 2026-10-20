@@ -14,8 +14,12 @@
   experts e empresas de educação. Educação é o território mais forte:
   faculdades, pós-graduação, formações, professores e especialistas que
   vendem conhecimento.
-- **What I sell:** [A CONFIRMAR] Diagnóstico e implementação de marketing &
-  growth (estrutura de funis, tráfego, copy, IA aplicada, CS e recompra).
+- **What I sell:**
+  - **Produto principal: Implementação de Funil — R$2.000, pontual.** Para
+    qualquer prestador de serviço. Entrega: uma página (captura, agendamento
+    ou vendas), os criativos e a campanha rodando.
+  - **Continuidade (upsell):** depois da implementação, o cliente pode
+    contratar o Cleiton para seguir executando a estratégia e os funis.
 
 ## What I sound like
 
