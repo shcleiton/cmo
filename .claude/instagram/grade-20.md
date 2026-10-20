@@ -1,4 +1,7 @@
-# Grade final: os 20 primeiros (@cleitonramos_marketing) — v2
+# Grade final: os 18 primeiros (@cleitonramos_marketing) — v3
+
+> Dias 9 e 12 removidos a pedido do Cleiton. Roteiros completos e calendário
+> de publicação em `roteiros.md`.
 
 Revisada com o feedback do Cleiton:
 - Os temas dos dias 2, 9, 12, 13 e 18 foram trocados.
@@ -43,10 +46,8 @@ Regras comuns:
 | dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
 | 8 | REEL | C | **MARKETING NÃO É CRIATIVIDADE. É MATEMÁTICA.** | "Marketing não é criatividade. É matemática." | Você não prevê o que um cliente faz, mas prevê o que mil fazem (exemplo da Coca e do guaraná). Por isso se testa em volume e se decide pelo número. | COMENTA: "Qual decisão de marketing você tomou no achismo esse mês?" | 64 |
-| 9 | REEL | C | **EU VENDO PRA QUEM NUNCA ME VIU. MAS NÃO O CARO.** | "Eu vendo pra quem nunca me viu. Só não vendo o produto caro." | Como o Cleiton divide a verba: a maior parte vai para remarketing de video view e engajamento (quem já assistiu). Uma parte menor continua em tráfego para público frio, mas com oferta de ticket baixo ou médio. O produto caro fica para quem já está aquecido. | SALVA | posição 4, Ciclo do Lucro |
 | 10 | REEL | D | **O ALFREDO SOARES ERROU NESSA** | "O Alfredo Soares diz que conteúdo demora pra vender. Eu discordo. Só demora se você deixar o público esfriar." | Respeito a ele no início; o argumento é o remarketing para quem assistiu, que encurta a jornada. | COMENTA: "Você faz remarketing pra quem assiste seus vídeos?" | 24 |
 | 11 | REEL | B | **6 DÍGITOS EM 7 DIAS. NÃO FOI TRÁFEGO.** | "Uma formação jurídica fez 6 dígitos em 7 dias. E não foi por tráfego. Foi timing." | **Aprovado.** Uma lei nova tinha acabado de sair; a narrativa foi construída em cima dela. "Empresa pequena não precisa de ideia, precisa de timing" (crédito: Alfredo). | SEGUE | case 2, 38 |
-| 12 | REEL | B | **O DONO DA V4 PAROU DE POSTAR. E VENDEU R$150 MIL.** | "O dono da maior rede de marketing do Brasil ficou um ano sem postar. E vendeu R$150 mil em publicidade no Instagram num mês." | Virada: não foi sorte, foi ativo. Conteúdo que você já publicou continua trabalhando (crédito: Dener Lippert, no Extremos). Mídia é aluguel; conteúdo é patrimônio. É por isso que este teste existe. | COMENTA: "Qual conteúdo seu ainda traz cliente até hoje?" | 6 |
 | 13 | CARROSSEL | A | Capa: **FORAM NO SEU EVENTO E NÃO COMPRARAM?** | — | São só 3 motivos, 1 por slide: não tinha dinheiro naquele momento (reabra a venda ~15 dias depois), sentiu que não era para ele (erro do evento), não viu urgência (erro também). Crédito: Ícaro. | SALVA | 70 |
 | 14 | CARROSSEL | — | Capa: **OS NÚMEROS QUE EU OLHO TODA SEMANA NUM FUNIL** | — | **Aprovado.** Um indicador por etapa: topo (alcance, % de não seguidores), meio (custo por lead, comparecimento), fundo (conversão, custo por venda). | SALVA | 25 |
 
