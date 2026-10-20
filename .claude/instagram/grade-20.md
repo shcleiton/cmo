@@ -31,10 +31,10 @@ Regras comuns:
 | dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
 | 1 | REEL | D | **O ORGÂNICO DO INSTAGRAM MORREU?** | "O Ícaro de Carvalho diz que o orgânico do Instagram morreu. Eu vou testar. 45 dias, perfil do zero, sem anúncio." | Por que testar mesmo concordando com ele. As regras: 1 post por dia, números abertos nos dias 15, 30 e 45. **Fixar.** | SEGUE | 47 |
-| 2 | REEL | A | **4 MIL SEGUIDORES E SÓ 13 VENDAS?** | "'Tenho 4 mil seguidores e meu lançamento vendeu 13.' Isso não é fracasso. É matemática." | A conta na tela: quem vê os stories, quem entra, quem aparece, quem compra. O problema não é o produto, é o tamanho da base que vê a oferta. (Exemplo, não case real.) | COMENTA: "Quantas pessoas viram sua última oferta?" | 71 |
+| 2 | REEL | B | **22 MIL SEGUIDORES. 9 VENDAS.** | "22 mil seguidores. O lançamento vendeu 9. E o problema não era o produto." | Virada: os seguidores eram comprados. Perfis fake, contas que nunca iam comprar nada. Seguidor comprado não assiste, não clica, não compra, e ainda derruba o alcance para quem é real. "Compre gente, não seguidor" (crédito: Ícaro). | COMENTA: "Você já comprou seguidor? Pode falar, ninguém vai julgar." | case 4, 48 |
 | 3 | CARROSSEL | B | Capa: **33 VENDAS → MAIS DE 110. O MÉTODO.** | — | O Ciclo do Lucro em 4 etapas, 1 por slide. Último slide: "A etapa 3 é a que quase ninguém configura." **Fixar.** | SALVA | voice.md |
 | 4 | REEL | C | **QUEM VAI TE COMPRAR AINDA NÃO TE SEGUE** | "Quem vai te comprar ainda não te segue." | A maioria de quem vai comprar ainda não te conhece (crédito: Ícaro). Por isso falar só com seguidor trava o crescimento. | COMENTA: "Quantos % das suas vendas vêm de quem já te seguia?" | 63 |
-| 5 | REEL | B | **33 VENDAS. NO LANÇAMENTO SEGUINTE, 110.** | "Uma pós-graduação vendeu 33. No lançamento seguinte, mais de 110. E o produto era o mesmo." | O que mudou foi o sistema: conteúdo antes, público de video view, remarketing com a oferta. Sem nome da faculdade. **Fixar.** ⚠️ Confirmar que o produto (a pós) não mudou entre os dois lançamentos. | SEGUE | case 1 |
+| 5 | REEL | B | **33 VENDAS. NO LANÇAMENTO SEGUINTE, 110.** | "Uma pós-graduação vendeu 33. No lançamento seguinte, mais de 110. E o produto era o mesmo." | O que mudou foi o sistema: conteúdo antes, público de video view, remarketing com a oferta. Sem nome da faculdade. **Fixar.**  (Confirmado: mesmo produto.) | SEGUE | case 1 |
 | 6 | REEL | B | **ELE CLICOU NO ANÚNCIO E NÃO CONSEGUIU COMPRAR** | "Ele clicou no anúncio, chamou no WhatsApp e não conseguiu comprar. E a culpa não foi do tráfego." | A história da lenha do Dener Lippert (crédito). O gargalo era o atendimento. Antes de pôr mais tráfego, ache o elo mais fraco. | COMENTA: "Onde o seu lead morre: no anúncio, na página ou no WhatsApp?" | 1 |
 | 7 | CARROSSEL | A | Capa: **ELE VIU SEU POST. POR QUE NÃO COMPROU?** | — | Os 5 níveis de consciência de Eugene Schwartz, 1 por slide, com um exemplo de anúncio para cada. Último slide: quem está no nível 5 e não compra é porque você não ofereceu (crédito: Ícaro). | SALVA | 50 |
 
@@ -43,10 +43,10 @@ Regras comuns:
 | dia | formato | estrutura | texto na tela | primeira fala | desenvolvimento | final | fonte |
 |---|---|---|---|---|---|---|---|
 | 8 | REEL | C | **MARKETING NÃO É CRIATIVIDADE. É MATEMÁTICA.** | "Marketing não é criatividade. É matemática." | Você não prevê o que um cliente faz, mas prevê o que mil fazem (exemplo da Coca e do guaraná). Por isso se testa em volume e se decide pelo número. | COMENTA: "Qual decisão de marketing você tomou no achismo esse mês?" | 64 |
-| 9 | REEL | C | **EU ANUNCIO PRA QUEM NUNCA ME VIU. SÓ NÃO VENDO.** | "Eu anuncio pra quem nunca ouviu falar de mim. Só não vendo pra essa pessoa." | Para quem é frio vai conteúdo pago (etapa 2). Quem assistiu vira público de video view (etapa 3). A oferta vai para esse público (etapa 4). | SALVA | posição 4, Ciclo do Lucro |
+| 9 | REEL | C | **EU VENDO PRA QUEM NUNCA ME VIU. MAS NÃO O CARO.** | "Eu vendo pra quem nunca me viu. Só não vendo o produto caro." | Como o Cleiton divide a verba: a maior parte vai para remarketing de video view e engajamento (quem já assistiu). Uma parte menor continua em tráfego para público frio, mas com oferta de ticket baixo ou médio. O produto caro fica para quem já está aquecido. | SALVA | posição 4, Ciclo do Lucro |
 | 10 | REEL | D | **O ALFREDO SOARES ERROU NESSA** | "O Alfredo Soares diz que conteúdo demora pra vender. Eu discordo. Só demora se você deixar o público esfriar." | Respeito a ele no início; o argumento é o remarketing para quem assistiu, que encurta a jornada. | COMENTA: "Você faz remarketing pra quem assiste seus vídeos?" | 24 |
 | 11 | REEL | B | **6 DÍGITOS EM 7 DIAS. NÃO FOI TRÁFEGO.** | "Uma formação jurídica fez 6 dígitos em 7 dias. E não foi por tráfego. Foi timing." | **Aprovado.** Uma lei nova tinha acabado de sair; a narrativa foi construída em cima dela. "Empresa pequena não precisa de ideia, precisa de timing" (crédito: Alfredo). | SEGUE | case 2, 38 |
-| 12 | REEL | B | **UMA BALA TRIPLICOU AS VENDAS NA FARMÁCIA** | "Uma bala energética mais que triplicou as vendas na farmácia. E nunca anunciou na farmácia." | Caso da DOT (contado no advisor do Alfredo, crédito): o TikTok gerava a procura e a venda acontecia no caixa. Lição: crie o indicador que mede o seu negócio de verdade. | COMENTA: "Qual número você olha pra saber se seu marketing funciona?" | 31 |
+| 12 | REEL | B | **O DONO DA V4 PAROU DE POSTAR. E VENDEU R$150 MIL.** | "O dono da maior rede de marketing do Brasil ficou um ano sem postar. E vendeu R$150 mil em publicidade no Instagram num mês." | Virada: não foi sorte, foi ativo. Conteúdo que você já publicou continua trabalhando (crédito: Dener Lippert, no Extremos). Mídia é aluguel; conteúdo é patrimônio. É por isso que este teste existe. | COMENTA: "Qual conteúdo seu ainda traz cliente até hoje?" | 6 |
 | 13 | CARROSSEL | A | Capa: **FORAM NO SEU EVENTO E NÃO COMPRARAM?** | — | São só 3 motivos, 1 por slide: não tinha dinheiro naquele momento (reabra a venda ~15 dias depois), sentiu que não era para ele (erro do evento), não viu urgência (erro também). Crédito: Ícaro. | SALVA | 70 |
 | 14 | CARROSSEL | — | Capa: **OS NÚMEROS QUE EU OLHO TODA SEMANA NUM FUNIL** | — | **Aprovado.** Um indicador por etapa: topo (alcance, % de não seguidores), meio (custo por lead, comparecimento), fundo (conversão, custo por venda). | SALVA | 25 |
 
@@ -71,11 +71,13 @@ Regras comuns:
 
 ## Antes de gravar
 
-- **Dia 5:** confirmar que a pós era o mesmo produto nos dois lançamentos.
-  Se não for, trocar a virada por "E não foi por anúncio novo".
 - **Dias 6, 18:** falas do Dener (seguras). **Dias 10, 20:** falas do Alfredo
-  (episódios solo, seguras). **Dia 12:** números ditos pelos fundadores da
-  DOT no episódio; usar "mais que triplicou", sem inventar valor.
+  (episódios solo, seguras). **Dia 12:** fala do Dener no Extremos ("vendi 150 mil
+  de pub no meu Instagram, onde não produzo conteúdo faz um ano"); "pub" =
+  publicidade/publis.
+- **Dia 2:** case do Cleiton, anônimo. Na fala, "perfis fake" ou "contas
+  estrangeiras falsas"; evitar citar nacionalidade, para não soar como
+  piada com um povo.
 - **Medir por peça:** views, % de não seguidores, compartilhamentos,
   salvamentos e seguidores ganhos. No dia 21, as 3 estruturas (A, B, C, D) que
   mais trouxeram seguidores ditam os próximos 10.

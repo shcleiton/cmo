@@ -76,7 +76,9 @@ Todas confirmadas pelo Cleiton:
      mais gente.
 4. **O dinheiro do tráfego vai mais para quem já está aquecido.** Não exclui
    100% o público frio, mas proporcionalmente a verba vai muito mais para
-   público de engajamento e remarketing.
+   público de engajamento e remarketing. Ele continua vendendo para público
+   frio, numa proporção menor, e de preferência produto de ticket baixo ou
+   médio. O ticket alto fica para quem já está aquecido.
 
 5. **Hack não constrói negócio.** Estrutura constrói.
 6. **O que não é medido não é crescimento, é sorte.**
@@ -123,7 +125,7 @@ Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
 1. **Pós-graduação numa faculdade: de 33 para mais de 110 vendas.**
    O lançamento anterior da pós tinha feito 33 vendas. Cleiton assumiu o
    projeto, aplicou o Ciclo do Lucro e o lançamento seguinte, 2 a 3 meses
-   depois, fez mais de 110 vendas (entre 111 e 116; dizer "mais de 110").
+   depois, com o mesmo produto, fez mais de 110 vendas (entre 111 e 116; dizer "mais de 110").
    Mais de 3x o resultado anterior.
 2. **Formação para profissionais da área jurídica: 6 dígitos em 7 dias.**
    Uma nova lei tinha acabado de entrar em vigor. Aproveitaram o hype da lei,
@@ -133,6 +135,10 @@ Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
    Estratégia criada pelo Cleiton naquele lançamento: venda em conjunto,
    para grupos de estudos de mães. Primeiro lançamento ~40 vendas, segundo
    lançamento com a estratégia de grupo: 93 vendas. Mais que dobrou.
+4. **Perfil com 22 mil seguidores e 9 vendas: audiência comprada.**
+   Um lançamento para um perfil de 22 mil seguidores vendeu 9. Os
+   seguidores eram comprados: perfis fake que nunca iam comprar. Lição:
+   compre gente (alcance para quem é real), não seguidor.
 
 ## The ask
 
