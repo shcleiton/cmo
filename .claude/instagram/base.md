@@ -307,3 +307,80 @@ Melhores para os 20 primeiros: **3** (Ciclo do Lucro em uma frase), **1**
 Melhores para os 20 primeiros: **1** (abre o teste citando quem discorda dele),
 **3** (os níveis de consciência, a referência do Cleiton, viram carrossel) e
 **5** (fala direto com quem nunca lança).
+
+---
+
+## Fonte 5: Ícaro de Carvalho — "BÁSICO DO BÁSICO #02 | AIDA"
+
+- Link: https://www.youtube.com/watch?v=kytm7upUoM4
+- Formato: live longa (~2h) do Ícaro de Carvalho com o "diretor" do canal.
+  Tudo abaixo é fala do Ícaro.
+- Fora da base de propósito: a análise política do vídeo do Tallis Gomes (só
+  ficou o princípio de comunicação, sem o conteúdo político), os comentários
+  de que a maioria da população "não tem capacidade de sair do azul", a
+  sugestão de reagir a vídeos de crianças obesas ou de pessoas expostas, e a
+  análise de uma página de produto íntimo. Nada disso combina com o tom do
+  Cleiton.
+
+### Ideias
+
+| # | ideia | min | relação | ângulo do Cleiton |
+|---|---|---|---|---|
+| 63 | **"A maioria das pessoas que comprarão de você ainda não te conhece."** A internet funciona em fluxo e a audiência se move. Erro comum: comunicar só para quem já é seguidor ou cliente. | 15:45, 38:56 | **CONCORDO +** | Justifica o teste: conteúdo para quem ainda não segue (reels) e tráfego para alcançar quem ainda não conhece. |
+| 64 | **Uma pessoa não é previsível; um conjunto de pessoas é.** Não dá para saber se uma pessoa prefere Coca ou guaraná, mas dá para saber o que 70% de um grupo prefere. Não dá para saber se a Ana prefere anúncio em vídeo, mas o conjunto "mulheres de 27 a 37, São Paulo, renda acima de R$20 mil" dá. | 09:15 | **CONCORDO +** | "Marketing é ciência exata": você não prevê o cliente, prevê o público. Por isso se mede em volume. |
+| 65 | **"Não existe comunicação errada. Existe comunicação para o lead errado."** Uma mensagem polêmica gera barulho em 99% de quem não compra, e esse barulho carrega a mensagem até o 1% que compra. Tem efeito colateral, e a decisão de repetir é uma "conta de padaria": quanto entrou de mídia, quantos clientes entraram e saíram, quanto ruído gerou com investidores e parceiros. | 22:34, 36:33 | **CONCORDO +** | A parte que serve ao Cleiton é a conta no fim: polêmica não é estratégia até ser medida. (Usar o princípio, não o caso político.) |
+| 66 | **Cada etapa concorre com coisas diferentes.** No topo, você disputa atenção com aposta, rifa e entretenimento. Para crescer, precisa ir à base grande e **simplificar a mensagem**; quem fala só para o público avançado tem negócio bom, mas não expande. | 40:57, 46:52 | **TRADUZO** | Tensão real para o teste: viralizar pede mensagem simples, e o Cleiton é profundo. Saída: gancho simples, conteúdo profundo. |
+| 67 | **Três erros:** (1) só fazer conteúdo na rede social; (2) só comprar tráfego, impulsionando sem depois qualificar; (3) só lançar/vender para a base pequena. | 49:12 | **CONCORDO +** | Os três juntos são o argumento do Ciclo do Lucro: conteúdo + tráfego + oferta, nessa ordem. |
+| 68 | **"Red pill": você QUER perder 90–95% das pessoas entre alcançar e qualificar.** Quem fica sem interesse custa view, lead, remarketing e tempo do comercial. "O trabalho de quem trabalha com digital é formar listas e diminuir listas." | 52:09, 57:17 | **CONCORDO +** | O Ciclo do Lucro faz isso pelo pixel: alcança muita gente e paga remarketing só para quem assistiu. |
+| 69 | **Anúncio de atenção já pode expulsar gente.** Palavras como "profissão", "trabalhar", "aprender" afastam quem não quer esforço, e isso é bom. Sorteio de iPhone no anúncio faz o contrário: lista grande, lead barato, presença baixa e um chat cheio de "já vi que ele vai cobrar". Sorteio, se houver, só dentro do evento, depois de qualificar. | 53:42, 59:58 | **CONCORDO +** | "Hack não constrói negócio": lead barato que não compra é métrica de vaidade. |
+| 70 | **Por que quem foi no evento não comprou: só 3 motivos.** (1) Não tinha dinheiro no momento: por isso o Novo Mercado faz "flash opening" ~15 dias depois, que ainda converte 15–20% de quem não comprou. (2) Sentiu que não era para ele: erro do evento. (3) Não viu urgência: erro também. | 1:05:08 | **CONCORDO +** | Experiência direta do Cleiton em lançamento de educação. |
+| 71 | **Exemplo hipotético da "Priscilinha".** Personal com 3.900 seguidores e ~780 views nos stories lança um produto de R$19,90 só para a base: ~13 vendas, ~R$258. Ela conclui que "Instagram não funciona", mas são conversões normais para essa base. Com anúncios de atenção antes (ex.: 1.000 leads a R$1,50), evento e remarketing, a base cresce e a conta muda. | 1:09:03 | **TRADUZO** | Ótimo para mostrar a conta na tela. **Atenção:** é exemplo inventado e a conta no ar ficou inconsistente (passa de R$1.520 para R$30 mil trocando o produto). Usar só a lógica, nunca como case real. |
+| 72 | **Duas formas de qualificar.** Pelo **conteúdo** do anúncio (quanto mais específico, mais caro e melhor o lead: "trabalho com internet" contra "escrevo copy para lançamentos com 4 CPLs") ou pela **forma** (formulário com perguntas: já trabalha com isso? o que faz? quanto ganha?), para o comercial priorizar. | 1:24:25 | **CONCORDO +** | Na Implementação de Funil, a página de captura pode ter 2 ou 3 perguntas para o Cleiton saber quem atender primeiro. |
+| 73 | **Lead barato em volume ou lead qualificado?** Volume quando você confia na capacidade de aquecer e converter (time, processo). Qualificado quando a operação é menor e o objetivo é ROAS alto. Números que ele cita: ROAS de 15–20 é possível em lançamento pequeno; acima de R$6–8 milhões, costuma ficar em 3,5–4,5. | 1:29:20 | **TRADUZO** | Para o público do Cleiton (operação pequena), começar qualificado. |
+| 74 | **O que cada anúncio faz no AIDA.** Atenção: promessa ampla e simples, sem cara de trabalho, sem revelar evento; objetivo é levar ao perfil. Interesse: fala do evento, datas, grupo; objetivo é presença. Desejo: o evento em si. Ação: lembrar de comprar, "últimas horas", escassez. Os anúncios mudam a cada fase. | 1:35:47 | **CONCORDO +** | Mapa direto para montar campanhas dos clientes. |
+| 75 | **Peça telefone e e-mail; grupo só no início do evento.** Telefone para o comercial, e-mail para a lista. Anunciar grupo de WhatsApp cedo atrai "piratas" que entram, copiam e oferecem cursos falsos no lugar da oferta real. | 1:47:28 | **TRADUZO** | Detalhe operacional útil para quem faz lançamento. |
+| 76 | **Anúncio de "siga meu perfil" não vale por si só.** Vale quando o anúncio já entrega conteúdo e chama para ver mais no perfil. Formato que ele sugere: reagir a um assunto do momento ("timing post") com você na tela. | 1:50:43 | **TRADUZO** | Para o teste: o formato de reação a um assunto do momento é bom para crescer. |
+| 77 | **Negócio físico: capture o contato na mesa.** Restaurante oferece sobremesa em troca do WhatsApp e manda voucher nos dias fracos. | 1:53:47 | **TRADUZO** | Para prestador de serviço local: transformar o cliente que já veio em lista. |
+| 78 | **Nome com número e método vende.** Ao analisar uma página, elogia "os três estímulos do ciclo do prazer": "Eu sou tarado por números e nomes de temas." Página: botão logo abaixo do título (H1/H2), nunca na troca de dobra. | 1:41:13 | **CONCORDO +** | Valida dar nome ao método: "Ciclo do Lucro", com 4 etapas numeradas. |
+
+### Frases fortes (crédito: Ícaro de Carvalho)
+
+- "A maioria das pessoas que comprarão de você ainda não te conhecem."
+- "Não existe comunicação errada. Existe comunicação para o lead errado."
+- "A gente quer perder essas pessoas."
+- "O trabalho de qualquer pessoa que trabalha com digital consiste em formar
+  listas e diminuir listas."
+- "A internet funciona em fluxo."
+
+### Números citados (fonte: a live)
+
+- Flash opening ~15 dias depois do lançamento: 15–20% de compra entre quem não
+  tinha comprado (Novo Mercado).
+- ROAS: 15–20 possível em lançamentos pequenos; 3,5–4,5 em lançamentos acima
+  de R$6–8 milhões.
+- Exemplo da Priscilinha: hipotético, não usar como dado.
+
+### Ganchos desta fonte (na voz do Cleiton)
+
+**Contra o senso comum (#22)**
+1. "Seu próximo cliente ainda não te segue." (ideia 63)
+2. "Você não quer que todo mundo fique. Você quer perder 90%." (ideia 68)
+3. "Não existe comunicação errada. Existe comunicação para o público
+   errado." (ideia 65, com crédito)
+
+**Marketing é ciência exata**
+4. "Você não consegue prever o que um cliente vai fazer. Mas consegue prever
+   o que mil vão fazer. É por isso que marketing é dado." (ideia 64)
+
+**Pergunta do público (#16)**
+5. "'Por que a pessoa foi no meu evento e não comprou?' São só 3 motivos."
+   (ideia 70)
+6. "'Tenho 4 mil seguidores e meu lançamento vendeu 13.' Isso não é
+   fracasso. É matemática." (ideia 71, como exemplo, com a conta na tela)
+
+**Comando (#2)**
+7. "Pare de sortear iPhone para conseguir lead." (ideia 69)
+
+Melhores para os 20 primeiros: **4** (a melhor tradução de "marketing é
+ciência exata" até agora), **1** (curto, abre conversa sobre alcance) e **2**
+(contraintuitivo, liga com o Ciclo do Lucro).
