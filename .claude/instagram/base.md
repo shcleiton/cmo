@@ -230,3 +230,80 @@ como resposta).
 
 Melhores para os 20 primeiros: **3** (Ciclo do Lucro em uma frase), **1**
 (caso + virada, ensina a medir marca) e **5** (liga direto ao case jurídico).
+
+---
+
+## Fonte 4: Ícaro de Carvalho — "BÁSICO DO BÁSICO #01 | AUDIÊNCIA"
+
+- Link: https://www.youtube.com/watch?v=xPi5mXg4Ntg
+- Formato: live longa (~2h) do Ícaro de Carvalho (O Novo Mercado) com o
+  "diretor" do canal. Tudo abaixo é fala do Ícaro, salvo indicação.
+- Fora da base de propósito: o trecho sobre espectro político e quais lados
+  "têm mais dinheiro" (opinião não verificável e fora do posicionamento do
+  Cleiton) e a crítica ao vídeo de um aluno de outro canal.
+
+### Ideias
+
+| # | ideia | min | relação | ângulo do Cleiton |
+|---|---|---|---|---|
+| 47 | **"O tráfego orgânico do Instagram acabou."** "Se você quiser fazer isso no orgânico, você não vai crescer, não vai encher grupo, não vai fazer lançamento." Antes todo mundo fazia collab e live junta; isso acabou. A conta dele "é a exceção da exceção". | 59:12 | **CONCORDO +** | É a posição nº 1 do Cleiton, dita por um nome grande. E o teste dos 45 dias coloca essa frase à prova em público. |
+| 48 | **Audiência pode (e deve) ser comprada, mas compre gente, não seguidor.** Os dois maiores erros: não comprar audiência (não impulsionar os reels, não anunciar) e demorar demais. Comprar seguidor é ruim porque traz quem só clica em seguir. | 57:53, 1:19:01 | **CONCORDO +** | Etapa 2 do Ciclo do Lucro: distribuir o conteúdo com tráfego para gente real. |
+| 49 | **Remarketing para quem interagiu.** Para um perfil de 2,6 milhões que faturou 5 dígitos: "seus próximos 100 mil estão aqui", no público de quem interagiu com o perfil nos últimos 30 dias. | 1:55:48 | **CONCORDO +** | É a etapa 3 e 4 do Ciclo do Lucro, exatamente. (A conta dele no ar deu 0,01%; 1.030 vendas em 2,6 milhões são ~0,04%. Corrigir se citar.) |
+| 50 | **Níveis de consciência (Schwartz) com o que falta nos livros.** Inconsciente do problema → consciente do problema → consciente da solução → consciente da **sua** solução → consciente do **seu produto**. Quanto mais inconsciente, mais barato o lead e mais conteúdo ele precisa. O complemento dele: muita gente chega no nível 5 e você não vende porque demora a fazer oferta. | 1:12:56 | **CONCORDO +** | A referência central do Cleiton, explicada por outro. O Ciclo do Lucro é como levar o público do nível 1 ao 5 com conteúdo e cobrar no remarketing. |
+| 51 | **Por que lançamento é em bloco.** Numa audiência misturada (níveis 1 a 5), a sequência de vídeos uniformiza o bloco: recepciona e expande a consciência → quem você é → prova social e transformação → venda. Prefere 4 vídeos de 15–40 min a um webinário de 2h: descanso, história, eventos entre os vídeos (quiz, exercício) e a venda abre com o lead descansado. Entre um CPL e outro cai 30–50% da audiência. | 1:21:32 | **CONCORDO +** | Experiência direta do Cleiton com lançamentos de educação. |
+| 52 | **"A audiência engorda como frango."** Frango de granja é abatido com ~49 dias. "Em 40 dias você tem que lançar algo", porque só no lançamento você descobre que o pixel não estava instalado, que o disparo de WhatsApp falhou, que o anúncio de selfie converte mais que o caro. | 56:15, 1:06:57 | **TRADUZO** | Os 45 dias do teste têm o tamanho certo: vale terminar com um evento (aula ao vivo, desafio), não só com um número. |
+| 53 | **"O zero é confortável" (Eric Ries, A Startup Enxuta).** Enquanto você não lança, você vende sonho para a família. Quanto mais perto da venda, mais você adia e mais "produção" inventa (estúdio, edição, legenda). Construir → medir → aprender, com MVP. Sugestão: 6 lançamentos por ano de qualquer coisa. | 1:02:33 | **CONCORDO +** | "O que não é medido é sorte": só lançando você tem dado. |
+| 54 | **AIDA para construir audiência.** Atenção (reels, timing posts, react ao assunto do momento) → interesse (o feed mostra quem você é, o que defende e com quem anda) → desejo (só depois) → ação (o evento: lançamento, desafio). "A maioria quer vender quando ainda deveria estar chamando atenção." | 38:23, 58:40 | **CONCORDO +** | Mapa simples para o perfil novo: reels = atenção; feed = interesse; stories/evento = desejo e ação. |
+| 55 | **Dois tipos de comprador que não se misturam:** quem quer muito resultado, rápido, com pouco esforço; e quem sabe que resultado vem com trabalho e desconfia de promessa boa demais. Escolha cedo para qual você fala. | 49:50 | **TRADUZO** | O público do Cleiton é o segundo: dono de empresa que desconfia de "hack". Combina com o tom calmo e didático. |
+| 56 | **"As pessoas não querem te conhecer. Querem o que você tem para vender."** Ele levou ~6 anos (2013–2019) até alguém querer saber quem era o Ícaro de Carvalho. | 1:11:42 | **CONCORDO +** | Reforça o plano: conteúdo sobre o problema do público, não sobre o Cleiton. |
+| 57 | **Nem todo perfil precisa ser grande.** A oftalmologista de São José dos Campos não precisa de clickbait nacional: as buscas da cidade dela já bastam. "Existem muitas contas com 80, 90 mil seguidores que fazem milhões." | 42:32 | **TRADUZO** | Para prestador de serviço local: audiência certa é melhor que audiência grande. |
+| 58 | **Direct não é técnica, é trabalho.** Das ~3h/dia de Instagram: ~20 min postando, ~1h de stories (com caixinha) e o resto respondendo direct e engajando, em 3 ou 4 blocos por dia. | 1:41:38 | **CONCORDO +** | Junto com a ideia 27 (Alfredo): o direct é onde o lead morno vira conversa. Entra na rotina diária do teste. |
+| 59 | **Jab, jab, jab, right hook (Gary Vaynerchuk).** 98% do tempo engajando (conteúdo, direct), 2% vendendo forte e repetido. "Você faz pouca oferta porque tem vergonha de parecer vendedor." | 1:17:32 | **TRADUZO** | Valida os 20 primeiros sem oferta, desde que depois a oferta venha forte. |
+| 60 | **Quem não comprou não é perdido.** Muita gente demorou 1 ou 2 anos para assinar o Novo Mercado. O cara costuma comprar em 2 ou 3 campanhas suas; dá para fazer nova oferta em ~20 dias. Cita "uma pesquisa do Google" de que é preciso ver o anúncio 6 ou 7 vezes antes de comprar (não verificado). | 1:28:19 | **CONCORDO +** | Mais um motivo para remarketing contínuo (Ciclo do Lucro). Não citar o "6 ou 7 vezes" como dado sem fonte. |
+| 61 | **Prospecção por telefone: vendedor não pede ajuda, oferece.** Em vez de "preciso de uma ajudinha sua", pergunte com quem falar de vendas e chegue com um número: "Tem 2.000 buscas por mês por autoescola na sua região. Quer que eu aponte parte delas para você?" | 1:45:34 | **TRADUZO** | Abordagem para vender a Implementação de Funil a prestador local: começar pelo dado de demanda da região. |
+| 62 | **Serviço pontual sem recorrência?** Para quem vende landing page: os bons clientes fazem landing page todo mês e várias; vá aonde se contrata muito e transforme o serviço em produto (livro "Feito para Vender", de John Warrillow). | 1:49:20 | **TRADUZO** | Pergunta igual à do modelo do Cleiton: a implementação pontual precisa de um caminho claro para a continuidade. |
+
+### Frases fortes (crédito: Ícaro de Carvalho)
+
+- "O tráfego orgânico do Instagram acabou."
+- "A audiência engorda como frango."
+- "O zero é muito confortável." (citando Eric Ries)
+- "As pessoas não querem te conhecer. Elas querem conhecer o que você tem
+  para vender."
+- "Não chame isso de técnica, chame isso de trabalho."
+- "Você não vai aprender a fazer rigorosamente nada na sua vida assistindo
+  vídeos de 5 minutos."
+
+### Números citados (fonte: a live)
+
+- Brasil: ~215 milhões de habitantes, "talvez 40 milhões" de público
+  endereçável (estimativa dele).
+- Usuários por rede no Brasil (pesquisa feita no ar, 2023): ~169 milhões no
+  primeiro colocado, ~24 milhões no Twitter/X (10º lugar).
+- Queda entre vídeos de um lançamento: 30% a 50% de um CPL para o outro
+  (ex.: 1.000 → ~350 no último).
+
+### Ganchos desta fonte (na voz do Cleiton)
+
+**Reação a um nome grande**
+1. "O Ícaro de Carvalho diz que o orgânico do Instagram acabou. Eu concordo.
+   E mesmo assim vou tentar crescer um perfil do zero, só no orgânico, por
+   45 dias." (ideia 47; **candidato forte para o reel de abertura**)
+2. "O Ícaro diz que a audiência engorda como frango. É a analogia mais
+   feia e mais certa do marketing." (ideia 52)
+
+**Pergunta do público (#16)**
+3. "'Tenho seguidor e não vendo.' Em qual dos 5 níveis de consciência está
+   o seu público?" (ideia 50, carrossel)
+4. "'Faço webinário ou série de vídeos?' Depende de quando você quer abrir o
+   carrinho: com o lead descansado ou cansado." (ideia 51)
+
+**Contra o senso comum (#2 / #22)**
+5. "O número mais confortável do marketing é o zero." (ideia 53)
+6. "Ninguém quer te conhecer. Querem saber o que você resolve." (ideia 56)
+7. "Seu perfil não precisa de 1 milhão de seguidores. Precisa das pessoas
+   certas." (ideia 57)
+
+Melhores para os 20 primeiros: **1** (abre o teste citando quem discorda dele),
+**3** (os níveis de consciência, a referência do Cleiton, viram carrossel) e
+**5** (fala direto com quem nunca lança).
