@@ -1,6 +1,6 @@
 # Plano: perfil novo, 0 → 10 mil em 45 dias (só orgânico)
 
-Perfil novo, só sobre marketing. Objetivo: testar se conteúdo de base de
+Perfil novo (@cleitonramos_marketing, começou com 77 seguidores), só sobre marketing. Objetivo: testar se conteúdo de base de
 conhecimento viraliza e traz seguidores. Os primeiros 20 conteúdos não têm CTA
 de oferta. O link da bio já aponta para a página da Implementação de Funil,
 mas nenhum conteúdo manda a pessoa para lá.
