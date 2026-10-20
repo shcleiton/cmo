@@ -108,8 +108,22 @@ Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
   de uma faculdade.
 - Trabalhou com especialistas e professores na venda de pós-graduação,
   formações e cursos de desenvolvimento.
-- {{um caso: negócio, problema, o que foi construído, resultado em número}}
-- {{outro caso}}
+
+### Cases (usar exatamente como está, sem arredondar para cima)
+
+1. **Pós-graduação numa faculdade: de 33 para mais de 110 vendas.**
+   O lançamento anterior da pós tinha feito 33 vendas. Cleiton assumiu o
+   projeto, aplicou o Ciclo do Lucro e o lançamento seguinte, 2 a 3 meses
+   depois, fez mais de 110 vendas (entre 111 e 116; dizer "mais de 110").
+   Mais de 3x o resultado anterior.
+2. **Formação para profissionais da área jurídica: 6 dígitos em 7 dias.**
+   Uma nova lei tinha acabado de entrar em vigor. Aproveitaram o hype da lei,
+   construíram uma narrativa em cima dela e o lançamento de 7 dias fez 6
+   dígitos de faturamento. Lição: narrativa em cima de um assunto quente.
+3. **Formação de mães: de cerca de 40 para 93 vendas com venda em grupo.**
+   Estratégia criada pelo Cleiton naquele lançamento: venda em conjunto,
+   para grupos de estudos de mães. Primeiro lançamento ~40 vendas, segundo
+   lançamento com a estratégia de grupo: 93 vendas. Mais que dobrou.
 
 ## The ask
 
