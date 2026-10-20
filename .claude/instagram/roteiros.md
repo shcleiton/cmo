@@ -15,33 +15,39 @@ Como ler:
 
 ---
 
-## Dia 1 — REEL — "O orgânico do Instagram morreu?"
+## Dia 1 — REEL — "O orgânico ainda constrói negócio?"
 
-Estrutura D (reação). Gravação: rosto. **Fixar no topo.**
+Estrutura D (reação). Gravação: texto animado com a voz clonada. **Fixar.**
+Tese do teste: crescer qualquer perfil cresce; a pergunta é se o orgânico
+sozinho constrói um negócio.
 
 **Fala**
 ```
 O Ícaro de Carvalho diz que o orgânico do Instagram morreu.
-E eu concordo com ele.
-Em 10 anos de mercado, eu vi pouquíssima gente crescer só no orgânico.
+Crescer, até dá. Perfil de humor cresce todo dia.
+A minha pergunta é outra: o orgânico sozinho constrói um negócio?
+Em 10 anos de mercado, eu vi pouca gente conseguir isso.
 Então eu vou testar.
 Perfil novo. 45 dias. Nenhum real em anúncio. Um post por dia.
-Nos dias 15, 30 e 45, eu abro todos os números aqui.
-Seguidores, alcance, o que funcionou e o que não funcionou.
-Se eu estiver errado, você vai ver.
-Se ele estiver certo, você também vai ver.
-Segue pra acompanhar até o dia 45. E aí a gente descobre se o orgânico morreu mesmo.
+Nos dias 15, 30 e 45, eu abro os números aqui.
+Seguidores, alcance e quantos viraram conversa de negócio.
+Se o orgânico sozinho der conta, você vai ver.
+Se não der, você também vai ver.
+Segue pra acompanhar até o dia 45. E aí a gente descobre a força do orgânico.
 ```
 
 **Tela**
-- 0:00 — O ORGÂNICO DO INSTAGRAM MORREU?
-- 0:08 — 10 ANOS DE MERCADO
-- 0:12 — 45 DIAS. ZERO ANÚNCIO.
-- 0:18 — NÚMEROS NOS DIAS 15, 30 E 45
-- 0:30 — SEGUE PRA VER O DIA 45
+- 0:00 — O ORGÂNICO AINDA CONSTRÓI NEGÓCIO?
+- 0:04 — CRESCER, ATÉ DÁ.
+- 0:08 — CONSTRÓI UM NEGÓCIO?
+- 0:16 — 45 DIAS. ZERO ANÚNCIO.
+- 0:22 — NÚMEROS NOS DIAS 15, 30 E 45
+- 0:26 — QUANTOS VIRARAM NEGÓCIO
+- 0:36 — SEGUE PRA VER O DIA 45
 
-**Legenda:** Dizem que o orgânico do Instagram morreu. Vou testar em público:
-45 dias, perfil novo, nenhum anúncio. Os números saem aqui nos dias 15, 30 e 45.
+**Legenda:** Crescer perfil, qualquer um cresce. A pergunta é se o orgânico
+sozinho constrói um negócio. Vou testar em público: 45 dias, perfil novo,
+nenhum anúncio. Os números saem aqui nos dias 15, 30 e 45.
 
 ---
 
@@ -376,8 +382,9 @@ números reais no dia.**
 
 **Fala**
 ```
-15 dias tentando crescer só no orgânico. Esses são os números.
+15 dias testando a força do orgânico. Esses são os números.
 Começamos com {{77}} seguidores. Hoje são {{X}}.
+E {{N}} viraram conversa de negócio: direct ou WhatsApp perguntando do meu trabalho.
 O vídeo que mais trouxe gente foi {{qual}}: {{N}} seguidores sozinho.
 {{X}}% de quem me assistiu ainda não me seguia.
 O que funcionou: {{1 coisa}}.

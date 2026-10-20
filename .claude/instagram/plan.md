@@ -5,6 +5,14 @@ conhecimento viraliza e traz seguidores. Os primeiros 20 conteúdos não têm CT
 de oferta. O link da bio já aponta para a página da Implementação de Funil,
 mas nenhum conteúdo manda a pessoa para lá.
 
+## A tese do teste (definida pelo Cleiton)
+
+O teste não é sobre provar que não dá para crescer: qualquer perfil de humor
+cresce. A pergunta é **se o orgânico sozinho constrói um negócio**. O perfil
+cresce do zero para testar a força do orgânico, e o que se mede junto com os
+seguidores é quantos viraram conversa de negócio (direct, WhatsApp, clique no
+link da bio).
+
 ## O teste vira o conteúdo
 
 O Cleiton defende que "só orgânico não escala". Este teste coloca essa
@@ -66,7 +74,8 @@ da pesquisa). Montada com os ganchos de `swipe.md` e `base.md`.
 | compartilhamentos | o sinal mais forte de distribuição |
 | salvamentos | prova que é base de conhecimento |
 | seguidores ganhos por reel | o que realmente move a meta |
-| seguidores totais (diário) | a meta |
+| seguidores totais (diário) | a meta de alcance |
+| conversas de negócio (direct, WhatsApp, cliques no link) | a tese: o orgânico constrói negócio? |
 
 **Conta da meta:** 10 mil em 45 dias = ~222 seguidores por dia em média. Na
 prática não vem linear: costuma vir de 1 ou 2 reels que estouram. O trabalho
