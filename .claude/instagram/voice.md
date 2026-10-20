@@ -1,7 +1,7 @@
 # voice.md — Cleiton Ramos
 
-> Rascunho v2, montado a partir da entrevista. Itens marcados com
-> `[A CONFIRMAR]` foram inferidos e precisam do Cleiton antes de valer.
+> v3, montado a partir da entrevista com o Cleiton. Os cases não podem ser
+> associados a nomes de clientes.
 
 ## Who I am
 
@@ -48,9 +48,11 @@
 - **Referências que cita:** Eugene Schwartz (níveis de consciência).
 - **Muletas de fala:** "ali" ("dentro ali do que fala..."), "na verdade",
   "claro,", "ao mesmo tempo". Usar com moderação no roteiro.
-- **Words I would never say out loud:** [A CONFIRMAR] hack, segredo,
-  fórmula mágica, "fature 6 dígitos", "do zero ao milhão", mindset,
-  gatilho mental, "bora", "explodir as vendas".
+- **Words I would never say out loud:** segredo, fórmula mágica, mindset,
+  gatilho mental, "máquina de vendas" e qualquer "máquina de X".
+  Evitar também (tom de guru, não combina): "do zero ao milhão", "explodir as
+  vendas", "fature 6 dígitos" como promessa. "Hack" só no contraste
+  ("hack não constrói negócio"), nunca como algo que ele ensina.
 - **Do I swear:** Não.
 - **Emoji in captions:** Um, raramente.
 - **Face on camera:** Às vezes (mistura rosto, tela e B-roll).
@@ -97,8 +99,11 @@ Usar pelo nome, sempre "Ciclo do Lucro". É a base de boa parte dos conteúdos.
 
 ## Off limits
 
-- **Topics I do not post about:** {{preencher}}
-- **Clients, numbers or names I cannot say publicly:** {{preencher}}
+- **Topics I do not post about:** Nada definido ainda.
+- **Clients, numbers or names I cannot say publicly:** Nunca citar nome de
+  cliente, faculdade ou especialista. Sem autorização para divulgação.
+  Sempre anônimo: "uma faculdade", "uma formação para a área jurídica",
+  "uma formação para mães".
 - **Claims I am not allowed to make:** Nada de promessa de faturamento
   garantido.
 
@@ -131,6 +136,12 @@ Nenhuma prova cadastrada ainda. Toda prova entra aqui com número real.
 
 ## The ask
 
-- **My keyword CTA, if I use one:** {{ex.: DIAGNÓSTICO}}
-- **What the keyword sends them:** {{preencher}}
-- **Where my link goes:** {{preencher}}
+- **Caminho de conversão:** link da bio → página da Implementação de Funil →
+  botão de WhatsApp no final da página.
+- **My keyword CTA, if I use one:** Nenhuma definida ainda. Sugestão em
+  teste: FUNIL (comenta "FUNIL" → recebe por DM o link da página).
+- **What the keyword sends them:** Link da página da Implementação de Funil.
+- **Where my link goes:** Página da Implementação de Funil (CTA final:
+  WhatsApp).
+- **CTA padrão nos roteiros:** um só por peça. Ou "link na bio", ou a
+  palavra-chave. Nunca os dois.
