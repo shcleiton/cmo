@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dia 1 — O orgânico ainda constrói negócio?</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-latin-500-normal.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; background: #03354e; overflow: hidden; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #03354e; font-family: "Montserrat", sans-serif; color: #FFFFFF; }
+      .scene { position: absolute; inset: 0; }
+      .ground { position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+      .ground::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 520px;
+        background-image: radial-gradient(circle, rgba(111,211,160,0.55) 2.2px, transparent 2.6px), radial-gradient(circle, rgba(0,163,214,0.45) 1.8px, transparent 2.2px);
+        background-size: 34px 34px, 34px 34px; background-position: 0 0, 17px 17px;
+        -webkit-mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 45%, transparent 75%);
+        mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 45%, transparent 75%); }
+      .orange .ground { background: linear-gradient(135deg, #00a897 0%, #008293 50%, #006892 100%); }
+      .orange .ground::after { opacity: 0.35; }
+      .badge { position: absolute; top: 300px; left: 120px; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 28px; letter-spacing: 0.32em; color: #6FD3A0; }
+      .badge.ink { color: #FFFFFF; }
+      .logo { position: absolute; top: 282px; right: 120px; width: 230px; height: auto; }
+      .stage { position: absolute; left: 120px; right: 120px; top: 400px; height: 860px; display: flex; flex-direction: column; justify-content: center; gap: 36px; }
+      .hook { font-weight: 900; font-size: 96px; line-height: 1.0; letter-spacing: -0.02em; }
+      .big { font-weight: 900; font-size: 112px; line-height: 1.0; letter-spacing: -0.025em; }
+      .big.sm { font-size: 88px; }
+      .mid { font-weight: 800; font-size: 76px; line-height: 1.02; letter-spacing: -0.02em; }
+      .stat { font-weight: 900; font-size: 280px; line-height: 0.9; letter-spacing: -0.04em; color: #6FD3A0; }
+      #s11-n { font-size: 190px; }
+      .kick { font-weight: 600; font-size: 28px; letter-spacing: 0.32em; color: #6FD3A0; }
+      .ink { color: #FFFFFF; }
+      .kick.ink { color: #E6F7F2; }
+      .acc { color: #6FD3A0; }
+      .orange .acc { color: #03354e; }
+      .rules { list-style: none; display: flex; flex-direction: column; gap: 30px; }
+      .rules li { font-weight: 900; font-size: 74px; line-height: 1.05; letter-spacing: -0.02em; border-top: 2px solid rgba(111,211,160,0.35); padding-top: 24px; display: flex; align-items: baseline; gap: 28px; }
+      .rules.three li { font-size: 96px; }
+      .rules .n { font-weight: 600; font-size: 28px; letter-spacing: 0.2em; color: #6FD3A0; }
+      .tline { position: relative; height: 90px; margin: 10px 0 20px; }
+      .tline .track { position: absolute; left: 0; right: 0; top: 40px; height: 4px; background: rgba(255,255,255,0.18); }
+      .tline .fill { position: absolute; left: 0; right: 0; top: 40px; height: 4px; background: #6FD3A0; transform-origin: left center; }
+      .tline .mk { position: absolute; top: 0; width: 0; height: 90px; }
+      .tline .mk b { position: absolute; left: -40px; width: 80px; top: 54px; text-align: center; font-weight: 600; font-size: 28px; color: #FFFFFF; }
+      .tline .mk::before { content: ""; position: absolute; left: -12px; top: 30px; width: 24px; height: 24px; border-radius: 50%; background: #6FD3A0; box-shadow: 0 0 18px rgba(111,211,160,0.8); }
+      .cap { position: absolute; left: 120px; right: 120px; top: 1330px; height: 180px; display: flex; align-items: flex-start; justify-content: center; }
+      .cap-line { display: block; font-weight: 600; font-size: 40px; line-height: 1.25; text-align: center; color: #FFFFFF; background: rgba(2,42,62,0.85); padding: 10px 22px; border-radius: 10px; }
+      .endlogo { width: 620px; height: auto; margin-top: 30px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="42.2">
+      <audio id="narracao" src="assets/audio/narracao.mp3" data-start="0" data-duration="42.2" data-track-index="0"></audio>
+      <section id="s01" class="clip scene dark" data-start="0.0" data-duration="3.8" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s01-badge">DIA 1/45</div>
+        <img class="logo" id="s01-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="hook" id="s01-t">O ORGÂNICO<br/>AINDA CONSTRÓI<br/><span class="acc">NEGÓCIO?</span></h1></div>
+      </section>
+      <section id="s02" class="clip scene dark" data-start="3.8" data-duration="4.15" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s02-badge">DIA 1/45</div>
+        <img class="logo" id="s02-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="big" id="s02-t">CRESCER,<br/>ATÉ DÁ.</h1><p class="kick" id="s02-k">PERFIL DE HUMOR CRESCE TODO DIA</p></div>
+      </section>
+      <section id="s03" class="clip scene orange" data-start="7.95" data-duration="4.5" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge ink" id="s03-badge">DIA 1/45</div>
+        <img class="logo" id="s03-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><p class="kick ink" id="s03-k">A MINHA PERGUNTA</p><h1 class="big ink" id="s03-t">CONSTRÓI<br/>UM NEGÓCIO?</h1></div>
+      </section>
+      <section id="s04" class="clip scene dark" data-start="12.45" data-duration="3.8" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s04-badge">DIA 1/45</div>
+        <img class="logo" id="s04-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><div class="stat" id="s04-n">10</div><h2 class="mid" id="s04-t">ANOS DE<br/>MERCADO</h2></div>
+      </section>
+      <section id="s05" class="clip scene dark" data-start="16.25" data-duration="1.35" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s05-badge">DIA 1/45</div>
+        <img class="logo" id="s05-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="big" id="s05-t">ENTÃO EU<br/>VOU <span class="acc">TESTAR.</span></h1></div>
+      </section>
+      <section id="s06" class="clip scene dark" data-start="17.6" data-duration="5.9" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s06-badge">DIA 1/45</div>
+        <img class="logo" id="s06-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><ul class="rules"><li id="s06-a"><span class="n">01</span>PERFIL NOVO</li><li id="s06-b"><span class="n">02</span>45 DIAS</li><li id="s06-c"><span class="n">03</span>R$ 0 EM ANÚNCIO</li><li id="s06-d"><span class="n">04</span>1 POST POR DIA</li></ul></div>
+      </section>
+      <section id="s07" class="clip scene dark" data-start="23.5" data-duration="4.15" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s07-badge">DIA 1/45</div>
+        <img class="logo" id="s07-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><p class="kick" id="s07-k">EU ABRO OS NÚMEROS</p><div class="tline" id="s07-line"><div class="track"></div><div class="fill" id="s07-fill"></div><div class="mk" style="left:31.8%" id="s07-m1"><b>15</b></div><div class="mk" style="left:65.9%" id="s07-m2"><b>30</b></div><div class="mk" style="left:100%" id="s07-m3"><b>45</b></div></div><h2 class="mid" id="s07-t">DIAS 15 · 30 · 45</h2></div>
+      </section>
+      <section id="s08" class="clip scene dark" data-start="27.65" data-duration="4.1" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s08-badge">DIA 1/45</div>
+        <img class="logo" id="s08-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><ul class="rules three"><li id="s08-a">SEGUIDORES</li><li id="s08-b">ALCANCE</li><li id="s08-c" class="acc">NEGÓCIO</li></ul></div>
+      </section>
+      <section id="s09" class="clip scene dark" data-start="31.75" data-duration="3.1" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s09-badge">DIA 1/45</div>
+        <img class="logo" id="s09-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="big sm" id="s09-t">SE O ORGÂNICO<br/>DER CONTA,<br/><span class="acc">VOCÊ VAI VER.</span></h1></div>
+      </section>
+      <section id="s10" class="clip scene orange" data-start="34.85" data-duration="2.45" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge ink" id="s10-badge">DIA 1/45</div>
+        <img class="logo" id="s10-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="big ink" id="s10-t">SE NÃO DER,<br/>TAMBÉM.</h1></div>
+      </section>
+      <section id="s11" class="clip scene dark" data-start="37.3" data-duration="2.45" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s11-badge">DIA 1/45</div>
+        <img class="logo" id="s11-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><p class="kick" id="s11-k">SEGUE PRA VER O</p><div class="stat" id="s11-n">DIA <span id="s11-c">1</span></div></div>
+      </section>
+      <section id="s12" class="clip scene dark" data-start="39.75" data-duration="2.45" data-track-index="1">
+        <div class="ground"></div>
+        <div class="badge " id="s12-badge">DIA 1/45</div>
+        <img class="logo" id="s12-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" />
+        <div class="stage"><h1 class="hook" id="s12-t">O ORGÂNICO<br/>AINDA CONSTRÓI<br/><span class="acc">NEGÓCIO?</span></h1><img class="endlogo" id="s12-logo2" src="assets/img/logo-claro.png" alt="Cleiton Ramos" /></div>
+      </section>
+      <div id="cap-01" class="clip cap" data-start="0.03" data-duration="1.58" data-track-index="2"><span class="cap-line" id="cap-01-t">O Ícaro de Carvalho diz</span></div>
+      <div id="cap-02" class="clip cap" data-start="1.61" data-duration="2.26" data-track-index="2"><span class="cap-line" id="cap-02-t">que o orgânico do Instagram morreu.</span></div>
+      <div id="cap-03" class="clip cap" data-start="3.87" data-duration="1.84" data-track-index="2"><span class="cap-line" id="cap-03-t">Crescer, até dá.</span></div>
+      <div id="cap-04" class="clip cap" data-start="5.71" data-duration="2.28" data-track-index="2"><span class="cap-line" id="cap-04-t">Perfil de humor cresce todo dia.</span></div>
+      <div id="cap-05" class="clip cap" data-start="7.99" data-duration="1.64" data-track-index="2"><span class="cap-line" id="cap-05-t">A minha pergunta é outra:</span></div>
+      <div id="cap-06" class="clip cap" data-start="9.63" data-duration="2.88" data-track-index="2"><span class="cap-line" id="cap-06-t">o orgânico sozinho constrói um negócio?</span></div>
+      <div id="cap-07" class="clip cap" data-start="12.51" data-duration="1.52" data-track-index="2"><span class="cap-line" id="cap-07-t">Em 10 anos de mercado,</span></div>
+      <div id="cap-08" class="clip cap" data-start="14.03" data-duration="2.24" data-track-index="2"><span class="cap-line" id="cap-08-t">eu vi pouca gente conseguir isso.</span></div>
+      <div id="cap-09" class="clip cap" data-start="16.27" data-duration="1.36" data-track-index="2"><span class="cap-line" id="cap-09-t">Então eu vou testar.</span></div>
+      <div id="cap-10" class="clip cap" data-start="17.63" data-duration="2.6" data-track-index="2"><span class="cap-line" id="cap-10-t">Perfil novo. 45 dias.</span></div>
+      <div id="cap-11" class="clip cap" data-start="20.23" data-duration="1.72" data-track-index="2"><span class="cap-line" id="cap-11-t">Nenhum real em anúncio.</span></div>
+      <div id="cap-12" class="clip cap" data-start="21.95" data-duration="1.56" data-track-index="2"><span class="cap-line" id="cap-12-t">Um post por dia.</span></div>
+      <div id="cap-13" class="clip cap" data-start="23.51" data-duration="2.61" data-track-index="2"><span class="cap-line" id="cap-13-t">Nos dias 15, 30 e 45,</span></div>
+      <div id="cap-14" class="clip cap" data-start="26.12" data-duration="1.55" data-track-index="2"><span class="cap-line" id="cap-14-t">eu abro os números aqui.</span></div>
+      <div id="cap-15" class="clip cap" data-start="27.67" data-duration="1.39" data-track-index="2"><span class="cap-line" id="cap-15-t">Seguidores, alcance</span></div>
+      <div id="cap-16" class="clip cap" data-start="29.06" data-duration="2.73" data-track-index="2"><span class="cap-line" id="cap-16-t">e quantos viraram conversa de negócio.</span></div>
+      <div id="cap-17" class="clip cap" data-start="31.79" data-duration="2.05" data-track-index="2"><span class="cap-line" id="cap-17-t">Se o orgânico sozinho der conta,</span></div>
+      <div id="cap-18" class="clip cap" data-start="33.84" data-duration="1.07" data-track-index="2"><span class="cap-line" id="cap-18-t">você vai ver.</span></div>
+      <div id="cap-19" class="clip cap" data-start="34.91" data-duration="0.79" data-track-index="2"><span class="cap-line" id="cap-19-t">Se não der,</span></div>
+      <div id="cap-20" class="clip cap" data-start="35.7" data-duration="1.65" data-track-index="2"><span class="cap-line" id="cap-20-t">você também vai ver.</span></div>
+      <div id="cap-21" class="clip cap" data-start="37.35" data-duration="2.44" data-track-index="2"><span class="cap-line" id="cap-21-t">Segue pra acompanhar até o dia 45.</span></div>
+      <div id="cap-22" class="clip cap" data-start="39.79" data-duration="2.41" data-track-index="2"><span class="cap-line" id="cap-22-t">E aí a gente descobre a força do orgânico.</span></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      // s01 hook: lines punch in
+      tl.fromTo("#s01-t", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: E }, 0.0);
+      tl.fromTo("#s02-t", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: E }, 3.85);
+      tl.fromTo("#s02-k", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 5.7);
+      tl.fromTo("#s03-k", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 8.0);
+      tl.fromTo("#s03-t", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: E }, 9.6);
+      tl.fromTo("#s04-n", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: E }, 12.5);
+      tl.fromTo("#s04-t", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 13.0);
+      tl.fromTo("#s05-t", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: E }, 16.27);
+      [["#s06-a",17.63],["#s06-b",18.75],["#s06-c",20.23],["#s06-d",21.95]].forEach(([s,t]) =>
+        tl.fromTo(s, { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: E }, t));
+      tl.fromTo("#s07-k", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 23.5);
+      tl.fromTo("#s07-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.9, ease: "none" }, 23.6);
+      [["#s07-m1",24.12],["#s07-m2",24.78],["#s07-m3",25.38]].forEach(([s,t]) =>
+        tl.fromTo(s, { opacity: 0.25 }, { opacity: 1, duration: 0.2 }, t));
+      tl.fromTo("#s07-t", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 25.5);
+      [["#s08-a",27.67],["#s08-b",28.54],["#s08-c",30.18]].forEach(([s,t]) =>
+        tl.fromTo(s, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: E }, t));
+      tl.fromTo("#s09-t", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: E }, 31.79);
+      tl.fromTo("#s10-t", { scale: 0.92, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: E }, 34.9);
+      tl.fromTo("#s11-k", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 37.35);
+      const ctr = { v: 1 };
+      tl.fromTo(ctr, { v: 1 }, { v: 45, duration: 1.8, ease: "power2.out",
+        onUpdate: () => { document.getElementById("s11-c").textContent = Math.round(ctr.v); } }, 37.4);
+      tl.fromTo("#s12-t", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: E }, 39.79);
+      tl.fromTo("#s12-logo2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 40.4);
+      document.querySelectorAll(".cap-line").forEach((el) => {
+        const t = parseFloat(el.parentElement.dataset.start);
+        tl.fromTo(el, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out" }, t);
+      });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

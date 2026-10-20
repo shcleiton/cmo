@@ -1,0 +1,650 @@
+[
+  {
+    "text": "O",
+    "start": 0.03,
+    "end": 0.07,
+    "id": "w0"
+  },
+  {
+    "text": "hícaro",
+    "start": 0.07,
+    "end": 0.49,
+    "id": "w1"
+  },
+  {
+    "text": "de",
+    "start": 0.49,
+    "end": 0.56,
+    "id": "w2"
+  },
+  {
+    "text": "Carvalho",
+    "start": 0.64,
+    "end": 1.19,
+    "id": "w3"
+  },
+  {
+    "text": "diz",
+    "start": 1.19,
+    "end": 1.4,
+    "id": "w4"
+  },
+  {
+    "text": "que",
+    "start": 1.4,
+    "end": 1.61,
+    "id": "w5"
+  },
+  {
+    "text": "o",
+    "start": 1.61,
+    "end": 1.68,
+    "id": "w6"
+  },
+  {
+    "text": "orgânico",
+    "start": 1.68,
+    "end": 2.24,
+    "id": "w7"
+  },
+  {
+    "text": "do",
+    "start": 2.24,
+    "end": 2.38,
+    "id": "w8"
+  },
+  {
+    "text": "Instagram",
+    "start": 2.38,
+    "end": 3.01,
+    "id": "w9"
+  },
+  {
+    "text": "morreu.",
+    "start": 3.01,
+    "end": 3.84,
+    "id": "w10"
+  },
+  {
+    "text": "Crescer,",
+    "start": 3.87,
+    "end": 4.74,
+    "id": "w11"
+  },
+  {
+    "text": "até",
+    "start": 4.74,
+    "end": 5.04,
+    "id": "w12"
+  },
+  {
+    "text": "dar.",
+    "start": 5.04,
+    "end": 5.68,
+    "id": "w13"
+  },
+  {
+    "text": "Perfil",
+    "start": 5.71,
+    "end": 6.14,
+    "id": "w14"
+  },
+  {
+    "text": "de",
+    "start": 6.14,
+    "end": 6.23,
+    "id": "w15"
+  },
+  {
+    "text": "humor",
+    "start": 6.32,
+    "end": 6.68,
+    "id": "w16"
+  },
+  {
+    "text": "cresce",
+    "start": 6.68,
+    "end": 7.12,
+    "id": "w17"
+  },
+  {
+    "text": "todo",
+    "start": 7.23,
+    "end": 7.45,
+    "id": "w18"
+  },
+  {
+    "text": "dia.",
+    "start": 7.45,
+    "end": 7.96,
+    "id": "w19"
+  },
+  {
+    "text": "A",
+    "start": 7.99,
+    "end": 8.03,
+    "id": "w20"
+  },
+  {
+    "text": "minha",
+    "start": 8.03,
+    "end": 8.38,
+    "id": "w21"
+  },
+  {
+    "text": "pergunta",
+    "start": 8.38,
+    "end": 8.94,
+    "id": "w22"
+  },
+  {
+    "text": "é",
+    "start": 8.94,
+    "end": 9.01,
+    "id": "w23"
+  },
+  {
+    "text": "outra.",
+    "start": 9.01,
+    "end": 9.6,
+    "id": "w24"
+  },
+  {
+    "text": "O",
+    "start": 9.63,
+    "end": 9.68,
+    "id": "w25"
+  },
+  {
+    "text": "orgânico",
+    "start": 9.68,
+    "end": 10.3,
+    "id": "w26"
+  },
+  {
+    "text": "sozinho",
+    "start": 10.3,
+    "end": 10.85,
+    "id": "w27"
+  },
+  {
+    "text": "constrói",
+    "start": 10.85,
+    "end": 11.47,
+    "id": "w28"
+  },
+  {
+    "text": "um",
+    "start": 11.47,
+    "end": 11.63,
+    "id": "w29"
+  },
+  {
+    "text": "negócio?",
+    "start": 11.63,
+    "end": 12.48,
+    "id": "w30"
+  },
+  {
+    "text": "Em",
+    "start": 12.51,
+    "end": 12.61,
+    "id": "w31"
+  },
+  {
+    "text": "10",
+    "start": 12.61,
+    "end": 13,
+    "id": "w32"
+  },
+  {
+    "text": "anos",
+    "start": 13,
+    "end": 13.26,
+    "id": "w33"
+  },
+  {
+    "text": "de",
+    "start": 13.26,
+    "end": 13.39,
+    "id": "w34"
+  },
+  {
+    "text": "mercado,",
+    "start": 13.39,
+    "end": 13.92,
+    "id": "w35"
+  },
+  {
+    "text": "eu",
+    "start": 14.03,
+    "end": 14.14,
+    "id": "w36"
+  },
+  {
+    "text": "vi",
+    "start": 14.14,
+    "end": 14.28,
+    "id": "w37"
+  },
+  {
+    "text": "pouca",
+    "start": 14.28,
+    "end": 14.61,
+    "id": "w38"
+  },
+  {
+    "text": "gente",
+    "start": 14.69,
+    "end": 15.01,
+    "id": "w39"
+  },
+  {
+    "text": "conseguir",
+    "start": 15.01,
+    "end": 15.68,
+    "id": "w40"
+  },
+  {
+    "text": "isso.",
+    "start": 15.68,
+    "end": 16.23,
+    "id": "w41"
+  },
+  {
+    "text": "Então",
+    "start": 16.27,
+    "end": 16.59,
+    "id": "w42"
+  },
+  {
+    "text": "eu",
+    "start": 16.59,
+    "end": 16.73,
+    "id": "w43"
+  },
+  {
+    "text": "vou",
+    "start": 16.73,
+    "end": 16.94,
+    "id": "w44"
+  },
+  {
+    "text": "testar.",
+    "start": 16.94,
+    "end": 17.6,
+    "id": "w45"
+  },
+  {
+    "text": "Perfil",
+    "start": 17.63,
+    "end": 18.1,
+    "id": "w46"
+  },
+  {
+    "text": "novo.",
+    "start": 18.1,
+    "end": 18.72,
+    "id": "w47"
+  },
+  {
+    "text": "45",
+    "start": 18.75,
+    "end": 19.4,
+    "id": "w48"
+  },
+  {
+    "text": "dias.",
+    "start": 19.4,
+    "end": 20.16,
+    "id": "w49"
+  },
+  {
+    "text": "Nenhum",
+    "start": 20.23,
+    "end": 20.65,
+    "id": "w50"
+  },
+  {
+    "text": "real",
+    "start": 20.65,
+    "end": 20.96,
+    "id": "w51"
+  },
+  {
+    "text": "em",
+    "start": 20.96,
+    "end": 21.11,
+    "id": "w52"
+  },
+  {
+    "text": "anúncio.",
+    "start": 21.11,
+    "end": 21.92,
+    "id": "w53"
+  },
+  {
+    "text": "Um",
+    "start": 21.95,
+    "end": 22.12,
+    "id": "w54"
+  },
+  {
+    "text": "post",
+    "start": 22.12,
+    "end": 22.47,
+    "id": "w55"
+  },
+  {
+    "text": "por",
+    "start": 22.56,
+    "end": 22.84,
+    "id": "w56"
+  },
+  {
+    "text": "dia.",
+    "start": 22.84,
+    "end": 23.48,
+    "id": "w57"
+  },
+  {
+    "text": "Nos",
+    "start": 23.51,
+    "end": 23.69,
+    "id": "w58"
+  },
+  {
+    "text": "dias",
+    "start": 23.79,
+    "end": 24.03,
+    "id": "w59"
+  },
+  {
+    "text": "15,",
+    "start": 24.12,
+    "end": 24.78,
+    "id": "w60"
+  },
+  {
+    "text": "30",
+    "start": 24.78,
+    "end": 25.3,
+    "id": "w61"
+  },
+  {
+    "text": "e",
+    "start": 25.3,
+    "end": 25.38,
+    "id": "w62"
+  },
+  {
+    "text": "45,",
+    "start": 25.38,
+    "end": 26.12,
+    "id": "w63"
+  },
+  {
+    "text": "eu",
+    "start": 26.12,
+    "end": 26.25,
+    "id": "w64"
+  },
+  {
+    "text": "abro",
+    "start": 26.25,
+    "end": 26.51,
+    "id": "w65"
+  },
+  {
+    "text": "os",
+    "start": 26.51,
+    "end": 26.64,
+    "id": "w66"
+  },
+  {
+    "text": "números",
+    "start": 26.64,
+    "end": 26.83,
+    "id": "w67"
+  },
+  {
+    "text": "aqui.",
+    "start": 27.33,
+    "end": 27.63,
+    "id": "w68"
+  },
+  {
+    "text": "Seguidores,",
+    "start": 27.67,
+    "end": 28.54,
+    "id": "w69"
+  },
+  {
+    "text": "alcance",
+    "start": 28.54,
+    "end": 29.06,
+    "id": "w70"
+  },
+  {
+    "text": "e",
+    "start": 29.06,
+    "end": 29.08,
+    "id": "w71"
+  },
+  {
+    "text": "quantos",
+    "start": 29.19,
+    "end": 29.66,
+    "id": "w72"
+  },
+  {
+    "text": "viraram",
+    "start": 29.66,
+    "end": 30.18,
+    "id": "w73"
+  },
+  {
+    "text": "conversa",
+    "start": 30.18,
+    "end": 30.78,
+    "id": "w74"
+  },
+  {
+    "text": "de",
+    "start": 30.78,
+    "end": 30.93,
+    "id": "w75"
+  },
+  {
+    "text": "negócio.",
+    "start": 30.93,
+    "end": 31.76,
+    "id": "w76"
+  },
+  {
+    "text": "Se",
+    "start": 31.79,
+    "end": 31.91,
+    "id": "w77"
+  },
+  {
+    "text": "o",
+    "start": 31.91,
+    "end": 31.97,
+    "id": "w78"
+  },
+  {
+    "text": "orgânico",
+    "start": 32.07,
+    "end": 32.56,
+    "id": "w79"
+  },
+  {
+    "text": "sozinho",
+    "start": 32.63,
+    "end": 33.09,
+    "id": "w80"
+  },
+  {
+    "text": "der",
+    "start": 33.09,
+    "end": 33.2,
+    "id": "w81"
+  },
+  {
+    "text": "conta,",
+    "start": 33.31,
+    "end": 33.84,
+    "id": "w82"
+  },
+  {
+    "text": "você",
+    "start": 33.84,
+    "end": 34.14,
+    "id": "w83"
+  },
+  {
+    "text": "vai",
+    "start": 34.14,
+    "end": 34.36,
+    "id": "w84"
+  },
+  {
+    "text": "ver.",
+    "start": 34.36,
+    "end": 34.88,
+    "id": "w85"
+  },
+  {
+    "text": "Se",
+    "start": 34.91,
+    "end": 35.04,
+    "id": "w86"
+  },
+  {
+    "text": "não",
+    "start": 35.04,
+    "end": 35.29,
+    "id": "w87"
+  },
+  {
+    "text": "der,",
+    "start": 35.29,
+    "end": 35.69,
+    "id": "w88"
+  },
+  {
+    "text": "você",
+    "start": 35.7,
+    "end": 36.03,
+    "id": "w89"
+  },
+  {
+    "text": "também",
+    "start": 36.03,
+    "end": 36.53,
+    "id": "w90"
+  },
+  {
+    "text": "vai",
+    "start": 36.53,
+    "end": 36.78,
+    "id": "w91"
+  },
+  {
+    "text": "ver.",
+    "start": 36.78,
+    "end": 37.32,
+    "id": "w92"
+  },
+  {
+    "text": "Segue",
+    "start": 37.35,
+    "end": 37.69,
+    "id": "w93"
+  },
+  {
+    "text": "para",
+    "start": 37.69,
+    "end": 37.99,
+    "id": "w94"
+  },
+  {
+    "text": "acompanhar",
+    "start": 37.99,
+    "end": 38.73,
+    "id": "w95"
+  },
+  {
+    "text": "até",
+    "start": 38.73,
+    "end": 38.95,
+    "id": "w96"
+  },
+  {
+    "text": "o",
+    "start": 38.95,
+    "end": 39.02,
+    "id": "w97"
+  },
+  {
+    "text": "dia",
+    "start": 39.02,
+    "end": 39.24,
+    "id": "w98"
+  },
+  {
+    "text": "45.",
+    "start": 39.24,
+    "end": 39.76,
+    "id": "w99"
+  },
+  {
+    "text": "Eaí",
+    "start": 39.79,
+    "end": 39.94,
+    "id": "w100"
+  },
+  {
+    "text": "a",
+    "start": 39.94,
+    "end": 39.97,
+    "id": "w101"
+  },
+  {
+    "text": "gente",
+    "start": 40.07,
+    "end": 40.3,
+    "id": "w102"
+  },
+  {
+    "text": "descobre",
+    "start": 40.3,
+    "end": 40.8,
+    "id": "w103"
+  },
+  {
+    "text": "a",
+    "start": 40.8,
+    "end": 40.86,
+    "id": "w104"
+  },
+  {
+    "text": "força",
+    "start": 40.86,
+    "end": 41.16,
+    "id": "w105"
+  },
+  {
+    "text": "do",
+    "start": 41.16,
+    "end": 41.2,
+    "id": "w106"
+  },
+  {
+    "text": "orgânico.",
+    "start": 41.31,
+    "end": 42.04,
+    "id": "w107"
+  }
+]

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:#03354e; overflow:hidden; }
+#root { position:relative; width:100%; height:100%; background:#03354e; font-family:"Montserrat",sans-serif; color:#fff; }
+.scene { position:absolute; inset:0; }
+.ground { position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+.ground::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 520px;
+        background-image: radial-gradient(circle, rgba(111,211,160,0.55) 2.2px, transparent 2.6px), radial-gradient(circle, rgba(0,163,214,0.45) 1.8px, transparent 2.2px);
+        background-size: 34px 34px, 34px 34px; background-position: 0 0, 17px 17px;
+        -webkit-mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 45%, transparent 75%);
+        mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 45%, transparent 75%); }
+
+.card { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:0 120px; gap:44px; }
+.badge { font-weight:600; font-size:38px; letter-spacing:0.32em; color:#6FD3A0; }
+h1 { font-weight:900; font-size:118px; line-height:1.0; letter-spacing:-0.025em; }
+.acc { color:#6FD3A0; }
+.logo { width:420px; height:auto; }
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="1">
+<section id="capa" class="clip scene" data-start="0" data-duration="1"><div class="ground"></div>
+<div class="card"><img class="logo" id="capa-logo" src="assets/img/logo-claro.png" alt="Cleiton Ramos" /><h1 id="capa-t">O ORGÂNICO CONSTRÓI <span class="acc">NEGÓCIO?</span></h1><div class="badge" id="capa-b">DIA 1/45</div></div></section>
+</div>
+<script>const tl = gsap.timeline({ paused: true }); tl.set("#capa-t", { opacity: 1 }, 0); window.__timelines["main"] = tl;</script>
+</body></html>
