@@ -50,23 +50,74 @@ most relevant corpus that exists and it is already filtered by their taste.
 
 ## Step 2: go and look
 
-Use whatever browsing tool this session actually has: an in-app browser, a
-browser extension connected to the user's own Chrome, or a computer-use tool.
-There is no API for this and there does not need to be, because the volume is
-small enough to read.
+Two routes. **Apify is the default** when the session has the Apify MCP
+(`mcp__apify__*`): it reads public data from Apify's own servers, with no
+login, so the user's Instagram account is never involved. Fall back to
+reading by hand (an in-app browser, a browser extension connected to the
+user's own Chrome, or a computer-use tool) when Apify is not connected.
 
 **Rules that are not negotiable:**
 
 - **Never log into Instagram on the user's behalf and never ask for a
-  password.** If a page needs a login, the user is the one who is already
-  logged in. Drive their browser with them present, or ask them to paste.
-- **This is reading, not scraping.** Ten accounts, a dozen reels each, at human
-  speed. Automated collection at volume violates Instagram's Terms of Use and
-  gets accounts action-blocked. Do not build a crawler, do not use a scraping
-  service, and do not loop this in the background.
+  password.** Not in a browser, not in an Apify actor that takes cookies or a
+  session. Public data only.
+- **Bounded runs, never a loop.** One research round at a time, run when the
+  user asks. Do not schedule it, do not leave it running in the background,
+  and cap every run with `callOptions.maxTotalChargeUsd`. Check the budget
+  before and after at `https://api.apify.com/v2/users/me/limits` (read it as
+  an MCP resource of the `apify` server).
 - **Copy the formula, never the video.** The hook shape, the structure, the
   length, the pattern of cuts. Not their script, not their voice, not their
   edit. Attribute every row in the swipe file to the account it came from.
+
+### The Apify route
+
+Three actors cover it. Read each one's input schema with
+`fetch-actor-details` before the first call of a session.
+
+| job | actor | input that matters |
+| --- | --- | --- |
+| find candidates by topic | `data-slayer/instagram-search-reels` | `query` (one keyword in Portuguese), `maxPages: 4` |
+| last N reels of each account | `apify/instagram-reel-scraper` | `username: [...]` (up to ~25 per run), `resultsLimit: 20` |
+| followers, and finding a handle | `apify/instagram-scraper` | `directUrls` + `resultsType: "details"`, or `search` + `searchType: "user"` |
+
+The order that worked: keyword search to find accounts that crossed the bar,
+then the reel scraper on the candidates plus the user's own list to get each
+median, then one details run for followers. 78 accounts and ~1,400 reels cost
+about US$4.
+
+Things that went wrong the first time, so they do not again:
+
+- **Use `videoPlayCount` from the reel scraper as the view count.** The
+  search actor's `play_count` adds Facebook plays and inflates the number (one
+  reel read 1.2M in search and 918K on Instagram).
+- **Group reel-scraper rows by `inputUrl`, not `ownerUsername`.** Collabs
+  show up on the account's grid with someone else as owner.
+- **Do not guess handles.** Half the guesses failed (`icarodecarvalho` is
+  `icarode.carvalho`, `ericorocha` is `rochaerico`). An empty result means a
+  wrong handle more often than a private account. Resolve with a user search.
+- **Never pull captions into the conversation.** Ask `get-dataset-items` for
+  only the fields you need. A large result is saved to a file; copy it to the
+  scratchpad and parse it with Python.
+- **The free plan runs 5 actors at once.** A sixth call fails; wait for one
+  to finish.
+- **The caption is not the hook.** The reel scraper's `includeTranscript`
+  add-on (charged per minute of audio) gives the spoken first line when the
+  analysis needs it.
+
+### Reading the numbers
+
+- **Median:** the last 20 reels, pinned ones excluded. When those 20 cover
+  only a day or two (accounts posting several times a day), the median is
+  not a baseline. Say so instead of ranking on it.
+- **Recurrent or one-off.** Two or more reels above the bar in the last 20,
+  or a median above 100K, is an account that does it on purpose. One spike
+  over a low median is a one-off.
+- **Probable paid boost.** Under 10K followers, a median under 1,000 views
+  and one reel in the millions is the shape of a reel run as an ad. So is a
+  like rate far below the account's own. Public data cannot prove it: flag it
+  and point the user to the Meta Ad Library. Keep these out of the formulas
+  to copy, since the distribution was bought.
 
 **What to capture per reel**, in the creator's own words:
 
