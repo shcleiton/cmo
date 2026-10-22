@@ -15,7 +15,7 @@
       #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #03354e; font-family: "Montserrat", sans-serif; color: #fff; }
       #fundo { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
       .layer { position: absolute; inset: 0; }
-      #ground { background: radial-gradient(120% 70% at 50% 110%, rgba(10,74,102,0.62) 0%, rgba(3,53,78,0.74) 55%, rgba(2,42,62,0.88) 100%); }
+      #ground { background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
       #ground::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 520px;
         background-image: radial-gradient(circle, rgba(111,211,160,0.5) 2.2px, transparent 2.6px), radial-gradient(circle, rgba(0,163,214,0.4) 1.8px, transparent 2.2px);
         background-size: 34px 34px, 34px 34px; background-position: 0 0, 17px 17px;
@@ -130,7 +130,6 @@
     <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="%%D%%">
       <audio id="narracao" src="assets/audio/narracao.mp3" data-start="0" data-duration="%%D%%" data-track-index="0"></audio>
 %%SFX%%
-      <video id="fundo" src="assets/video/fundo.mp4" data-start="0" data-duration="%%D%%" data-track-index="2" muted playsinline></video>
       <div class="layer" id="ground"></div>
       <div id="cam">
         <!-- gancho 1: a parede de conversas -->
