@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:#03354e; overflow:hidden; }
+#root { position:relative; width:1080px; height:1920px; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff;
+  background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+.c { position:absolute; left:110px; right:110px; text-align:center; }
+#p { top:560px; font-weight:900; font-size:150px; color:#6FD3A0; letter-spacing:-0.03em; white-space:nowrap; }
+#l { top:740px; font-weight:900; font-size:84px; line-height:1.02; }
+#l span { color:#ff7b7b; }
+#dots { position:absolute; left:50%; top:980px; margin-left:-90px; display:inline-flex; gap:16px; background:#fff; padding:28px 36px; border-radius:36px; border-bottom-left-radius:10px; }
+#dots i { width:24px; height:24px; border-radius:50%; background:#8aa0ad; display:block; }
+#d { top:1200px; font-weight:600; font-size:30px; letter-spacing:0.32em; color:#6FD3A0; }
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="1">
+<section id="capa" class="clip" data-start="0" data-duration="1" style="position:absolute;inset:0">
+<div class="c" id="p">40% A 60%</div><div class="c" id="l">DAS NEGOCIAÇÕES<br/><span>SEM DECISÃO</span></div>
+<div id="dots"><i></i><i></i><i></i></div><div class="c" id="d">DIA 4/45</div></section>
+</div>
+<script>const tl = gsap.timeline({ paused: true }); tl.set("#p", { opacity: 1 }, 0); window.__timelines["main"] = tl;</script>
+</body></html>
