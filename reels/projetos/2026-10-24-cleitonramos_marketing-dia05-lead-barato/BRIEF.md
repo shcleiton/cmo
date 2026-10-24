@@ -4,7 +4,7 @@
 - 3 mudanças reais: (1) 15+ dias de distribuição de conteúdo, público de engajamento/video view, captação como remarketing; lead mais caro, presença estável; (2) criativo de captura claro sobre o evento e a oferta no final; (3) host fechando cada dia: dia 1 problema, dia 2 diagnóstico e promessa de solução, dia 3 solução e oferta (antes a oferta era no dia 1).
 - Conselho do Cleiton: verba fixa para distribuição contínua de conteúdo.
 - Estrutura: reel de referência "3 coisas" (pedido para seguir antes do ponto 3). CTA é seguir; sem palavra-chave. Sem citar a faculdade. Na fala, "mais de 110"; na tela, 110+.
-- Pendente de confirmação: corte do público em "metade do vídeo" (50%).
+- Corte do público confirmado: quem assistiu 50% do vídeo.
 
 ## Direção visual
 

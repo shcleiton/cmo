@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dia 5: lead barato</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Montserrat"; font-weight: 900; src: url("assets/fonts/montserrat-latin-900-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Montserrat"; font-weight: 500; src: url("assets/fonts/montserrat-latin-500-normal.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; background: #03354e; overflow: hidden; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #03354e; font-family: "Montserrat", sans-serif; color: #fff; }
+      .layer { position: absolute; inset: 0; }
+      #ground { background: radial-gradient(120% 70% at 50% 110%, #0a4a66 0%, #03354e 55%, #022a3e 100%); }
+      #ground::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 520px;
+        background-image: radial-gradient(circle, rgba(111,211,160,0.5) 2.2px, transparent 2.6px), radial-gradient(circle, rgba(0,163,214,0.4) 1.8px, transparent 2.2px);
+        background-size: 34px 34px, 34px 34px; background-position: 0 0, 17px 17px;
+        -webkit-mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 45%, transparent 75%);
+        mask-image: radial-gradient(90% 100% at 50% 100%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 45%, transparent 75%); }
+      #cam { position: absolute; inset: 0; transform-origin: 540px 900px; }
+      .badge { position: absolute; top: 290px; left: 120px; font-weight: 600; font-size: 26px; letter-spacing: 0.32em; color: #6FD3A0; z-index: 5; }
+      .sc { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+      .bggreen { position: absolute; inset: 0; background: #6FD3A0; }
+      .kick { font-weight: 600; font-size: 28px; letter-spacing: 0.28em; color: #6FD3A0; }
+      .big { font-weight: 900; font-size: 96px; line-height: 1.0; letter-spacing: -0.02em; }
+      .mid { font-weight: 900; font-size: 64px; line-height: 1.05; letter-spacing: -0.01em; }
+      .acc { color: #6FD3A0; } .red { color: #ff7b7b; } .navy { color: #03354e; }
+      .center { position: absolute; left: 120px; right: 120px; text-align: center; }
+      .label { position: absolute; left: 120px; right: 120px; top: 390px; }
+      .pill { display: inline-block; font-weight: 900; font-size: 34px; color: #03354e; background: #6FD3A0; padding: 12px 24px; border-radius: 40px; white-space: nowrap; }
+      .pill.pw { background: #ffffff; } .pill.c { background: #ff7b7b; color: #ffffff; }
+      .ch { opacity: 0; }
+      .bn { position: absolute; width: 220px; height: 330px; overflow: visible; }
+      /* painéis */
+      .pn { position: absolute; top: 470px; width: 420px; padding: 30px 28px 34px; border-radius: 30px; background: rgba(255,255,255,0.06); border: 3px solid rgba(255,255,255,0.16); }
+      .pnh { font-weight: 800; font-size: 22px; letter-spacing: 0.16em; color: rgba(255,255,255,0.75); line-height: 1.3; }
+      .pr { margin-top: 34px; }
+      .pr span { display: block; font-weight: 600; font-size: 22px; letter-spacing: 0.1em; color: rgba(255,255,255,0.7); }
+      .pr b { display: block; margin-top: 6px; font-weight: 900; font-size: 46px; }
+      .pr b.g { color: #6FD3A0; } .pr b.c { color: #ff7b7b; }
+      .num { font-size: 130px !important; line-height: 1; letter-spacing: -0.03em; }
+      #pnL { left: 100px; } #pnR { left: 560px; }
+      #stamp { position: absolute; left: 0; right: 0; top: 1190px; text-align: center; }
+      #n123 { position: absolute; left: 0; right: 0; top: 820px; display: flex; justify-content: center; gap: 40px; }
+      #n123 span { width: 170px; height: 170px; border-radius: 30px; border: 5px solid #6FD3A0; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 110px; color: #6FD3A0; opacity: 0; }
+      /* congresso */
+      .scr { position: absolute; left: 160px; width: 760px; border-radius: 28px; background: #0b2533; border: 6px solid #0d2633; box-shadow: 0 30px 80px rgba(0,0,0,0.45); overflow: hidden; }
+      .scr .bar { height: 48px; background: #16394a; display: flex; align-items: center; gap: 10px; padding-left: 20px; }
+      .scr .bar i { width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.3); display: block; }
+      .live { position: absolute; top: 72px; left: 24px; font-weight: 900; font-size: 22px; letter-spacing: 0.12em; background: #ff7b7b; padding: 6px 14px; border-radius: 8px; }
+      .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 70px 24px 24px; }
+      .tiles div { height: 150px; border-radius: 16px; background: rgba(255,255,255,0.08); position: relative; }
+      .tiles div::after { content: ""; position: absolute; left: 50%; top: 34px; width: 56px; height: 56px; margin-left: -28px; border-radius: 50%; background: rgba(255,255,255,0.22); }
+      .mb { position: absolute; width: 100px; height: 170px; }
+      .mb svg { width: 100px; height: 170px; overflow: visible; }
+      .gt { position: absolute; top: -40px; left: 50%; margin-left: -52px; width: 104px; text-align: center; font-weight: 900; font-size: 18px; color: #03354e; background: #ffd66b; padding: 5px 0; border-radius: 20px; }
+      .lt { position: absolute; top: -40px; left: 50%; margin-left: -44px; width: 88px; text-align: center; font-weight: 900; font-size: 18px; color: #03354e; background: #6FD3A0; padding: 5px 0; border-radius: 20px; opacity: 0; }
+      #magnet { position: absolute; left: 50%; top: 420px; width: 200px; height: 200px; margin-left: -100px; }
+      #mgl { top: 640px; }
+      #cart { position: absolute; left: 700px; top: 1130px; width: 220px; text-align: center; }
+      #cart svg { width: 150px; height: 130px; }
+      #cart p { font-weight: 900; font-size: 34px; color: #ff7b7b; }
+      #full { position: absolute; left: 140px; top: 1170px; }
+      /* números das mudanças */
+      .nbig { position: absolute; left: 50%; top: 520px; width: 260px; height: 260px; margin-left: -130px; border-radius: 48px; background: #6FD3A0; color: #03354e; font-weight: 900; font-size: 200px; display: flex; align-items: center; justify-content: center; }
+      .ntit { top: 860px; }
+      /* ponto 1 */
+      #calg { position: absolute; left: 204px; top: 520px; display: grid; grid-template-columns: repeat(5, 120px); gap: 18px; }
+      #calg i { width: 120px; height: 120px; border-radius: 22px; border: 4px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 900; font-size: 30px; color: rgba(255,255,255,0.5); position: relative; }
+      #calg i b { position: absolute; inset: -4px; border-radius: 22px; background: #00a897; opacity: 0; display: flex; align-items: center; justify-content: center; }
+      #calg i b::after { content: ""; border-left: 30px solid #ffffff; border-top: 19px solid transparent; border-bottom: 19px solid transparent; margin-left: 8px; }
+      #p1bt { top: 1010px; }
+      .vid { position: absolute; left: 240px; top: 440px; width: 600px; height: 190px; border-radius: 26px; background: #ffffff; color: #03354e; padding: 26px 30px; }
+      .vid p { font-weight: 900; font-size: 30px; }
+      .vid .trk { margin-top: 26px; height: 22px; border-radius: 11px; background: #d6e2e8; position: relative; }
+      .vid .prg { position: absolute; left: 0; top: 0; bottom: 0; width: 50%; border-radius: 11px; background: #00a897; transform-origin: left center; }
+      .vid .pct { position: absolute; right: 30px; top: 22px; font-weight: 900; font-size: 44px; color: #00a897; }
+      .ring { opacity: 0; }
+      #aim { position: absolute; left: 0; top: 0; width: 150px; height: 150px; opacity: 0; }
+      #path { position: absolute; left: 120px; right: 120px; top: 1170px; text-align: center; }
+      #path span { display: inline-block; font-weight: 800; font-size: 26px; padding: 10px 16px; border-radius: 12px; background: rgba(255,255,255,0.12); margin: 6px 2px; opacity: 0; }
+      #path span.on { background: #6FD3A0; color: #03354e; }
+      .meter { position: absolute; top: 520px; width: 200px; height: 520px; border-radius: 30px; background: rgba(255,255,255,0.08); overflow: hidden; }
+      .meter i { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; display: block; transform-origin: 50% 100%; }
+      .mtl { position: absolute; top: 1070px; width: 320px; text-align: center; font-weight: 800; font-size: 28px; letter-spacing: 0.06em; line-height: 1.2; }
+      .msg { position: absolute; top: 450px; width: 320px; text-align: center; font-weight: 900; font-size: 64px; }
+      #faucet { position: absolute; left: 250px; top: 500px; width: 300px; height: 220px; }
+      #fpill { position: absolute; left: 520px; top: 520px; }
+      .drop { position: absolute; left: 478px; top: 700px; width: 26px; height: 34px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: #6FD3A0; opacity: 0; }
+      #tank { position: absolute; left: 290px; top: 800px; width: 400px; height: 380px; border: 6px solid rgba(255,255,255,0.7); border-top: none; border-radius: 0 0 40px 40px; overflow: hidden; }
+      #tankf { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; background: linear-gradient(180deg, #6FD3A0, #00a897); transform-origin: 50% 100%; }
+      #tankl { position: absolute; left: 0; right: 0; top: 140px; text-align: center; font-weight: 900; font-size: 46px; color: #ffffff; z-index: 2; }
+      #launch { position: absolute; left: 720px; top: 1060px; }
+      #ready { position: absolute; left: 290px; width: 400px; top: 1210px; text-align: center; }
+      /* ponto 2 */
+      .ad { position: absolute; left: 170px; top: 460px; width: 740px; background: #ffffff; color: #0d2633; border-radius: 30px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+      .ad .hd { display: flex; align-items: center; gap: 16px; padding: 20px 26px; }
+      .ad .av { width: 58px; height: 58px; border-radius: 50%; background: #00a897; }
+      .ad .hd b { display: block; font-weight: 900; font-size: 26px; } .ad .hd small { font-weight: 600; font-size: 20px; color: #7c8f99; }
+      .ad .img { height: 260px; background: linear-gradient(135deg, #00a897, #006892); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 58px; color: #ffffff; letter-spacing: -0.01em; }
+      .ad .cp { padding: 26px 30px 20px; font-weight: 700; font-size: 38px; line-height: 1.3; min-height: 200px; }
+      .ad .ct { display: flex; justify-content: space-between; align-items: center; background: #eef3f5; padding: 18px 26px; font-weight: 800; font-size: 24px; }
+      .ad .ct span { background: #00a897; color: #fff; padding: 10px 20px; border-radius: 12px; }
+      #adtag { position: absolute; left: 0; right: 0; top: 1250px; text-align: center; }
+      #p2out { top: 1100px; }
+      /* cta */
+      #follow { position: absolute; left: 50%; top: 1060px; width: 440px; margin-left: -220px; text-align: center; font-weight: 900; font-size: 50px; color: #ffffff; background: #03354e; padding: 26px 0; border-radius: 24px; }
+      #hand { position: absolute; left: 640px; top: 1150px; width: 120px; height: 140px; }
+      /* ponto 3 */
+      .dc { position: absolute; top: 560px; width: 260px; height: 460px; border-radius: 24px; background: rgba(255,255,255,0.06); border: 3px solid rgba(255,255,255,0.12); }
+      .dc .dh { text-align: center; padding-top: 22px; font-weight: 900; font-size: 32px; letter-spacing: 0.08em; }
+      .blk { position: absolute; left: 30px; width: 200px; height: 90px; border-radius: 16px; background: rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 22px; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); opacity: 0; }
+      .crd { position: absolute; left: 18px; width: 224px; top: 100px; height: 130px; border-radius: 18px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 900; font-size: 25px; line-height: 1.15; opacity: 0; }
+      .hc { position: absolute; left: 50%; bottom: 26px; margin-left: -60px; width: 120px; text-align: center; font-weight: 900; font-size: 20px; color: #03354e; background: #6FD3A0; padding: 8px 0; border-radius: 20px; opacity: 0; }
+      .ofr { position: absolute; left: 40px; width: 180px; top: 270px; text-align: center; font-weight: 900; font-size: 30px; padding: 14px 0; border-radius: 14px; opacity: 0; }
+      #thread { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      #sol { position: absolute; left: 0; width: 260px; top: 260px; text-align: center; font-weight: 900; font-size: 24px; color: #6FD3A0; opacity: 0; }
+      #score { position: absolute; right: 120px; top: 380px; text-align: right; }
+      #score small { display: block; font-weight: 600; font-size: 24px; letter-spacing: 0.2em; color: rgba(255,255,255,0.7); }
+      #score b { font-weight: 900; font-size: 86px; letter-spacing: -0.03em; color: #6FD3A0; }
+      /* fechamento */
+      #fpn { left: 230px; width: 620px; top: 480px; }
+      #mag { position: absolute; left: 600px; top: 620px; width: 220px; height: 220px; }
+      #errado { position: absolute; left: 0; right: 0; top: 1040px; text-align: center; }
+      #errado span { display: inline-block; font-weight: 900; font-size: 60px; color: #ffffff; background: #ff7b7b; padding: 14px 30px; border-radius: 16px; }
+      #qd { top: 560px; }
+      #cpv { top: 650px; font-weight: 900; font-size: 120px; line-height: 0.98; letter-spacing: -0.03em; }
+      #frm { position: absolute; left: 0; right: 0; top: 1000px; text-align: center; }
+      #frm span { display: inline-block; font-weight: 800; font-size: 34px; border: 4px solid #6FD3A0; color: #6FD3A0; padding: 16px 28px; border-radius: 18px; }
+      #sgname { top: 760px; font-weight: 900; font-size: 92px; letter-spacing: -0.02em; }
+      #sgpos { top: 880px; }
+      #sgch { position: absolute; left: 50%; top: 990px; width: 820px; margin-left: -410px; text-align: center; font-weight: 900; font-size: 40px; color: #6FD3A0; border: 5px solid #6FD3A0; border-radius: 18px; padding: 14px 0; white-space: nowrap; }
+      #caps { position: absolute; left: 110px; right: 110px; top: 1430px; height: 110px; z-index: 6; }
+      .cap { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-weight: 800; font-size: 40px; line-height: 1.2; visibility: hidden;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.9); }
+      .cap .w { color: rgba(255,255,255,0.55); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="82.65">
+      <audio id="narracao" src="assets/audio/narracao.mp3" data-start="0" data-duration="82.65" data-track-index="0"></audio>
+      <audio id="sfx-000" src="assets/sfx/whoosh.mp3" data-start="0.0" data-duration="0.6" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-001" src="assets/sfx/pop.mp3" data-start="0.34" data-duration="0.7" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-002" src="assets/sfx/pop.mp3" data-start="1.06" data-duration="0.7" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-003" src="assets/sfx/pop.mp3" data-start="2.0" data-duration="0.7" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-004" src="assets/sfx/click.mp3" data-start="2.15" data-duration="0.4" data-track-index="3" data-volume="0.14"></audio>
+      <audio id="sfx-005" src="assets/sfx/click.mp3" data-start="2.3" data-duration="0.4" data-track-index="4" data-volume="0.14"></audio>
+      <audio id="sfx-006" src="assets/sfx/click.mp3" data-start="2.45" data-duration="0.4" data-track-index="5" data-volume="0.14"></audio>
+      <audio id="sfx-007" src="assets/sfx/click.mp3" data-start="2.6" data-duration="0.4" data-track-index="6" data-volume="0.14"></audio>
+      <audio id="sfx-008" src="assets/sfx/impact.mp3" data-start="2.75" data-duration="2.1" data-track-index="3" data-volume="0.18"></audio>
+      <audio id="sfx-009" src="assets/sfx/whoosh.mp3" data-start="3.36" data-duration="0.6" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-010" src="assets/sfx/pop.mp3" data-start="4.6" data-duration="0.7" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-011" src="assets/sfx/impact.mp3" data-start="5.36" data-duration="2.1" data-track-index="6" data-volume="0.2"></audio>
+      <audio id="sfx-012" src="assets/sfx/pop.mp3" data-start="5.9" data-duration="0.7" data-track-index="3" data-volume="0.22"></audio>
+      <audio id="sfx-013" src="assets/sfx/pop.mp3" data-start="6.1" data-duration="0.7" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="sfx-014" src="assets/sfx/click.mp3" data-start="6.25" data-duration="0.4" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-015" src="assets/sfx/click.mp3" data-start="6.4" data-duration="0.4" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-016" src="assets/sfx/click.mp3" data-start="6.55" data-duration="0.4" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-017" src="assets/sfx/click.mp3" data-start="6.7" data-duration="0.4" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-018" src="assets/sfx/click.mp3" data-start="6.85" data-duration="0.4" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-019" src="assets/sfx/impact.mp3" data-start="6.96" data-duration="2.1" data-track-index="6" data-volume="0.38"></audio>
+      <audio id="sfx-020" src="assets/sfx/impact.mp3" data-start="7.96" data-duration="2.1" data-track-index="3" data-volume="0.32"></audio>
+      <audio id="sfx-021" src="assets/sfx/whoosh.mp3" data-start="8.85" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-022" src="assets/sfx/pop.mp3" data-start="9.36" data-duration="0.7" data-track-index="5" data-volume="0.28"></audio>
+      <audio id="sfx-023" src="assets/sfx/pop.mp3" data-start="9.5" data-duration="0.7" data-track-index="6" data-volume="0.28"></audio>
+      <audio id="sfx-024" src="assets/sfx/pop.mp3" data-start="9.64" data-duration="0.7" data-track-index="3" data-volume="0.28"></audio>
+      <audio id="sfx-025" src="assets/sfx/whoosh.mp3" data-start="10.2" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-026" src="assets/sfx/pop.mp3" data-start="10.6" data-duration="0.7" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-027" src="assets/sfx/pop.mp3" data-start="10.84" data-duration="0.7" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-028" src="assets/sfx/pop.mp3" data-start="11.08" data-duration="0.7" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-029" src="assets/sfx/pop.mp3" data-start="12.1" data-duration="0.7" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-030" src="assets/sfx/whoosh.mp3" data-start="13.1" data-duration="0.6" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-031" src="assets/sfx/pop.mp3" data-start="13.2" data-duration="0.7" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="sfx-032" src="assets/sfx/whoosh.mp3" data-start="14.7" data-duration="0.6" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="sfx-033" src="assets/sfx/whoosh.mp3" data-start="15.5" data-duration="0.6" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="sfx-034" src="assets/sfx/pop.mp3" data-start="17.3" data-duration="0.7" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-035" src="assets/sfx/glitch.mp3" data-start="18.3" data-duration="2.6" data-track-index="6" data-volume="0.15"></audio>
+      <audio id="sfx-036" src="assets/sfx/whoosh.mp3" data-start="18.92" data-duration="0.6" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-037" src="assets/sfx/impact.mp3" data-start="18.98" data-duration="2.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-038" src="assets/sfx/whoosh.mp3" data-start="21.3" data-duration="0.6" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-039" src="assets/sfx/pop.mp3" data-start="22.3" data-duration="0.7" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-040" src="assets/sfx/pop.mp3" data-start="22.58" data-duration="0.7" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-041" src="assets/sfx/pop.mp3" data-start="22.86" data-duration="0.7" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-042" src="assets/sfx/pop.mp3" data-start="23.14" data-duration="0.7" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-043" src="assets/sfx/pop.mp3" data-start="23.42" data-duration="0.7" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-044" src="assets/sfx/pop.mp3" data-start="23.7" data-duration="0.7" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-045" src="assets/sfx/pop.mp3" data-start="23.98" data-duration="0.7" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-046" src="assets/sfx/pop.mp3" data-start="24.26" data-duration="0.7" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-047" src="assets/sfx/whoosh.mp3" data-start="25.3" data-duration="0.6" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-048" src="assets/sfx/click.mp3" data-start="25.9" data-duration="0.4" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="sfx-049" src="assets/sfx/pop.mp3" data-start="26.8" data-duration="0.7" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-050" src="assets/sfx/pop.mp3" data-start="27.2" data-duration="0.7" data-track-index="5" data-volume="0.2"></audio>
+      <audio id="sfx-051" src="assets/sfx/click.mp3" data-start="28.4" data-duration="0.4" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="sfx-052" src="assets/sfx/click.mp3" data-start="28.75" data-duration="0.4" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="sfx-053" src="assets/sfx/click.mp3" data-start="29.05" data-duration="0.4" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="sfx-054" src="assets/sfx/whoosh.mp3" data-start="29.5" data-duration="0.6" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-055" src="assets/sfx/pop.mp3" data-start="30.0" data-duration="0.7" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="sfx-056" src="assets/sfx/pop.mp3" data-start="31.72" data-duration="0.7" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-057" src="assets/sfx/whoosh.mp3" data-start="32.72" data-duration="0.6" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-058" src="assets/sfx/impact.mp3" data-start="33.4" data-duration="2.1" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-059" src="assets/sfx/whoosh.mp3" data-start="33.9" data-duration="0.6" data-track-index="6" data-volume="0.22"></audio>
+      <audio id="sfx-060" src="assets/sfx/pop.mp3" data-start="34.4" data-duration="0.7" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-061" src="assets/sfx/whoosh.mp3" data-start="37.3" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-062" src="assets/sfx/impact.mp3" data-start="38.48" data-duration="2.1" data-track-index="5" data-volume="0.32"></audio>
+      <audio id="sfx-063" src="assets/sfx/whoosh.mp3" data-start="39.72" data-duration="0.6" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="sfx-064" src="assets/sfx/impact.mp3" data-start="39.8" data-duration="2.1" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-065" src="assets/sfx/whoosh.mp3" data-start="41.92" data-duration="0.6" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-066" src="assets/sfx/click.mp3" data-start="43.4" data-duration="0.4" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-067" src="assets/sfx/click.mp3" data-start="43.7" data-duration="0.4" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-068" src="assets/sfx/click.mp3" data-start="44.0" data-duration="0.4" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-069" src="assets/sfx/click.mp3" data-start="44.3" data-duration="0.4" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-070" src="assets/sfx/click.mp3" data-start="44.6" data-duration="0.4" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-071" src="assets/sfx/click.mp3" data-start="44.9" data-duration="0.4" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-072" src="assets/sfx/click.mp3" data-start="45.2" data-duration="0.4" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-073" src="assets/sfx/click.mp3" data-start="45.5" data-duration="0.4" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-074" src="assets/sfx/click.mp3" data-start="45.8" data-duration="0.4" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="sfx-075" src="assets/sfx/click.mp3" data-start="46.1" data-duration="0.4" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-076" src="assets/sfx/click.mp3" data-start="46.4" data-duration="0.4" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-077" src="assets/sfx/click.mp3" data-start="46.7" data-duration="0.4" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-078" src="assets/sfx/pop.mp3" data-start="45.6" data-duration="0.7" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-079" src="assets/sfx/whoosh.mp3" data-start="47.22" data-duration="0.6" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-080" src="assets/sfx/whoosh.mp3" data-start="48.7" data-duration="0.6" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-081" src="assets/sfx/pop.mp3" data-start="50.02" data-duration="0.7" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-082" src="assets/sfx/whoosh.mp3" data-start="50.42" data-duration="0.6" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-083" src="assets/sfx/pop.mp3" data-start="51.3" data-duration="0.7" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="sfx-084" src="assets/sfx/click.mp3" data-start="52.4" data-duration="0.4" data-track-index="3" data-volume="0.5"></audio>
+      <audio id="sfx-085" src="assets/sfx/whoosh.mp3" data-start="53.78" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-086" src="assets/sfx/impact.mp3" data-start="53.86" data-duration="2.1" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-087" src="assets/sfx/whoosh.mp3" data-start="55.85" data-duration="0.6" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-088" src="assets/sfx/pop.mp3" data-start="56.6" data-duration="0.7" data-track-index="3" data-volume="0.15"></audio>
+      <audio id="sfx-089" src="assets/sfx/pop.mp3" data-start="56.76" data-duration="0.7" data-track-index="4" data-volume="0.15"></audio>
+      <audio id="sfx-090" src="assets/sfx/pop.mp3" data-start="56.92" data-duration="0.7" data-track-index="5" data-volume="0.15"></audio>
+      <audio id="sfx-091" src="assets/sfx/pop.mp3" data-start="57.08" data-duration="0.7" data-track-index="6" data-volume="0.15"></audio>
+      <audio id="sfx-092" src="assets/sfx/pop.mp3" data-start="57.24" data-duration="0.7" data-track-index="3" data-volume="0.15"></audio>
+      <audio id="sfx-093" src="assets/sfx/pop.mp3" data-start="57.4" data-duration="0.7" data-track-index="4" data-volume="0.15"></audio>
+      <audio id="sfx-094" src="assets/sfx/impact.mp3" data-start="58.5" data-duration="2.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-095" src="assets/sfx/whoosh.mp3" data-start="59.6" data-duration="0.6" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-096" src="assets/sfx/whoosh.mp3" data-start="60.48" data-duration="0.6" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="sfx-097" src="assets/sfx/pop.mp3" data-start="61.1" data-duration="0.7" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-098" src="assets/sfx/pop.mp3" data-start="62.0" data-duration="0.7" data-track-index="5" data-volume="0.2"></audio>
+      <audio id="sfx-099" src="assets/sfx/pop.mp3" data-start="62.25" data-duration="0.7" data-track-index="6" data-volume="0.2"></audio>
+      <audio id="sfx-100" src="assets/sfx/pop.mp3" data-start="62.5" data-duration="0.7" data-track-index="3" data-volume="0.2"></audio>
+      <audio id="sfx-101" src="assets/sfx/whoosh.mp3" data-start="63.0" data-duration="0.6" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="sfx-102" src="assets/sfx/pop.mp3" data-start="65.38" data-duration="0.7" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-103" src="assets/sfx/pop.mp3" data-start="66.82" data-duration="0.7" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="sfx-104" src="assets/sfx/pop.mp3" data-start="68.52" data-duration="0.7" data-track-index="3" data-volume="0.3"></audio>
+      <audio id="sfx-105" src="assets/sfx/pop.mp3" data-start="70.3" data-duration="0.7" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-106" src="assets/sfx/impact.mp3" data-start="71.86" data-duration="2.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-107" src="assets/sfx/click.mp3" data-start="71.95" data-duration="0.4" data-track-index="6" data-volume="0.12"></audio>
+      <audio id="sfx-108" src="assets/sfx/click.mp3" data-start="72.1" data-duration="0.4" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="sfx-109" src="assets/sfx/click.mp3" data-start="72.25" data-duration="0.4" data-track-index="4" data-volume="0.12"></audio>
+      <audio id="sfx-110" src="assets/sfx/whoosh.mp3" data-start="72.5" data-duration="0.6" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-111" src="assets/sfx/whoosh.mp3" data-start="73.4" data-duration="0.6" data-track-index="6" data-volume="0.22"></audio>
+      <audio id="sfx-112" src="assets/sfx/impact.mp3" data-start="75.6" data-duration="2.1" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="sfx-113" src="assets/sfx/whoosh.mp3" data-start="76.45" data-duration="0.6" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-114" src="assets/sfx/impact.mp3" data-start="78.6" data-duration="2.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-115" src="assets/sfx/pop.mp3" data-start="79.0" data-duration="0.7" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="sfx-116" src="assets/sfx/whoosh.mp3" data-start="79.7" data-duration="0.6" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="sfx-117" src="assets/sfx/impact.mp3" data-start="80.75" data-duration="1.9" data-track-index="4" data-volume="0.3"></audio>
+      <div class="layer" id="ground"></div>
+      <div id="cam">
+        <!-- gancho: dois painéis -->
+        <div class="sc" id="sH1">
+          <div class="pn" id="pnL"><p class="pnh">LANÇAMENTO<br/>ANTERIOR</p>
+            <div class="pr" id="pL0"><span>CUSTO POR LEAD</span><b class="g">BAIXO ✓</b></div>
+            <div class="pr" id="pL1"><span>PRESENÇA NA AULA</span><b class="g">ALTA ✓</b></div>
+            <div class="pr" id="pL2"><span>VENDAS</span><b class="num" id="nL">0</b></div>
+          </div>
+          <div class="pn" id="pnR"><p class="pnh">LANÇAMENTO<br/>SEGUINTE</p>
+            <div class="pr" id="pR0"><span>CUSTO POR LEAD</span><b class="c">MAIS ALTO ↑</b></div>
+            <div class="pr" id="pR1"><span>PRESENÇA NA AULA</span><b>ALTA =</b></div>
+            <div class="pr" id="pR2"><span>VENDAS</span><b class="num g" id="nR">0</b></div>
+          </div>
+          <div id="stamp"><span class="pill pw">MESMO PRODUTO</span></div>
+        </div>
+        <div class="sc" id="sH2">
+          <div class="center mid" style="top:620px">MUDAMOS</div>
+          <div id="n123"><span>1</span><span>2</span><span>3</span></div>
+        </div>
+        <!-- contexto -->
+        <div class="sc" id="sX1">
+          <div class="label"><p class="kick" id="x1k">PÓS-GRADUAÇÃO</p></div>
+          <div class="scr" id="x1s" style="top:480px"><div class="bar"><i></i><i></i><i></i></div><span class="live">AO VIVO</span>
+            <div class="tiles"><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+          <div class="center mid" id="x1t" style="top:1010px">CONGRESSO<br/><span class="acc">ONLINE</span></div>
+        </div>
+        <div class="sc" id="sX2">
+          <svg id="magnet" viewBox="0 0 200 200"><path d="M40 20 V110 a60 60 0 0 0 120 0 V20" fill="none" stroke="#ff7b7b" stroke-width="44"/><rect x="18" y="10" width="44" height="40" fill="#ffffff"/><rect x="138" y="10" width="44" height="40" fill="#ffffff"/></svg>
+          <div class="center kick" id="mgl">ANÚNCIO</div>
+          <div class="mb" id="a0" style="left:150px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a1" style="left:310px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a2" style="left:470px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a3" style="left:630px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a4" style="left:790px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a5" style="left:150px; top:930px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a6" style="left:310px; top:930px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a7" style="left:470px; top:930px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a8" style="left:630px; top:930px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="a9" style="left:790px; top:930px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div>
+          <div id="full"><span class="pill">SALA CHEIA ✓</span></div>
+          <div id="cart"><svg viewBox="0 0 150 130"><path d="M8 16h22l16 70h76l16-52H38" fill="none" stroke="#ff7b7b" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><circle cx="56" cy="112" r="10" fill="#ff7b7b"/><circle cx="112" cy="112" r="10" fill="#ff7b7b"/></svg><p>0 COMPRAS</p></div>
+        </div>
+        <!-- ponto 1 -->
+        <div class="sc" id="sP1a"><div class="nbig">1</div><div class="center mid ntit">QUEM VIA<br/><span class="acc">O ANÚNCIO</span></div></div>
+        <div class="sc" id="sP1b">
+          <div class="label"><p class="kick">ANTES DE CAPTAR</p></div>
+          <div id="calg"><i>1<b></b></i><i>2<b></b></i><i>3<b></b></i><i>4<b></b></i><i>5<b></b></i><i>6<b></b></i><i>7<b></b></i><i>8<b></b></i><i>9<b></b></i><i>10<b></b></i><i>11<b></b></i><i>12<b></b></i><i>13<b></b></i><i>14<b></b></i><i>15<b></b></i></div>
+          <div class="center mid" id="p1bt">15+ DIAS DE CONTEÚDO<br/><span class="acc">COM ANÚNCIO</span></div>
+        </div>
+        <div class="sc" id="sP1c">
+          <div class="vid" id="vid"><p>ASSISTIU O VÍDEO</p><div class="trk"><i class="prg" id="prg"></i></div><span class="pct">50%</span></div>
+          <div class="mb" id="b0" style="left:130px; top:720px"><svg viewBox="0 0 100 170"><circle class="ring" id="b0-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b0-l">PÚBLICO</span></div><div class="mb" id="b1" style="left:270px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div><div class="mb" id="b2" style="left:410px; top:720px"><svg viewBox="0 0 100 170"><circle class="ring" id="b2-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b2-l">PÚBLICO</span></div><div class="mb" id="b3" style="left:550px; top:720px"><svg viewBox="0 0 100 170"><circle class="ring" id="b3-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b3-l">PÚBLICO</span></div><div class="mb" id="b4" style="left:690px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div><div class="mb" id="b5" style="left:830px; top:720px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div><div class="mb" id="b6" style="left:130px; top:940px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div><div class="mb" id="b7" style="left:270px; top:940px"><svg viewBox="0 0 100 170"><circle class="ring" id="b7-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b7-l">PÚBLICO</span></div><div class="mb" id="b8" style="left:410px; top:940px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div><div class="mb" id="b9" style="left:550px; top:940px"><svg viewBox="0 0 100 170"><circle class="ring" id="b9-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b9-l">PÚBLICO</span></div><div class="mb" id="b10" style="left:690px; top:940px"><svg viewBox="0 0 100 170"><circle class="ring" id="b10-r" cx="50" cy="60" r="40" fill="none" stroke="#6FD3A0" stroke-width="8"/><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="b10-l">PÚBLICO</span></div><div class="mb" id="b11" style="left:830px; top:940px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg></div>
+          <svg id="aim" viewBox="0 0 150 150"><circle cx="75" cy="75" r="58" fill="none" stroke="#ff7b7b" stroke-width="8"/><path d="M75 0v40M75 110v40M0 75h40M110 75h40" stroke="#ff7b7b" stroke-width="8"/></svg>
+          <div id="path"><span>PÚBLICOS</span> <span>PERSONALIZADO</span> <span>ENVOLVIMENTO COM VÍDEO</span> <span class="on">50%</span></div>
+        </div>
+        <div class="sc" id="sP1d">
+          <div class="meter" style="left:220px"><i id="mt0" style="background:#ff7b7b"></i></div>
+          <div class="meter" style="left:660px"><i id="mt1" style="background:#6FD3A0"></i></div>
+          <div class="msg red" id="mg0" style="left:160px">↑</div>
+          <div class="msg acc" id="mg1" style="left:600px">=</div>
+          <div class="mtl" style="left:160px">CUSTO<br/>POR LEAD</div>
+          <div class="mtl" style="left:600px">PRESENÇA<br/>NA AULA</div>
+        </div>
+        <div class="sc" id="sP1e">
+          <div class="label"><p class="kick">CONSELHO DE AMIGO</p></div>
+          <svg id="faucet" viewBox="0 0 300 220"><rect x="0" y="60" width="250" height="50" rx="12" fill="#cfe3ea"/><rect x="100" y="24" width="50" height="40" rx="8" fill="#cfe3ea"/><rect x="70" y="10" width="110" height="22" rx="11" fill="#ffffff"/><rect x="204" y="60" width="50" height="140" rx="14" fill="#cfe3ea"/></svg>
+          <div id="fpill"><span class="pill pw">VERBA FIXA</span></div>
+          <i class="drop"></i><i class="drop"></i><i class="drop"></i><i class="drop"></i><i class="drop"></i>
+          <div id="tank"><div id="tankf"></div><div id="tankl">PÚBLICO</div></div>
+          <div id="launch"><span class="pill c">LANÇAMENTO</span></div>
+          <div id="ready"><span class="pill">JÁ ESTÁ PRONTO ✓</span></div>
+        </div>
+        <!-- ponto 2 -->
+        <div class="sc" id="sP2a"><div class="nbig">2</div><div class="center mid ntit">O QUE O ANÚNCIO<br/><span class="acc">PROMETIA</span></div></div>
+        <div class="sc" id="sP2b">
+          <div class="ad" id="ad"><div class="hd"><i class="av"></i><div><b>Congresso online</b><small>Patrocinado</small></div></div>
+            <div class="img">3 DIAS · AO VIVO</div>
+            <p class="cp" id="adcp"><span class="ch">C</span><span class="ch">o</span><span class="ch">n</span><span class="ch">g</span><span class="ch">r</span><span class="ch">e</span><span class="ch">s</span><span class="ch">s</span><span class="ch">o</span><span class="ch"> </span><span class="ch">o</span><span class="ch">n</span><span class="ch">l</span><span class="ch">i</span><span class="ch">n</span><span class="ch">e</span><span class="ch"> </span><span class="ch">d</span><span class="ch">e</span><span class="ch"> </span><span class="ch">3</span><span class="ch"> </span><span class="ch">d</span><span class="ch">i</span><span class="ch">a</span><span class="ch">s</span><span class="ch">.</span><span class="ch"> </span><span class="ch">N</span><span class="ch">o</span><span class="ch"> </span><span class="ch">f</span><span class="ch">i</span><span class="ch">n</span><span class="ch">a</span><span class="ch">l</span><span class="ch">,</span><span class="ch"> </span><span class="ch">e</span><span class="ch">u</span><span class="ch"> </span><span class="ch">v</span><span class="ch">o</span><span class="ch">u</span><span class="ch"> </span><span class="ch">a</span><span class="ch">p</span><span class="ch">r</span><span class="ch">e</span><span class="ch">s</span><span class="ch">e</span><span class="ch">n</span><span class="ch">t</span><span class="ch">a</span><span class="ch">r</span><span class="ch"> </span><span class="ch">u</span><span class="ch">m</span><span class="ch">a</span><span class="ch"> </span><span class="ch">o</span><span class="ch">f</span><span class="ch">e</span><span class="ch">r</span><span class="ch">t</span><span class="ch">a</span><span class="ch">.</span></p>
+            <div class="ct">congresso online <span>Inscreva-se</span></div></div>
+          <div id="adtag"><span class="pill">A FRASE DO CRIATIVO</span></div>
+        </div>
+        <div class="sc" id="sP2c">
+          <div class="mb" id="c0" style="left:110px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="c1" style="left:220px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="c1-l">LEAD</span></div><div class="mb" id="c2" style="left:330px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="c3" style="left:440px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="c4" style="left:550px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="c4-l">LEAD</span></div><div class="mb" id="c5" style="left:660px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="c5-l">LEAD</span></div><div class="mb" id="c6" style="left:770px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><polygon points="50,4 34,38 66,38" fill="#ffd66b"/><circle cx="50" cy="4" r="6" fill="#ff7b7b"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="gt">GRÁTIS</span></div><div class="mb" id="c7" style="left:880px; top:760px"><svg viewBox="0 0 100 170"><rect x="18" y="92" width="64" height="78" rx="32" fill="#E6F7F2"/><circle cx="50" cy="60" r="28" fill="#ffffff"/><circle cx="40" cy="56" r="4.5" fill="#03354e"/><circle cx="60" cy="56" r="4.5" fill="#03354e"/><path d="M40 70 Q50 77 60 70" fill="none" stroke="#03354e" stroke-width="4" stroke-linecap="round"/></svg><span class="lt" id="c7-l">LEAD</span></div>
+          <div class="center mid" id="p2out">SAIU ANTES DE<br/><span class="acc">VIRAR LEAD</span></div>
+        </div>
+        <!-- CTA -->
+        <div class="sc" id="sC"><div class="bggreen"></div>
+          <div class="center mid navy" style="top:640px">A TERCEIRA FOI<br/>A QUE MAIS PESOU</div>
+          <div id="follow">SEGUIR</div>
+          <svg id="hand" viewBox="0 0 120 140"><circle cx="40" cy="30" r="26" fill="#ffffff" stroke="#03354e" stroke-width="8"/><path d="M40 30 L40 100 Q40 130 70 130 L95 130 Q112 130 112 110 L112 70" fill="#ffffff" stroke="#03354e" stroke-width="8" stroke-linejoin="round"/></svg>
+        </div>
+        <!-- ponto 3 -->
+        <div class="sc" id="sP3a"><div class="nbig">3</div><div class="center mid ntit">O ROTEIRO<br/><span class="acc">DO CONGRESSO</span></div></div>
+        <div class="sc" id="sP3b">
+          <div class="label"><p class="kick red">ANTES</p></div>
+          <div class="dc" style="left:120px"><p class="dh">DIA 1</p><div class="blk" style="top:100px; left:24px">PALESTRA</div><div class="blk" style="top:214px; left:36px">PALESTRA</div><div class="ofr" id="oA" style="background:#ff7b7b; color:#ffffff; top:330px">OFERTA</div></div><div class="dc" style="left:410px"><p class="dh">DIA 2</p><div class="blk" style="top:100px; left:38px">PALESTRA</div><div class="blk" style="top:214px; left:22px">PALESTRA</div></div><div class="dc" style="left:700px"><p class="dh">DIA 3</p><div class="blk" style="top:100px; left:24px">PALESTRA</div><div class="blk" style="top:214px; left:36px">PALESTRA</div></div>
+        </div>
+        <div class="sc" id="sP3c">
+          <div class="label"><p class="kick">DEPOIS</p></div>
+          <div id="score"><small>VENDAS</small><b id="nS">33</b></div>
+          <svg id="thread" viewBox="0 0 1080 1920"><path id="thp" d="M250 975 C 330 1040, 460 1040, 540 975 S 750 910, 830 975" fill="none" stroke="#6FD3A0" stroke-width="8" stroke-linecap="round" stroke-dasharray="760" stroke-dashoffset="760"/></svg>
+          <div class="dc" style="left:120px"><p class="dh">DIA 1</p><div class="crd" id="cB0" style="background:#ff7b7b; color:#ffffff">O PROBLEMA</div><div class="hc">HOST</div></div><div class="dc" style="left:410px"><p class="dh">DIA 2</p><div class="crd" id="cB1" style="background:#ffffff; color:#03354e">O DIAGNÓSTICO</div><div id="sol">TEM SOLUÇÃO →</div><div class="hc">HOST</div></div><div class="dc" style="left:700px"><p class="dh">DIA 3</p><div class="crd" id="cB2" style="background:#6FD3A0; color:#03354e">A SOLUÇÃO</div><div class="ofr" id="oB" style="background:#6FD3A0; color:#03354e">OFERTA</div><div class="hc">HOST</div></div>
+          <div style="position:absolute; left:460px; top:1100px"><svg class="bn" id="h" viewBox="0 0 200 300" style="width:150px; height:225px"><rect x="38" y="138" width="124" height="162" rx="62" fill="#00a897"/><circle cx="100" cy="82" r="62" fill="#6FD3A0"/><circle cx="78" cy="76" r="7.5" fill="#03354e"/><circle cx="122" cy="76" r="7.5" fill="#03354e"/><path id="h-m" d="M84 110 Q100 110 116 110" fill="none" stroke="#03354e" stroke-width="6" stroke-linecap="round"/></svg></div>
+        </div>
+        <!-- fechamento -->
+        <div class="sc" id="sF1">
+          <div class="pn" id="fpn"><p class="pnh">O SEU LANÇAMENTO</p>
+            <div class="pr"><span>CUSTO POR LEAD</span><b class="g">BAIXO ✓</b></div>
+            <div class="pr"><span>PRESENÇA NA AULA</span><b class="g">ALTA ✓</b></div>
+            <div class="pr"><span>VENDAS</span><b class="c">POUCAS ✕</b></div>
+          </div>
+          <svg id="mag" viewBox="0 0 180 180"><circle cx="72" cy="72" r="54" fill="rgba(255,255,255,0.15)" stroke="#ffffff" stroke-width="14"/><path d="M112 112 L165 165" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/></svg>
+          <div id="errado"><span>PÚBLICO ERRADO</span></div>
+        </div>
+        <div class="sc" id="sF2">
+          <div class="center kick" id="qd">QUEM DECIDE</div>
+          <div class="center" id="cpv">CUSTO POR<br/><span class="acc">VENDA</span></div>
+          <div id="frm"><span>INVESTIMENTO ÷ VENDAS</span></div>
+        </div>
+        <!-- assinatura -->
+        <div class="sc" id="sS">
+          <div class="center" id="sgname">CLEITON RAMOS</div>
+          <div class="center kick" id="sgpos">MARKETING E VENDAS COM NÚMERO</div>
+          <div id="sgch">DESAFIO 45 DIAS · DIA 5/45</div>
+        </div>
+      </div>
+      <div class="badge">DIA 5/45</div>
+      <div id="caps"><div class="cap" data-s="0.1" data-e="2.74"><span class="w" data-t="0.1">Lead</span> <span class="w" data-t="0.34">barato,</span> <span class="w" data-t="1.06">aula</span> <span class="w" data-t="1.28">lotada</span> <span class="w" data-t="1.92">e</span> <span class="w" data-t="2.22">33</span></div>
+<div class="cap" data-s="2.74" data-e="3.36"><span class="w" data-t="2.74">vendas.</span></div>
+<div class="cap" data-s="3.36" data-e="4.52"><span class="w" data-t="3.36">No</span> <span class="w" data-t="3.46">lançamento</span> <span class="w" data-t="3.9">seguinte,</span></div>
+<div class="cap" data-s="4.52" data-e="5.96"><span class="w" data-t="4.52">o</span> <span class="w" data-t="4.6">lead</span> <span class="w" data-t="4.82">ficou</span> <span class="w" data-t="5.06">mais</span> <span class="w" data-t="5.36">caro</span> <span class="w" data-t="5.9">e</span></div>
+<div class="cap" data-s="5.96" data-e="7.96"><span class="w" data-t="5.96">as</span> <span class="w" data-t="6.1">vendas</span> <span class="w" data-t="6.36">passaram</span> <span class="w" data-t="6.76">de</span> <span class="w" data-t="6.96">110.</span></div>
+<div class="cap" data-s="7.96" data-e="8.92"><span class="w" data-t="7.96">Mesmo</span> <span class="w" data-t="8.3">produto.</span></div>
+<div class="cap" data-s="8.92" data-e="10.28"><span class="w" data-t="8.92">Mudamos</span> <span class="w" data-t="9.36">3</span> <span class="w" data-t="9.66">coisas.</span></div>
+<div class="cap" data-s="10.28" data-e="12.58"><span class="w" data-t="10.28">Era</span> <span class="w" data-t="10.4">uma</span> <span class="w" data-t="10.58">pós-graduação</span> <span class="w" data-t="11.58">vendida</span> <span class="w" data-t="11.98">num</span> <span class="w" data-t="12.12">congresso</span></div>
+<div class="cap" data-s="12.58" data-e="13.2"><span class="w" data-t="12.58">online.</span></div>
+<div class="cap" data-s="13.2" data-e="14.3"><span class="w" data-t="13.2">No</span> <span class="w" data-t="13.3">lançamento</span> <span class="w" data-t="13.68">anterior,</span></div>
+<div class="cap" data-s="14.3" data-e="15.88"><span class="w" data-t="14.3">o</span> <span class="w" data-t="14.38">anúncio</span> <span class="w" data-t="14.7">achava</span> <span class="w" data-t="15.06">gente</span> <span class="w" data-t="15.34">que</span> <span class="w" data-t="15.46">adora</span></div>
+<div class="cap" data-s="15.88" data-e="17.0"><span class="w" data-t="15.88">congresso</span> <span class="w" data-t="16.28">gratuito.</span></div>
+<div class="cap" data-s="17.0" data-e="18.94"><span class="w" data-t="17.0">Enchia</span> <span class="w" data-t="17.36">a</span> <span class="w" data-t="17.52">sala</span> <span class="w" data-t="18.04">e</span> <span class="w" data-t="18.14">não</span> <span class="w" data-t="18.28">comprava.</span></div>
+<div class="cap" data-s="18.94" data-e="20.56"><span class="w" data-t="18.94">A</span> <span class="w" data-t="19.02">primeira</span> <span class="w" data-t="19.32">mudança</span> <span class="w" data-t="19.84">foi</span> <span class="w" data-t="20.08">quem</span> <span class="w" data-t="20.36">via</span></div>
+<div class="cap" data-s="20.56" data-e="21.36"><span class="w" data-t="20.56">o</span> <span class="w" data-t="20.66">anúncio.</span></div>
+<div class="cap" data-s="21.36" data-e="22.3"><span class="w" data-t="21.36">Antes</span> <span class="w" data-t="21.58">de</span> <span class="w" data-t="21.7">captar,</span></div>
+<div class="cap" data-s="22.3" data-e="23.98"><span class="w" data-t="22.3">rodamos</span> <span class="w" data-t="22.68">pelo</span> <span class="w" data-t="22.88">menos</span> <span class="w" data-t="23.24">15</span> <span class="w" data-t="23.62">dias</span> <span class="w" data-t="23.88">de</span></div>
+<div class="cap" data-s="23.98" data-e="25.38"><span class="w" data-t="23.98">conteúdo</span> <span class="w" data-t="24.46">com</span> <span class="w" data-t="24.58">anúncio.</span></div>
+<div class="cap" data-s="25.38" data-e="26.98"><span class="w" data-t="25.38">Quem</span> <span class="w" data-t="25.54">assistiu</span> <span class="w" data-t="25.9">metade</span> <span class="w" data-t="26.36">do</span> <span class="w" data-t="26.5">vídeo</span> <span class="w" data-t="26.8">virou</span></div>
+<div class="cap" data-s="26.98" data-e="28.8"><span class="w" data-t="26.98">um</span> <span class="w" data-t="27.1">público</span> <span class="w" data-t="27.74">e</span> <span class="w" data-t="27.8">a</span> <span class="w" data-t="27.88">captação</span> <span class="w" data-t="28.4">rodou</span></div>
+<div class="cap" data-s="28.8" data-e="29.54"><span class="w" data-t="28.8">só</span> <span class="w" data-t="28.96">pra</span> <span class="w" data-t="29.16">ele.</span></div>
+<div class="cap" data-s="29.54" data-e="30.84"><span class="w" data-t="29.54">O</span> <span class="w" data-t="29.62">lead</span> <span class="w" data-t="29.84">ficou</span> <span class="w" data-t="30.06">mais</span> <span class="w" data-t="30.34">caro,</span></div>
+<div class="cap" data-s="30.84" data-e="32.24"><span class="w" data-t="30.84">a</span> <span class="w" data-t="30.92">presença</span> <span class="w" data-t="31.34">na</span> <span class="w" data-t="31.5">aula</span> <span class="w" data-t="31.72">continuou</span> <span class="w" data-t="32.14">a</span></div>
+<div class="cap" data-s="32.24" data-e="32.82"><span class="w" data-t="32.24">mesma.</span></div>
+<div class="cap" data-s="32.82" data-e="34.0"><span class="w" data-t="32.82">E</span> <span class="w" data-t="32.88">um</span> <span class="w" data-t="32.96">conselho</span> <span class="w" data-t="33.32">de</span> <span class="w" data-t="33.4">amigo:</span></div>
+<div class="cap" data-s="34.0" data-e="35.76"><span class="w" data-t="34.0">deixe</span> <span class="w" data-t="34.22">uma</span> <span class="w" data-t="34.4">verba</span> <span class="w" data-t="34.8">fixa</span> <span class="w" data-t="35.16">pra</span> <span class="w" data-t="35.28">distribuir</span></div>
+<div class="cap" data-s="35.76" data-e="37.14"><span class="w" data-t="35.76">conteúdo</span> <span class="w" data-t="36.2">o</span> <span class="w" data-t="36.34">tempo</span> <span class="w" data-t="36.66">todo.</span></div>
+<div class="cap" data-s="37.14" data-e="38.36"><span class="w" data-t="37.14">Quando</span> <span class="w" data-t="37.28">o</span> <span class="w" data-t="37.34">lançamento</span> <span class="w" data-t="37.78">chegar,</span></div>
+<div class="cap" data-s="38.36" data-e="39.78"><span class="w" data-t="38.36">o</span> <span class="w" data-t="38.48">público</span> <span class="w" data-t="38.88">já</span> <span class="w" data-t="39.04">está</span> <span class="w" data-t="39.28">pronto.</span></div>
+<div class="cap" data-s="39.78" data-e="40.76"><span class="w" data-t="39.78">A</span> <span class="w" data-t="39.9">segunda</span> <span class="w" data-t="40.42">foi</span> <span class="w" data-t="40.52">o</span> <span class="w" data-t="40.6">que</span> <span class="w" data-t="40.66">o</span></div>
+<div class="cap" data-s="40.76" data-e="41.94"><span class="w" data-t="40.76">anúncio</span> <span class="w" data-t="41.14">prometia.</span></div>
+<div class="cap" data-s="41.94" data-e="43.36"><span class="w" data-t="41.94">O</span> <span class="w" data-t="42.02">criativo</span> <span class="w" data-t="42.46">passou</span> <span class="w" data-t="42.7">a</span> <span class="w" data-t="42.78">dizer:</span></div>
+<div class="cap" data-s="43.36" data-e="45.28"><span class="w" data-t="43.36">"Congresso</span> <span class="w" data-t="43.84">online</span> <span class="w" data-t="44.24">de</span> <span class="w" data-t="44.42">3</span> <span class="w" data-t="44.72">dias.</span></div>
+<div class="cap" data-s="45.28" data-e="46.62"><span class="w" data-t="45.28">No</span> <span class="w" data-t="45.42">final,</span> <span class="w" data-t="45.86">eu</span> <span class="w" data-t="45.96">vou</span> <span class="w" data-t="46.06">apresentar</span> <span class="w" data-t="46.52">uma</span></div>
+<div class="cap" data-s="46.62" data-e="47.3"><span class="w" data-t="46.62">oferta."</span></div>
+<div class="cap" data-s="47.3" data-e="48.88"><span class="w" data-t="47.3">Quem</span> <span class="w" data-t="47.54">só</span> <span class="w" data-t="47.68">queria</span> <span class="w" data-t="47.94">aula</span> <span class="w" data-t="48.18">grátis</span> <span class="w" data-t="48.62">saiu</span></div>
+<div class="cap" data-s="48.88" data-e="50.5"><span class="w" data-t="48.88">ali,</span> <span class="w" data-t="49.4">antes</span> <span class="w" data-t="49.66">de</span> <span class="w" data-t="49.74">virar</span> <span class="w" data-t="50.02">lead.</span></div>
+<div class="cap" data-s="50.5" data-e="51.74"><span class="w" data-t="50.5">A</span> <span class="w" data-t="50.6">terceira</span> <span class="w" data-t="51.14">foi</span> <span class="w" data-t="51.24">a</span> <span class="w" data-t="51.32">que</span> <span class="w" data-t="51.48">mais</span></div>
+<div class="cap" data-s="51.74" data-e="52.38"><span class="w" data-t="51.74">pesou.</span></div>
+<div class="cap" data-s="52.38" data-e="53.82"><span class="w" data-t="52.38">Segue</span> <span class="w" data-t="52.56">o</span> <span class="w" data-t="52.62">perfil</span> <span class="w" data-t="52.94">pra</span> <span class="w" data-t="53.06">não</span> <span class="w" data-t="53.18">perder.</span></div>
+<div class="cap" data-s="53.82" data-e="55.12"><span class="w" data-t="53.82">A</span> <span class="w" data-t="53.9">terceira</span> <span class="w" data-t="54.42">foi</span> <span class="w" data-t="54.52">o</span> <span class="w" data-t="54.6">roteiro</span> <span class="w" data-t="55.02">do</span></div>
+<div class="cap" data-s="55.12" data-e="55.9"><span class="w" data-t="55.12">congresso.</span></div>
+<div class="cap" data-s="55.9" data-e="57.88"><span class="w" data-t="55.9">Antes,</span> <span class="w" data-t="56.38">cada</span> <span class="w" data-t="56.62">palestrante</span> <span class="w" data-t="57.14">apresentava</span> <span class="w" data-t="57.6">o</span> <span class="w" data-t="57.68">seu</span></div>
+<div class="cap" data-s="57.88" data-e="59.54"><span class="w" data-t="57.88">tema</span> <span class="w" data-t="58.38">e</span> <span class="w" data-t="58.44">a</span> <span class="w" data-t="58.5">oferta</span> <span class="w" data-t="58.84">aparecia</span> <span class="w" data-t="59.42">já</span></div>
+<div class="cap" data-s="59.54" data-e="60.54"><span class="w" data-t="59.54">no</span> <span class="w" data-t="59.64">primeiro</span> <span class="w" data-t="60.08">dia.</span></div>
+<div class="cap" data-s="60.54" data-e="62.48"><span class="w" data-t="60.54">Colocamos</span> <span class="w" data-t="60.94">um</span> <span class="w" data-t="61.1">host</span> <span class="w" data-t="61.5">fechando</span> <span class="w" data-t="62.02">todos</span> <span class="w" data-t="62.32">os</span></div>
+<div class="cap" data-s="62.48" data-e="64.0"><span class="w" data-t="62.48">dias</span> <span class="w" data-t="63.04">com</span> <span class="w" data-t="63.14">uma</span> <span class="w" data-t="63.28">história</span> <span class="w" data-t="63.58">em</span> <span class="w" data-t="63.72">3</span></div>
+<div class="cap" data-s="64.0" data-e="64.7"><span class="w" data-t="64.0">partes.</span></div>
+<div class="cap" data-s="64.7" data-e="66.08"><span class="w" data-t="64.7">Dia</span> <span class="w" data-t="64.959">1,</span> <span class="w" data-t="65.3">o</span> <span class="w" data-t="65.379">problema.</span></div>
+<div class="cap" data-s="66.08" data-e="67.86"><span class="w" data-t="66.08">Dia</span> <span class="w" data-t="66.3">2,</span> <span class="w" data-t="66.72">o</span> <span class="w" data-t="66.82">diagnóstico</span> <span class="w" data-t="67.7">e</span> <span class="w" data-t="67.78">a</span></div>
+<div class="cap" data-s="67.86" data-e="69.4"><span class="w" data-t="67.86">promessa</span> <span class="w" data-t="68.3">de</span> <span class="w" data-t="68.38">que</span> <span class="w" data-t="68.52">tem</span> <span class="w" data-t="68.7">solução.</span></div>
+<div class="cap" data-s="69.4" data-e="71.4"><span class="w" data-t="69.4">Dia</span> <span class="w" data-t="69.62">3,</span> <span class="w" data-t="70.16">a</span> <span class="w" data-t="70.3">solução</span> <span class="w" data-t="71.0">e</span> <span class="w" data-t="71.22">só</span></div>
+<div class="cap" data-s="71.4" data-e="72.58"><span class="w" data-t="71.4">aí</span> <span class="w" data-t="71.76">a</span> <span class="w" data-t="71.86">oferta.</span></div>
+<div class="cap" data-s="72.58" data-e="74.64"><span class="w" data-t="72.58">Lead</span> <span class="w" data-t="72.8">barato,</span> <span class="w" data-t="73.46">aula</span> <span class="w" data-t="73.76">cheia</span> <span class="w" data-t="74.14">e</span> <span class="w" data-t="74.3">pouca</span></div>
+<div class="cap" data-s="74.64" data-e="76.52"><span class="w" data-t="74.64">venda</span> <span class="w" data-t="75.06">é</span> <span class="w" data-t="75.18">sinal</span> <span class="w" data-t="75.44">de</span> <span class="w" data-t="75.58">público</span> <span class="w" data-t="75.9">errado.</span></div>
+<div class="cap" data-s="76.52" data-e="77.94"><span class="w" data-t="76.52">Quem</span> <span class="w" data-t="76.68">decide</span> <span class="w" data-t="77.1">se</span> <span class="w" data-t="77.18">a</span> <span class="w" data-t="77.26">captação</span> <span class="w" data-t="77.74">foi</span></div>
+<div class="cap" data-s="77.94" data-e="79.74"><span class="w" data-t="77.94">boa</span> <span class="w" data-t="78.36">é</span> <span class="w" data-t="78.42">o</span> <span class="w" data-t="78.62">custo</span> <span class="w" data-t="78.96">por</span> <span class="w" data-t="79.18">venda.</span></div>
+<div class="cap" data-s="79.74" data-e="80.72"><span class="w" data-t="79.74">Esse</span> <span class="w" data-t="79.9">é</span> <span class="w" data-t="79.96">o</span> <span class="w" data-t="80.04">dia</span> <span class="w" data-t="80.36">cinco</span> <span class="w" data-t="80.62">de</span></div>
+<div class="cap" data-s="80.72" data-e="81.74"><span class="w" data-t="80.72">quarenta</span> <span class="w" data-t="81.02">e</span> <span class="w" data-t="81.16">cinco.</span></div>
+<div class="cap" data-s="81.74" data-e="82.65"><span class="w" data-t="81.74">Segue</span> <span class="w" data-t="81.98">pra</span> <span class="w" data-t="82.04">acompanhar.</span></div></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out", D = 82.65;
+      const $ = (s) => document.querySelector(s), $$ = (s) => Array.from(document.querySelectorAll(s));
+      const scene = (s, a, b, dir) => {
+        tl.fromTo(s, { autoAlpha: 0, x: (dir || 1) * 140 }, { autoAlpha: 1, x: 0, duration: 0.3, ease: E }, a);
+        tl.fromTo(s, { scale: 1 }, { scale: 1.035, duration: b - a, ease: "none" }, a);
+        tl.to(s, { autoAlpha: 0, x: -(dir || 1) * 140, duration: 0.2, ease: "power2.in" }, b - 0.2);
+      };
+      const punch = (t, k) => tl.fromTo("#cam", { scale: k || 1.07 }, { scale: 1, duration: 0.45, ease: "power3.out" }, t);
+      const shake = (t) => tl.fromTo("#cam", { x: -10 }, { x: 0, duration: 0.35, ease: "elastic.out(1,0.3)" }, t);
+      const up = (s, t, d) => tl.fromTo(s, { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: d || 0.35, ease: "back.out(1.6)" }, t);
+      const pop = (s, t) => tl.fromTo(s, { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(2.4)" }, t);
+      const slam = (s, t, r) => tl.fromTo(s, { autoAlpha: 0, scale: 1.8, rotation: (r || -4) * 3 }, { autoAlpha: 1, scale: 1, rotation: r || -4, duration: 0.22, ease: "power4.in" }, t);
+      const type = (sel, a, b) => { const ch = $$(sel + " .ch"); tl.fromTo(ch, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: (b - a) / ch.length }, a); };
+      const bob = (sel, t, n) => tl.fromTo(sel, { y: 0 }, { y: -12, duration: 0.22, yoyo: true, repeat: n || 1, ease: "sine.inOut" }, t);
+      const count = (sel, a, d, v, suf) => { const o = { v: 0 }; tl.fromTo(o, { v: 0 }, { v: v, duration: d, ease: "power2.out", onUpdate: () => { $(sel).textContent = Math.round(o.v) + (o.v >= v - 0.01 ? (suf || "") : ""); } }, a); };
+
+      // ===== gancho =====
+      scene("#sH1", 0, 8.85);
+      tl.fromTo("#pnL", { autoAlpha: 0, y: 60 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: E }, 0.05);
+      up("#pL0", 0.34); up("#pL1", 1.06); up("#pL2", 2.0);
+      count("#nL", 2.1, 0.6, 33);
+      tl.to("#nL", { color: "#ff7b7b", duration: 0.2 }, 2.75);
+      tl.to("#pnL", { opacity: 0.45, filter: "grayscale(1)", duration: 0.4 }, 3.1);
+      tl.fromTo("#pnR", { autoAlpha: 0, y: 60 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: E }, 3.36);
+      up("#pR0", 4.6); punch(5.36, 1.04);
+      up("#pR1", 5.9); up("#pR2", 6.1);
+      count("#nR", 6.15, 0.85, 110, "+");
+      punch(6.96, 1.08);
+      tl.to("#pnR", { borderColor: "#6FD3A0", duration: 0.3 }, 6.96);
+      slam("#stamp", 7.96, -3);
+      scene("#sH2", 8.85, 10.2);
+      $$("#n123 span").forEach((el, i) => pop(el, 9.36 + i * 0.14));
+
+      // ===== contexto =====
+      scene("#sX1", 10.2, 13.1);
+      up("#x1k", 10.5);
+      tl.fromTo("#x1s", { autoAlpha: 0, y: 60 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: E }, 10.35);
+      tl.fromTo("#x1s .tiles div", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.2, stagger: 0.08 }, 10.6);
+      up("#x1t", 12.1);
+      scene("#sX2", 13.1, 18.92);
+      tl.fromTo("#magnet", { autoAlpha: 0, y: -80 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "back.out(2)" }, 13.2);
+      up("#mgl", 14.38);
+      tl.fromTo("#a0", { autoAlpha: 0, x: -700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 14.7);
+      tl.fromTo("#a1", { autoAlpha: 0, x: 700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 14.85);
+      tl.fromTo("#a2", { autoAlpha: 0, x: -700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.0);
+      tl.fromTo("#a3", { autoAlpha: 0, x: 700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.15);
+      tl.fromTo("#a4", { autoAlpha: 0, x: -700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.3);
+      tl.fromTo("#a5", { autoAlpha: 0, x: 700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.45);
+      tl.fromTo("#a6", { autoAlpha: 0, x: -700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.6);
+      tl.fromTo("#a7", { autoAlpha: 0, x: 700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.75);
+      tl.fromTo("#a8", { autoAlpha: 0, x: -700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 15.9);
+      tl.fromTo("#a9", { autoAlpha: 0, x: 700, y: -200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.5, ease: "power3.out" }, 16.05);
+      bob("#sX2 .mb", 17.3, 1);
+      tl.fromTo("#magnet", { rotation: -4 }, { rotation: 4, duration: 0.18, yoyo: true, repeat: 9, ease: "sine.inOut" }, 14.7);
+      pop("#full", 17.3);
+      tl.fromTo("#cart", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.3 }, 18.0);
+      shake(18.3);
+
+      // ===== ponto 1 =====
+      scene("#sP1a", 18.92, 21.3);
+      pop("#sP1a .nbig", 18.98); up("#sP1a .ntit", 19.3);
+      scene("#sP1b", 21.3, 25.3);
+      tl.fromTo("#calg i", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.15, stagger: 0.03 }, 21.36);
+      tl.fromTo("#calg i b", { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.18, stagger: 0.14, ease: "back.out(2)" }, 22.3);
+      up("#p1bt", 23.2);
+      scene("#sP1c", 25.3, 29.5);
+      tl.fromTo("#vid", { autoAlpha: 0, y: -40 }, { autoAlpha: 1, y: 0, duration: 0.3 }, 25.35);
+      tl.fromTo("#prg", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 25.9);
+      tl.fromTo("#sP1c .mb", { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.25, stagger: 0.04, ease: "back.out(2)" }, 25.4);
+      tl.fromTo("#b0-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 26.8);
+      tl.fromTo("#b0-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.15);
+      tl.fromTo("#b2-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 26.87);
+      tl.fromTo("#b2-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.2);
+      tl.fromTo("#b3-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 26.94);
+      tl.fromTo("#b3-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.25);
+      tl.fromTo("#b7-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 27.01);
+      tl.fromTo("#b7-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.3);
+      tl.fromTo("#b9-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 27.08);
+      tl.fromTo("#b9-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.35);
+      tl.fromTo("#b10-r", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 27.15);
+      tl.fromTo("#b10-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 27.4);
+      tl.to("#b1", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.to("#b4", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.to("#b5", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.to("#b6", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.to("#b8", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.to("#b11", { opacity: 0.25, duration: 0.3 }, 27.15);
+      tl.fromTo("#aim", { autoAlpha: 0, x: 105, y: 705 }, { autoAlpha: 1, duration: 0.15 }, 28.35);
+      tl.to("#aim", { x: 245, y: 925, duration: 0.22, ease: "power3.inOut" }, 28.55);
+      tl.to("#aim", { x: 665, y: 925, duration: 0.22, ease: "power3.inOut" }, 28.85);
+      $$("#path span").forEach((el, i) => up(el, 26.4 + i * 0.25, 0.25));
+
+      scene("#sP1d", 29.5, 32.72);
+      tl.fromTo("#mt0", { scaleY: 0.3 }, { scaleY: 0.85, duration: 0.8, ease: "power2.out" }, 29.62);
+      tl.fromTo("#mt1", { scaleY: 0 }, { scaleY: 0.75, duration: 0.5, ease: "power2.out" }, 29.6);
+      pop("#mg0", 30.0); pop("#mg1", 31.72);
+      bob("#mt1", 31.0, 1);
+      scene("#sP1e", 32.72, 39.72);
+      up("#sP1e .kick", 32.85); punch(33.4, 1.05);
+      tl.fromTo("#faucet", { autoAlpha: 0, x: -120 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: E }, 33.9);
+      pop("#fpill", 34.4);
+      tl.fromTo("#tank", { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.3 }, 34.5);
+      $$(".drop").forEach((d, i) => tl.fromTo(d, { autoAlpha: 1, y: 0 }, { autoAlpha: 0.9, y: 300, duration: 0.42, ease: "power1.in", repeat: 9, repeatDelay: 0.2 }, 34.75 + i * 0.21));
+      tl.fromTo("#tankf", { scaleY: 0 }, { scaleY: 1, duration: 4.0, ease: "none" }, 34.8);
+      tl.fromTo("#launch", { autoAlpha: 0, x: 300 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: "back.out(1.6)" }, 37.3);
+      tl.to("#tankl", { color: "#03354e", duration: 0.3 }, 37.2); pop("#ready", 38.48); punch(38.5, 1.05);
+
+      // ===== ponto 2 =====
+      scene("#sP2a", 39.72, 41.92);
+      pop("#sP2a .nbig", 39.8); up("#sP2a .ntit", 40.1);
+      scene("#sP2b", 41.92, 47.22);
+      tl.fromTo("#ad", { autoAlpha: 0, y: 80 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: E }, 41.96);
+      type("#adcp", 43.36, 47.0);
+      pop("#adtag", 45.6);
+      scene("#sP2c", 47.22, 50.42);
+      tl.fromTo("#sP2c .mb", { autoAlpha: 0, y: 60 }, { autoAlpha: 1, y: 0, duration: 0.3, stagger: 0.05, ease: "back.out(2)" }, 47.3);
+      tl.to("#c0", { x: -260 - 0, y: 420, autoAlpha: 0, rotation: -25, duration: 0.6, ease: "power2.in" }, 48.62);
+      tl.to("#c2", { x: -260 - 40, y: 420, autoAlpha: 0, rotation: -25, duration: 0.6, ease: "power2.in" }, 48.7);
+      tl.to("#c3", { x: -260 - 80, y: 420, autoAlpha: 0, rotation: -25, duration: 0.6, ease: "power2.in" }, 48.78);
+      tl.to("#c6", { x: -260 - 120, y: 420, autoAlpha: 0, rotation: -25, duration: 0.6, ease: "power2.in" }, 48.86);
+      tl.fromTo("#c1-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 50.02);
+      tl.fromTo("#c4-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 50.02);
+      tl.fromTo("#c5-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 50.02);
+      tl.fromTo("#c7-l", { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25 }, 50.02);
+      bob(["#c1","#c4","#c5","#c7"], 50.05, 1);
+      up("#p2out", 49.4);
+
+      // ===== CTA =====
+      scene("#sC", 50.42, 53.78);
+      tl.fromTo("#follow", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 51.3);
+      tl.fromTo("#hand", { autoAlpha: 0, x: 200, y: 200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.4, ease: E }, 51.9);
+      tl.to("#follow", { scale: 0.9, duration: 0.1, yoyo: true, repeat: 1 }, 52.4);
+      tl.to("#follow", { backgroundColor: "#ffffff", color: "#03354e", duration: 0.15 }, 52.5);
+      tl.set("#follow", { textContent: "SEGUINDO ✓" }, 52.55);
+      punch(52.5, 1.05);
+
+      // ===== ponto 3 =====
+      scene("#sP3a", 53.78, 55.85);
+      pop("#sP3a .nbig", 53.86); up("#sP3a .ntit", 54.5);
+      scene("#sP3b", 55.85, 60.48);
+      $$("#sP3b .dc").forEach((el, i) => up(el, 55.9 + i * 0.12, 0.3));
+      $$("#sP3b .blk").forEach((el, i) => pop(el, 56.6 + i * 0.16));
+      tl.fromTo("#oA", { autoAlpha: 0, scale: 2, rotation: -20 }, { autoAlpha: 1, scale: 1, rotation: -8, duration: 0.22, ease: "power4.in" }, 58.5);
+      shake(58.72);
+      tl.to("#oA", { y: 520, rotation: 30, autoAlpha: 0, duration: 0.7, ease: "power2.in" }, 59.6);
+      scene("#sP3c", 60.48, 72.5);
+      $$("#sP3c .dc").forEach((el, i) => up(el, 60.55 + i * 0.12, 0.3));
+      tl.fromTo("#h", { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.35, ease: "back.out(2)" }, 61.1);
+      $$("#sP3c .hc").forEach((el, i) => pop(el, 62.0 + i * 0.25));
+      tl.to("#thp", { attr: { "stroke-dashoffset": 0 }, duration: 1.2, ease: "power2.inOut" }, 63.0);
+      bob("#h", 63.1, 2);
+      pop("#cB0", 65.38); pop("#cB1", 66.82); tl.fromTo("#sol", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.3 }, 68.52);
+      pop("#cB2", 70.3); punch(70.3, 1.04);
+      tl.fromTo("#oB", { autoAlpha: 0, y: -260 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "bounce.out" }, 71.86);
+      tl.fromTo("#score", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, 70.6);
+      (() => { const o = { v: 33 }; tl.fromTo(o, { v: 33 }, { v: 110, duration: 0.55, ease: "power2.out", onUpdate: () => { $("#nS").textContent = Math.round(o.v) + (o.v >= 109.99 ? "+" : ""); } }, 71.9); })();
+      tl.to("#h-m", { attr: { d: "M82 104 Q100 120 118 104" }, duration: 0.2 }, 71.9);
+
+      // ===== fechamento =====
+      scene("#sF1", 72.5, 76.45);
+      tl.fromTo("#fpn", { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.35 }, 72.55);
+      tl.fromTo("#mag", { autoAlpha: 0, x: 200, y: 200 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.45, ease: E }, 73.4);
+      tl.to("#mag", { x: -330, y: 120, duration: 0.8, ease: "power2.inOut" }, 73.9);
+      tl.to("#mag", { x: -120, y: 300, duration: 0.6, ease: "power2.inOut" }, 74.7);
+      tl.to("#mag", { autoAlpha: 0, scale: 0.6, duration: 0.25 }, 75.35); slam("#errado", 75.6, -3); shake(75.82);
+      scene("#sF2", 76.45, 79.7);
+      up("#qd", 76.55);
+      tl.fromTo("#cpv", { autoAlpha: 0, scale: 1.4 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "power4.out" }, 78.6);
+      punch(78.62, 1.08);
+      up("#frm", 79.0);
+      // ===== assinatura =====
+      tl.fromTo("#sS", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, 79.7);
+      up("#sgname", 79.8); up("#sgpos", 80.3);
+      tl.fromTo("#sgch", { autoAlpha: 0, scale: 1.6, rotation: -8 }, { autoAlpha: 1, scale: 1, rotation: -2, duration: 0.25, ease: "power4.in" }, 80.75);
+
+      // ===== legendas =====
+      $$(".cap").forEach((c) => {
+        const s = parseFloat(c.dataset.s), e = parseFloat(c.dataset.e);
+        tl.set(c, { visibility: "visible" }, s); tl.set(c, { visibility: "hidden" }, e);
+        const ws = $$(".w", c);
+        ws.forEach((w, i) => {
+          tl.set(w, { color: "#6FD3A0" }, parseFloat(w.dataset.t));
+          tl.set(w, { color: "#ffffff" }, i + 1 < ws.length ? parseFloat(ws[i + 1].dataset.t) : e - 0.01);
+        });
+      });
+      $$(".cap .w").forEach((w) => gsap.set(w, { color: "rgba(255,255,255,0.55)" }));
+      tl.to("#caps", { autoAlpha: 0, duration: 0.15 }, 50.42); tl.to("#caps", { autoAlpha: 1, duration: 0.15 }, 53.78);
+      tl.set({}, {}, D);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

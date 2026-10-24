@@ -1,6 +1,6 @@
 # SCRIPT: dia 05, lead barato (33 → 110+)
 
-Status: copy fechada no chat; aguardando "aprovado" por escrito para gerar a voz.
+Status: aprovado pelo Cleiton. Narração: take 1, pausas comprimidas e 1,15x (82,65s).
 
 **Gancho**
 Lead barato, aula lotada e 33 vendas.
